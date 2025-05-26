@@ -9,16 +9,27 @@ import os
 import sys
 import re
 
+#labels_all_hierarchy_with_other = {
+#    "MT": ["MT"],
+#    "LY": ["LY"],
+#    "SP": ["SP", "it", "os"],
+#    "ID": ["ID"],
+#    "NA": ["NA", "ne", "sr", "nb", "on"],
+#    "HI": ["HI", "re", "oh"],
+#    "IN": ["IN", "en", "ra", "dtp", "fi", "lt", "oi"],
+#    "OP": ["OP", "rv", "ob", "rs", "av", "oo"],
+#    "IP": ["IP", "ds", "ed", "oe"],
+#}
 labels_all_hierarchy_with_other = {
     "MT": ["MT"],
     "LY": ["LY"],
-    "SP": ["SP", "it", "os"],
+    "SP": ["SP", "IT", "OS"],
     "ID": ["ID"],
-    "NA": ["NA", "ne", "sr", "nb", "on"],
-    "HI": ["HI", "re", "oh"],
-    "IN": ["IN", "en", "ra", "dtp", "fi", "lt", "oi"],
-    "OP": ["OP", "rv", "ob", "rs", "av", "oo"],
-    "IP": ["IP", "ds", "ed", "oe"],
+    "NA": ["NA", "NE", "SR", "NB", "ON"],
+    "HI": ["HI", "RE", "OH"],
+    "IN": ["IN", "EN", "RA", "DTP", "FI", "LT", "OI"],
+    "OP": ["OP", "RV", "OB", "RS", "AV", "OO"],
+    "IP": ["IP", "DS", "ED", "OE"],
 }
 # above dictionary reversed for easier lookup
 reverse_hierarchy = {}
@@ -88,7 +99,7 @@ def separate_sub_labels_from_incorrect_main_labels(df):
     df["subregister_prediction"] = new_sublabels
     return df
 
-def read_and_process_data(options):
+def read_and_process_data(options, sublabels):
     """ 
         Function for reading embedding files and their associated languages and labels.
         Long, as there are many label combination options in the parameters.
@@ -137,6 +148,11 @@ def read_and_process_data(options):
             if options.keep_sublabels:
                 # separate label levels further:
                 df["register_prediction"] = df["full_register"].apply(lambda x: [i for i in x if i in options.labels])
+                #print(70*"-")
+                #print("\n\n")
+                #print(df["full_register"])
+                #print("\n\n")
+                #print(70*"-")
                 df["subregister_prediction"] = df["full_register"].apply(lambda x:  [i for i in x if i in sublabels])
                 # explode wrt. both
                 # This causes NA OP ob to be divided into two: NA+ob and OP+ob

@@ -19,7 +19,7 @@ def argparser():
     ap.add_argument('--fold','--fold_number', type=int, metavar="INT", default=None,
                     help='Fold for models with different splits')
     ap.add_argument('--data_name', type=str, metavar='STR', required=True,
-                    choices=["CORE", "hplt"],
+                    choices=["CORE", "hplt", "cleaned"],
                     help='Which data to use.')
     ap.add_argument('--language','--lang', type=str, default=None, required=True, metavar='str',
                     help='which language to use.')
@@ -37,10 +37,25 @@ def argparser():
 # paths for models and data, e.g. data_path = data_dict("en")["CORE"] gives en-core
 model_dict = lambda fold: {"bge-m3":"/scratch/project_462000353/amanda/register-clustering/data/models/folds_improved/fold_"+str(fold)}
 
-label_dict = {"bge-m3":np.array(["MT","LY","SP","ID","NA","HI","IN","OP","IP"])}
+#label_dict = {"bge-m3":np.array(["MT", "LY", "SP", "ID", "NA", "HI", "IN", "OP", "IP",
+#                                 "it", "os", "ne", "sr", "nb", "on", "re", "oh", "en",
+#                                 "ra", "dtp", "fi", "lt", "oi", "rv", "ob", "rs", "av",
+#                                 "oo", "ds", "ed", "oe"])}
+
+lang_map = {
+    "en": "eng_Latn",
+    "fi": "fin_Latn",
+    "fr": "fra_Latn",
+    "sv": "swe_Latn",
+}
+
+label_dict = {"bge-m3":np.array(["MT", "LY", "SP", "ID", "NA", "HI", "IN", "OP", "IP",
+                                 "IT", "NE", "SR", "NB", "RE", "EN", "RA", "DTP", "FI",
+                                 "LT", "RV", "OB", "RS", "AV", "DS", "ED"])}
 
 data_dict = lambda lang: {"CORE": f'/scratch/project_462000353/amanda/register-clustering/data/datasets/CORE/{lang}.hf',
-                          "hplt": f'/scratch/project_462000353/amanda/register-clustering/data/datasets/hplt/{lang}.hf'}
+                          "hplt": f'/scratch/project_462000353/amanda/register-clustering/data/datasets/hplt/{lang}.hf',
+                          "cleaned": f'/scratch/project_462000353/tlundber/hplt-samples/clean/{lang_map[lang]}.shuf',}
 
 
 options = argparser().parse_args(sys.argv[1:])
@@ -51,9 +66,11 @@ options.data_path = data_dict(options.language)[options.data_name]
 options.labels = label_dict[options.model_name]
 if options.save_path is None:
     if options.fold is not None:
-        options.save_path = f'/scratch/project_462000353/amanda/register-clustering/data/model_embeds/{options.data_name}/{options.model_name}-fold-{options.fold}/'
+        #options.save_path = f'/scratch/project_462000353/amanda/register-clustering/data/model_embeds/{options.data_name}/{options.model_name}-fold-{options.fold}/'
+        options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}-fold-{options.fold}/th-optimised/'
     else:
-       options.save_path = f'/scratch/project_462000353/amanda/register-clustering/data/model_embeds/{options.data_name}/{options.model_name}/' 
+       #options.save_path = f'/scratch/project_462000353/amanda/register-clustering/data/model_embeds/{options.data_name}/{options.model_name}/' 
+       options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}/th-optimised/' 
 os.makedirs(options.save_path, exist_ok=True)
 
 num_labels=len(options.labels)
@@ -62,8 +79,9 @@ extract_labels = False if options.data_name in ["cleaned", "dirty"] else True
 base_model_name ="xlm-roberta-base"
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
-dataset = datasets.load_from_disk(options.data_path)
-print(dataset)
+#dataset = datasets.load_from_disk(options.data_path)
+dataset = datasets.load_dataset('json', data_files=options.data_path)
+#print(dataset)
 model = AutoModelForSequenceClassification.from_pretrained(options.model_path)
 tokenizer = AutoTokenizer.from_pretrained(base_model_name)
 model.to(device)
@@ -78,14 +96,18 @@ def predict(d, extract_labels=True):
     Calculate sigmoids and get document averaged embeddings form 1st, last, middle and 3/4 model layers.
     Also, if labels 
     """
+    #print(f'Entered predict(), extract_labels is equal to: {extract_labels}')
     with torch.no_grad():
         output = model(d["encoded"]["input_ids"].to(device), output_hidden_states=True)
     logits = output["logits"].cpu().tolist()
+    #print(logits[0])
+    #sys.exit()
     sigm = np.array([sigmoid(v) for i,v in enumerate(logits[0]) if i < num_labels])
     hidden_states = output["hidden_states"]
     indices = np.array([0, len(hidden_states)//2, 3*len(hidden_states)//4, -1], dtype=int)
     embed = [torch.mean(hidden_states[i],axis=1).cpu().tolist() for i in indices]
     torch.cuda.empty_cache()
+    #print(d)
     if extract_labels:
         true_labels = np.zeros(num_labels, dtype=int)
         if d["labels"] is not None:
@@ -106,7 +128,7 @@ def predict(d, extract_labels=True):
                     "embed_last":embed[2]}
         else:
             return {"id":d["id"], "lang":d["lang"], "prediction":sigm, "labels": d["labels"], "vec_labels": true_labels, "embed_first":embed[0], "embed_half":embed[1], "embed_last":embed[2]}
-    return {"id":d["id"], "lang":d["lang"], "prediction":sigm, "embed_first":embed[0], "embed_half":embed[1], "embed_last":embed[2]}
+    return {"id":d["id"], "lang":d["lang"], "text":d["text"], "prediction":sigm, "embed_first":embed[0], "embed_half":embed[1], "embed_last":embed[2]}
 
 
 
@@ -117,8 +139,15 @@ def tokenize(d):
 
 
 dataset = dataset.map(lambda line: {"encoded": tokenize(line), "lang": options.language})
+#print(dataset['train'][0])
+#sys.exit()
 #dataset = dataset.map(lambda line: {"lang": options.language})
-dataset = dataset.with_format("torch")
+dataset.set_format(
+    type="torch",
+    columns=["encoded"],
+	output_all_columns=True,
+)
+#print(dataset['train'][0])
 
 
 # this takes too much memory
@@ -127,16 +156,26 @@ dataset = dataset.with_format("torch")
 # doing it with pandas instead
 results = []
 for d in tqdm(dataset["train"]):
-    results.append(predict(d))
+    results.append(predict(d, extract_labels))
 
 df = pd.DataFrame(results)
 del dataset
 
 # predictions for 0.5 threshold; applicable to all data
 predictions = df["prediction"]
-binary_predictions = [(prediction > 0.5).astype(int).tolist() for prediction in predictions]
+if(options.language == 'sv'):
+	binary_predictions = [(prediction > 0.35).astype(int).tolist() for prediction in predictions]
+else:
+	binary_predictions = [(prediction > 0.4).astype(int).tolist() for prediction in predictions]
 preds = [options.labels[np.where(np.array(sublist) == 1)[0]].tolist() for sublist in binary_predictions]
 df["preds"] = preds
+
+#df.to_csv('dataframe.csv')
+#print(df['labels'].head(20))
+#all_labels = set().union(*df['labels'].dropna().map(lambda x: eval(x) if isinstance(x, str) else set()))
+#all_labels = set().union(*df['labels'].dropna().map(lambda x: x if x is not None else set()))
+#print(all_labels)
+#sys.exit()
 
 # for data that has labels, calculate best f1 threshold
 if extract_labels: #options.data_name != "cleaned":
@@ -149,6 +188,10 @@ if extract_labels: #options.data_name != "cleaned":
     
     for threshold in np.arange(options.f1_limits[0],options.f1_limits[1],options.f1_limits[2]):
         binary_predictions = [(prediction > threshold).astype(int).tolist() for prediction in predictions]
+        #print(type(true_labels), type(binary_predictions))
+        #print(len(true_labels), len(binary_predictions))
+        #print(true_labels[:5])  # Print first few elements
+        #print(binary_predictions[:5])
         f1 = f1 = f1_score(y_true=true_labels, y_pred=binary_predictions, average="micro")
         if f1 > best_f1:
             best_f1 = f1

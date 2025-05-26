@@ -19,3 +19,8 @@ spherecluster2
 __pycache__
 metric_plot*
 .venv
+slurm-logs/
+outputtest.tsv
+data/
+*.test
+*.old

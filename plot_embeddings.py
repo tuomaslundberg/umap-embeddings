@@ -21,18 +21,19 @@ embedding_columns=["embed_first", "embed_half", "embed_last"]
 all_labels = ["HI","ID","IN","IP","LY","MT","NA","OP","SP"]
 main_labels = ["HI","ID","IN","IP","NA","OP"]
 without_MT = ["HI","ID","IN","IP","LY","NA","OP","SP"]
-sublabels = ["it", "os", "ne", "sr", "nb", "on", "re","oh", "en", "ra", "dtp", "fi", "lt", "oi", "rv","ob", "rs", "av", "oo""ds", "ed", "oe"]
+#sublabels = ["it", "os", "ne", "sr", "nb", "on", "re","oh", "en", "ra", "dtp", "fi", "lt", "oi", "rv","ob", "rs", "av", "oo""ds", "ed", "oe"]
+sublabels = ["IT", "OS", "NE", "SR", "NB", "ON", "RE","OH", "EN", "RA", "DTP", "FI", "LT", "OI", "RV","OB", "RS", "AV", "OO""DS", "ED", "OE"]
 
 labels_all_hierarchy_with_other = {
     "MT": ["MT"],
     "LY": ["LY"],
-    "SP": ["SP", "it", "os"],
+    "SP": ["SP", "IT", "OS"],
     "ID": ["ID"],
-    "NA": ["NA", "ne", "sr", "nb", "on"],
-    "HI": ["HI", "re", "oh"],
-    "IN": ["IN", "en", "ra", "dtp", "fi", "lt", "oi"],
-    "OP": ["OP", "rv", "ob", "rs", "av", "oo"],
-    "IP": ["IP", "ds", "ed", "oe"],
+    "NA": ["NA", "NE", "SR", "NB", "ON"],
+    "HI": ["HI", "RE", "OH"],
+    "IN": ["IN", "EN", "RA", "DTP", "FI", "LT", "OI"],
+    "OP": ["OP", "RV", "OB", "RS", "AV", "OO"],
+    "IP": ["IP", "DS", "ED", "OE"],
 }
 # above dictionary reversed for easier lookup
 reverse_hierarchy = {}
@@ -188,7 +189,7 @@ def wrap_text(text, width, truncate=True):
     return '<br>'.join([text[i:i+width] for i in range(0, len(text), width)])
 
 
-def plot_embeddings_with_hover(df_plot, data_column, color_column, options, title=None):
+def plot_embeddings_with_hover(df_plot, data_column, color_column, options, column_name, title=None):
 
     if title is None:
         title = f'Embeddings with {options.model_name} from {options.data_name}'
@@ -212,9 +213,10 @@ def plot_embeddings_with_hover(df_plot, data_column, color_column, options, titl
         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
         })
     # Save the figure as an HTML file
-    html_file = os.path.join(options.save_dir, f'{options.save_prefix}_wrt_{fig_label.get(color_column, color_column)}_{data_column}.html')
-    if not os.path.exists(options.save_dir):
-        os.makedirs(options.save_dir)
+    html_file = os.path.join(options.save_dir, column_name, f'{options.save_prefix}_wrt_{fig_label.get(color_column, color_column)}_{data_column}.html')
+    subpath = os.path.join(options.save_dir, column_name)
+    if not os.path.exists(subpath):
+        os.makedirs(subpath)
     fig.write_html(html_file)
     
     # Add custom JavaScript for copying to clipboard

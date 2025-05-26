@@ -33,7 +33,8 @@ embedding_columns=["embed_last"]#, "embed_first" ,"embed_half", "embed_last"]
 all_labels = ["HI","ID","IN","IP","LY","MT","NA","OP","SP"]
 main_labels = ["HI","ID","IN","IP","NA","OP"]
 without_MT = ["HI","ID","IN","IP","LY","NA","OP","SP"]
-sublabels = ["it", "os", "ne", "sr", "nb", "on", "re","oh", "en", "ra", "dtp", "fi", "lt", "oi", "rv","ob", "rs", "av", "oo""ds", "ed", "oe"]
+#sublabels = ["it", "os", "ne", "sr", "nb", "on", "re","oh", "en", "ra", "dtp", "fi", "lt", "oi", "rv","ob", "rs", "av", "oo""ds", "ed", "oe"]
+sublabels = ["IT", "OS", "NE", "SR", "NB", "ON", "RE", "OH", "EN", "RA", "DTP", "FI", "LT", "OI", "RV", "OB", "RS", "AV", "OO", "DS", "ED", "OE"]
 
 # percentage of the colorwheel not used in the plots;
 # high values choose more similar colors for a method, e.g. blueish for kmeans, redish for spherical
@@ -380,9 +381,9 @@ def create_colormap(results, methods):
             colors[m][p] = c
     return colors
 
-def plot_results(results, options):
+def plot_results(results, options, column):
 
-    num_labels=len(options.labels)
+    num_labels=25 #len(options.labels)
 
     # Initialize the figure
     # fig = go.Figure()
@@ -457,7 +458,7 @@ def plot_results(results, options):
     fig.update_yaxes(title_text="Score", row=1, col=1)
     fig.update_yaxes(title_text="Score", row=1, col=2)
     langs = "-".join(options.languages)
-    save_name = os.path.join(options.save_dir, options.save_prefix+"_"+langs+"_sample"+str(options.sample)+".html")
+    save_name = os.path.join(options.save_dir, column, options.save_prefix+"_"+langs+"_sample"+str(options.sample)+".html")
     pio.write_html(fig, file=save_name, auto_open=False)
 
 
@@ -468,7 +469,7 @@ def parse_params_further(options):
     """
     # number of clusters needed:
     if options.n_clusters is None:
-        options.n_clusters = [2, len(options.labels)*len(options.languages)+1]
+        options.n_clusters = [2, 25*len(options.languages)+1]
 
     # change this to something that can be looped through
     if options.clustering_method == "all":
@@ -477,7 +478,8 @@ def parse_params_further(options):
         options.clustering_method = [options.clustering_method]
             
     try:
-        os.makedirs(options.save_dir, exist_ok=True)
+        for column in options.use_column_embeddings:
+            os.makedirs(options.save_dir + column, exist_ok=True)
     except Exception as e:
         print("Cannot create save directory.")
         print(e)
@@ -537,7 +539,7 @@ if __name__=="__main__":
     print(options)
     
     print("\nReading data")
-    df = read_and_process_data(options)
+    df = read_and_process_data(options, sublabels)
     print(f"\nParsing columns {options.use_column_embeddings} to float.")
     parse_to_float(df, options.use_column_embeddings)
 
@@ -556,7 +558,7 @@ if __name__=="__main__":
         results, data = reduction_loop(x, y, options)
 
         print("\nCalculations done, plotting...")
-        plot_results(results, options)
+        plot_results(results, options, column)
         print("Trying to print best clusters...")
         ext_df = from_dict_to_pandas(data, options)
         
@@ -566,20 +568,20 @@ if __name__=="__main__":
         if options.hover_text:
             ext_df[options.hover_text] = np.array(df[options.hover_text].values.tolist())
 
-        ext_df.to_csv(options.save_dir+"data.tsv", sep='\t')
+        ext_df.to_csv(options.save_dir+column+"/data.tsv", sep='\t')
         plot_embeddings = plot_embeddings_with_hover if options.hover_text is not None else plot_embeddings_normal
         for c in options.clustering_method:
             for m in ["pca", "umap"]:#options.reduction_method:
                 if f"{m}_2" in results.keys():  # results for two dims
                     best_silh_dim, best_ari_dim = find_max_values(results[f"{m}_2"][c])
                     options.save_prefix = f"true_labels_{m}"
-                    plot_embeddings(ext_df, "umap_data_2", "label_for_umap", options, title= f"Real labels ({len(options.labels)}) from {options.model_name} on {options.data_name}")
+                    plot_embeddings(ext_df, "umap_data_2", "label_for_umap", options, column, title= f"Real labels (25) from {options.model_name} on {options.data_name}")
                     options.save_prefix = f"langs_{m}"
-                    plot_embeddings(ext_df, "umap_data_2", "lang", options, title= f"Languages ({len(options.labels)}) from {options.model_name} on {options.data_name}")
+                    plot_embeddings(ext_df, "umap_data_2", "lang", options, column, title= f"Languages ({len(options.languages)}) from {options.model_name} on {options.data_name}")
                     options.save_prefix = f"{m}_{c}_max_ari"
-                    plot_embeddings(ext_df, "umap_data_2", f"umap_labels_2_{c}_{best_ari_dim}", options, title= f"{c} dim={best_ari_dim} from {options.model_name} on {options.data_name}")
+                    plot_embeddings(ext_df, "umap_data_2", f"umap_labels_2_{c}_{best_ari_dim}", options, column, title= f"{c} dim={best_ari_dim} from {options.model_name} on {options.data_name}")
                     options.save_prefix = f"{m}_{c}_max_silh"
-                    plot_embeddings(ext_df, "umap_data_2", f"umap_labels_2_{c}_{best_silh_dim}", options, title= f"{c} dim={best_silh_dim} from {options.model_name} on {options.data_name}")
+                    plot_embeddings(ext_df, "umap_data_2", f"umap_labels_2_{c}_{best_silh_dim}", options, column, title= f"{c} dim={best_silh_dim} from {options.model_name} on {options.data_name}")
                 else:
                     print(f"No results for {c} x {m} dim 2")
             

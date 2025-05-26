@@ -1,24 +1,31 @@
 #!/bin/bash
 #SBATCH --job-name=embeddings
 #SBATCH --account=project_462000353
-#SBATCH --time=02:45:00
+#SBATCH --time=72:00:00
 #SBATCH --partition=small-g
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=2
-#SBATCH --mem-per-cpu=12G
+#SBATCH --mem=192G
 #SBATCH --gpus-per-node=1
 #SBATCH -o logs/%j.out
 #SBATCH -e logs/%j.err
 
+# If run without sbatch, invoke here
+if [ -z "$SLURM_JOB_ID" ]; then
+	sbatch "$0" "$@"
+    exit
+fi
 
-data_name=$1
-model_name=$2
-fold=$3
+# See http://redsymbol.net/articles/unofficial-bash-strict-mode/
+set -euo pipefail
+
+data_name="cleaned" #$1
+model_name="bge-m3" #$2
+fold=6 #$3
 
 case $data_name in
     CORE)
-        langs=("en" "fi" "fr" "sv" "tr")
+        langs=("en" "fi" "sv") #("en" "fi" "fr" "sv" "tr")
         ;;
     register_oscar)
         langs=("en" "fr" "ur" "zh")
@@ -30,7 +37,7 @@ case $data_name in
         langs=("en" "fr" "ur" "zh")
         ;;
     cleaned)
-        langs=("en" "fa" "fi" "fr" "sv" "ur" "tr" "zh")
+        langs=("en" "fi" "fr" "sv") #("en" "fa" "fi" "fr" "sv" "ur" "tr" "zh")
         ;;
     dirty)
         langs=("en" "fa" "fi" "fr" "sv" "ur" "tr" "zh")
@@ -41,6 +48,7 @@ case $data_name in
         ;;
 esac
 
+export HF_DATASETS_CACHE="/scratch/project_462000353/tlundber/hf_cache"
 
 echo $langs, $data_name, $model_name, $fold
 module purge
@@ -50,8 +58,8 @@ module use /appl/local/csc/modulefiles
 module load pytorch/2.4
 
 for lang in "${langs[@]}"; do
-    srun python3 embeds.py --lang=$lang --data_name=$data_name --model_name=$model_name --fold=$fold
-    #echo python3 embeds.py --lang=$lang --data_name=$data_name --model_name=$model_name --fold=$fold
+	srun python3 embeds.py --lang=$lang --data_name=$data_name --model_name=$model_name --fold=$fold
+    #echo "python3 embeds.py --lang=$lang --data_name=$data_name --model_name=$model_name --fold=$fold"
 done
 sacct --format="jobid,Elapsed" -j $SLURM_JOBID 
 mkdir -p logs/embeds_${model_name}_${fold}_${data_name}/${lang}/
