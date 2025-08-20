@@ -7,6 +7,7 @@ dest = sys.argv[2]
 
 df = pd.read_csv(source, sep='\t')
 df['doc_length'] = df['text'].str.split().str.len()
-aggr = df.groupby('preds')['doc_length'].agg(['count', 'median', 'std'])
+#aggr = df.groupby('preds')['doc_length'].agg(['count', 'median', 'std'])
+aggr = df['doc_length'].agg(['count', 'median', 'std'])
 
-aggr.to_csv(f'{dest}/{os.path.basename(source)}', sep='\t')
+aggr.to_csv(f'{dest}/totals_{os.path.basename(source)}', sep='\t')
