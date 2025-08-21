@@ -235,6 +235,10 @@ def apply_pca(x: np.array, n_dim: int, options):
     return z
 
 def apply_umap(x: np.array, n_dim: int, options):
+    # Handle the case where n_components >= data size - 1, for testing with very small data sets
+    if n_dim >= x.shape[0] - 1:
+        print(f"Warning: n_dim ({n_dim}) >= number of samples ({x.shape[0]}). Setting n_dim = {x.shape[0] - 2}.")
+        n_dim = max(1, x.shape[0] - 2) # See https://github.com/lmcinnes/umap/issues/201
     if options.seed is not None:
         reducer = umap.UMAP(n_neighbors=options.n_neighbors, min_dist=options.min_dist, n_components=n_dim, random_state=options.seed)
     else:
@@ -296,6 +300,8 @@ def cluster_loop(x, y, options):
         labels = {}
         for d in range(*options.n_clusters):
             cluster_labels=cluster_(method)(x, d)    #redirects to correct function
+            #print("d: ", d)
+            #print("cluster_labels: ", cluster_labels)
             if cluster_labels is not None:
                 silh = calculate_silhouette_score(x, np.array(cluster_labels).reshape(-1,))
                 ARI = calculate_ari(y, np.array(cluster_labels))
@@ -547,6 +553,10 @@ if __name__=="__main__":
     for column in options.use_column_embeddings:
         x = np.array(df[column].values.tolist())
         given_labels = np.array(df["label_for_umap"].values.tolist())
+
+        # A dirty hack to make clustering loop work in cases where not all labels are present in the data
+        unique_labels, _ = np.unique(df["label_for_umap"], return_counts=True)
+        options.n_clusters = [2, len(unique_labels)*len(options.languages)+1]
 
         print("\nNormalizing and encoding labels")
         # handle a couple things more (labels need to be numerical for ARI)

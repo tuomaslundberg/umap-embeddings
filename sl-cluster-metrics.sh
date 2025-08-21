@@ -1,11 +1,11 @@
 #!/bin/bash
 #SBATCH --job-name=clustering
 #SBATCH --account=project_462000353
-#SBATCH --partition=small
-#SBATCH --time=24:00:00
+#SBATCH --partition=debug
+#SBATCH --time=00:10:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --mem=256G
+#SBATCH --mem=64G
 #SBATCH --cpus-per-task=16
 #SBATCH -o logs/%x_%j.out
 #SBATCH -e logs/%x_%j.err
@@ -24,31 +24,32 @@ module use /appl/local/csc/modulefiles
 module load pytorch
 #source .venv/bin/activate
 
-[[ "$PYTHONPATH" != *"/scratch/project_462000353/tlundber/umap-embeddings/pythonuserbase/lib/python3.10/site-packages"* ]] && \
-export PYTHONPATH="/scratch/project_462000353/tlundber/umap-embeddings/pythonuserbase/lib/python3.10/site-packages:$PYTHONPATH"
+[[ "$PYTHONPATH" != *"/scratch/project_462000353/tlundber/pythonuserbase/lib/python3.11/site-packages"* ]] && \
+export PYTHONPATH="/scratch/project_462000353/tlundber/pythonuserbase/lib/python3.11/site-packages:$PYTHONPATH"
 
 pip install -r requirements.txt
 
-model="bge-m3-fold-6"
-data="cleaned"
+model="model_name_test"
+data="data_name_test"
 #data="hplt"
 #data="CORE"
 
 echo $model $data "cluster metrics"
 
+#                           --langs="['en', 'fr', 'ur', 'zh']" \
+
 #: '
-srun python clusters.py --data="/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/${data}/${model}/" \
-                           --langs="['en', 'fi', 'fr', 'sv']" \
+srun python clusters.py --data="/scratch/project_462000353/tlundber/umap-embeddings/test/read/" \
+                           --langs="['en']" \
                            --data_name=$data \
                            --model_name=$model \
                            --labels="all" \
                            --hover_text="text" \
-                           --sample=2400 \
                            --cmethod="all" \
                            --rmethod="umap" \
                            --n_umap="[2,4,1]" \
-                           --save_dir="/scratch/project_462000353/tlundber/umap-embeddings/data/cluster_plots/${data}/${model}/with_hover/" \
-						   --column_e="['embed_last', 'embed_first']" \
+                           --save_dir="/scratch/project_462000353/tlundber/umap-embeddings/test/write/" \
+						   --column_e="['embed_last']" \
 						   --column_l="preds" \
 						   --keep_sublabels="True" \
 # '
