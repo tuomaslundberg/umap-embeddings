@@ -262,7 +262,8 @@ def parse_to_float(df: pd.DataFrame, columns):
     for column in columns:
         try:
             df[column] = df[column].apply(
-                lambda x: np.array([float(y) for y in eval(x)[0]])   # remove [0], if your embeds are [x1, x2, ...]
+                #lambda x: np.array([float(y) for y in eval(x)[0]])   # remove [0], if your embeds are [x1, x2, ...]
+                lambda x: np.array([float(y) for y in eval(x)])   # remove [0], if your embeds are [x1, x2, ...]
             )
         except:
             try:
