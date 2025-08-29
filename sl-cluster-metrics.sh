@@ -29,30 +29,29 @@ export PYTHONPATH="/scratch/project_462000353/tlundber/pythonuserbase/lib/python
 
 pip install -r requirements.txt
 
-model="model_name_test"
-data="data_name_test"
+model="BGE register classifier (all folds)"
+data="SACX keywords"
 #data="hplt"
 #data="CORE"
 
 echo $model $data "cluster metrics"
 
-#                           --langs="['en', 'fr', 'ur', 'zh']" \
-
 #: '
-srun python clusters.py --data="/scratch/project_462000353/tlundber/umap-embeddings/test/read/" \
-                           --langs="['en']" \
-                           --data_name=$data \
-                           --model_name=$model \
+srun python clusters.py --data="/scratch/project_462000353/tlundber/sacx-kw-clustering/output/avg-embeddings/" \
+                           --langs="['en', 'fr', 'ur', 'zh']" \
+                           --data_name="$data" \
+                           --model_name="$model" \
                            --labels="all" \
                            --hover_text="text" \
                            --cmethod="all" \
                            --rmethod="umap" \
                            --n_umap="[2,4,1]" \
-                           --save_dir="/scratch/project_462000353/tlundber/umap-embeddings/test/write/" \
+                           --save_dir="/scratch/project_462000353/tlundber/umap-embeddings/sacx-keyword-clusters/" \
 						   --column_e="['embed_last']" \
 						   --column_l="preds" \
-						   --keep_sublabels="True" \
 # '
+
+#						   --keep_sublabels="True" \ if there are any. check label dist before running this
 
 sacct -j "$SLURM_JOB_ID"
 exit 0

@@ -390,7 +390,7 @@ def create_colormap(results, methods):
 
 def plot_results(results, options, column):
 
-    num_labels=25 #len(options.labels)
+    num_labels=25 #len(options.labels) #TODO: unique labels vrm toimii, tai sit ehkä täki mikä on kommentoitu pois
 
     # Initialize the figure
     # fig = go.Figure()
@@ -586,7 +586,7 @@ if __name__=="__main__":
                 if f"{m}_2" in results.keys():  # results for two dims
                     best_silh_dim, best_ari_dim = find_max_values(results[f"{m}_2"][c])
                     options.save_prefix = f"true_labels_{m}"
-                    plot_embeddings(ext_df, "umap_data_2", "label_for_umap", options, column, title= f"Real labels (25) from {options.model_name} on {options.data_name}")
+                    plot_embeddings(ext_df, "umap_data_2", "label_for_umap", options, column, title= f"Real labels ({len(unique_labels)}) from {options.model_name} on {options.data_name}")
                     options.save_prefix = f"langs_{m}"
                     plot_embeddings(ext_df, "umap_data_2", "lang", options, column, title= f"Languages ({len(options.languages)}) from {options.model_name} on {options.data_name}")
                     options.save_prefix = f"{m}_{c}_max_ari"
