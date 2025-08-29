@@ -15,7 +15,7 @@ import os
 def argparser():
     ap = ArgumentParser(formatter_class=ArgumentDefaultsHelpFormatter)
     ap.add_argument('--model_name', type=str, metavar='STR', default=None, required=True, 
-                    choices = ["bge-m3"],help='Which model to use.')
+                    choices = ["bge-m3", "xlm-r-reference"],help='Which model to use.')
     ap.add_argument('--fold','--fold_number', type=int, metavar="INT", default=None,
                     help='Fold for models with different splits')
     ap.add_argument('--data_name', type=str, metavar='STR', required=True,
@@ -64,7 +64,7 @@ data_dict = lambda lang: {"CORE": f'/scratch/project_462000353/amanda/register-c
 options = argparser().parse_args(sys.argv[1:])
 if options.model_name in ["bge-m3"]:
     assert options.fold is not None, "No fold given for bge-m3."
-options.model_path = model_dict(options.fold)[options.model_name]
+#options.model_path = model_dict(options.fold)[options.model_name]
 options.data_path = data_dict(options.language)[options.data_name]
 options.labels = label_dict[options.model_name]
 if options.save_path is None:
