@@ -21,7 +21,7 @@ fi
 set -euo pipefail
 
 data_name="cleaned" #$1
-model_name="bge-m3" #$2
+model_name="xlm-r-reference" #$2
 fold=6 #$3
 
 case $data_name in
@@ -60,8 +60,8 @@ module load pytorch/2.4
 
 lang=${langs[$SLURM_ARRAY_TASK_ID]}
 
-python3 embeds.py --lang=$lang --data_name=$data_name --model_name=$model_name --fold=$fold
-#echo "python3 embeds.py --lang=$lang --data_name=$data_name --model_name=$model_name --fold=$fold"
+python3 embeds.py --lang=$lang --data_name=$data_name --model_name=$model_name
+#echo "python3 embeds.py --lang=$lang --data_name=$data_name --model_name=$model_name"
 sacct --format="jobid,Elapsed" -j $SLURM_JOBID
 mkdir -p logs/embeds_${model_name}_${fold}_${data_name}/${lang}/
 mv logs/${SLURM_JOBID}.* logs/embeds_${model_name}_${fold}_${data_name}/${lang}/

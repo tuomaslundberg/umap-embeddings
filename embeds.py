@@ -49,9 +49,12 @@ lang_map = {
     "sv": "swe_Latn",
 }
 
-label_dict = {"bge-m3":np.array(["MT", "LY", "SP", "ID", "NA", "HI", "IN", "OP", "IP",
+label_dict = {
+	"bge-m3":np.array(["MT", "LY", "SP", "ID", "NA", "HI", "IN", "OP", "IP",
                                  "IT", "NE", "SR", "NB", "RE", "EN", "RA", "DTP", "FI",
-                                 "LT", "RV", "OB", "RS", "AV", "DS", "ED"])}
+                                 "LT", "RV", "OB", "RS", "AV", "DS", "ED"]),
+	"xlm-r-reference":np.array([]),
+}
 
 data_dict = lambda lang: {"CORE": f'/scratch/project_462000353/amanda/register-clustering/data/datasets/CORE/{lang}.hf',
                           "hplt": f'/scratch/project_462000353/amanda/register-clustering/data/datasets/hplt/{lang}.hf',
@@ -70,7 +73,8 @@ if options.save_path is None:
         options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}-fold-{options.fold}/th-optimised/'
     else:
        #options.save_path = f'/scratch/project_462000353/amanda/register-clustering/data/model_embeds/{options.data_name}/{options.model_name}/' 
-       options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}/th-optimised/' 
+       #options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}/th-optimised/' # TODO: joko omaan polkuunsa tai sit katenoidaan olemassaolevan datan perään
+       options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}_test/'
 os.makedirs(options.save_path, exist_ok=True)
 
 num_labels=len(options.labels)
@@ -81,8 +85,9 @@ device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 #dataset = datasets.load_from_disk(options.data_path)
 dataset = datasets.load_dataset('json', data_files=options.data_path)
+dataset['train'] = dataset['train'].select(range(min(10, len(dataset['train']))))
 #print(dataset)
-model = AutoModelForSequenceClassification.from_pretrained(options.model_path)
+model = AutoModelForSequenceClassification.from_pretrained(base_model_name)
 tokenizer = AutoTokenizer.from_pretrained(base_model_name)
 model.to(device)
 
@@ -162,6 +167,7 @@ df = pd.DataFrame(results)
 del dataset
 
 # predictions for 0.5 threshold; applicable to all data
+'''
 predictions = df["prediction"]
 if(options.language == 'sv'):
 	binary_predictions = [(prediction > 0.35).astype(int).tolist() for prediction in predictions]
@@ -169,6 +175,7 @@ else:
 	binary_predictions = [(prediction > 0.4).astype(int).tolist() for prediction in predictions]
 preds = [options.labels[np.where(np.array(sublist) == 1)[0]].tolist() for sublist in binary_predictions]
 df["preds"] = preds
+'''
 
 #df.to_csv('dataframe.csv')
 #print(df['labels'].head(20))
