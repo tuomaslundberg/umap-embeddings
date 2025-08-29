@@ -1,15 +1,15 @@
 #!/bin/bash
 #SBATCH --job-name=embeddings
 #SBATCH --account=project_462000353
-#SBATCH --time=72:00:00
-#SBATCH --partition=small-g
+#SBATCH --time=00:01:00
+#SBATCH --partition=dev-g
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --mem=192G
+#SBATCH --mem=16G
 #SBATCH --gpus-per-node=1
 #SBATCH -o logs/%j.out
 #SBATCH -e logs/%j.err
-#SBATCH --array=0-3
+#SBATCH --array=0
 
 # If run without sbatch, invoke here
 if [ -z "$SLURM_JOB_ID" ]; then
