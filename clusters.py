@@ -388,9 +388,9 @@ def create_colormap(results, methods):
             colors[m][p] = c
     return colors
 
-def plot_results(results, options, column):
+def plot_results(results, options, column, unique_labels):
 
-    num_labels=25 #len(options.labels) #TODO: unique labels vrm toimii, tai sit ehkä täki mikä on kommentoitu pois
+    num_labels = len(unique_labels) #25 #len(options.labels) #TODO: unique labels vrm toimii, tai sit ehkä täki mikä on kommentoitu pois
 
     # Initialize the figure
     # fig = go.Figure()
@@ -569,7 +569,7 @@ if __name__=="__main__":
         results, data = reduction_loop(x, y, options)
 
         print("\nCalculations done, plotting...")
-        plot_results(results, options, column)
+        plot_results(results, options, column, unique_labels)
         print("Trying to print best clusters...")
         ext_df = from_dict_to_pandas(data, options)
         
