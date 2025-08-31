@@ -9,7 +9,7 @@
 #SBATCH --gpus-per-node=1
 #SBATCH -o logs/%j.out
 #SBATCH -e logs/%j.err
-#SBATCH --array=0-3
+#SBATCH --array=0
 
 # If run without sbatch, invoke here
 if [ -z "$SLURM_JOB_ID" ]; then
@@ -38,7 +38,7 @@ case $data_name in
         langs=("en" "fr" "ur" "zh")
         ;;
     cleaned)
-        langs=("en" "fi" "fr" "sv") #("en" "fa" "fi" "fr" "sv" "ur" "tr" "zh")
+        langs=("th") #("en" "fi" "fr" "sv") #("en" "fa" "fi" "fr" "sv" "ur" "tr" "zh")
         ;;
     dirty)
         langs=("en" "fa" "fi" "fr" "sv" "ur" "tr" "zh")
@@ -56,7 +56,7 @@ module purge
 #module load LUMI
 #module load PyTorch/2.2.0-rocm-5.6.1-python-3.10-singularity-20240315
 module use /appl/local/csc/modulefiles
-module load pytorch/2.4
+module load pytorch #/2.4
 
 lang=${langs[$SLURM_ARRAY_TASK_ID]}
 

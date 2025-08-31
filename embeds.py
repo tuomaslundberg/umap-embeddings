@@ -47,6 +47,7 @@ lang_map = {
     "fi": "fin_Latn",
     "fr": "fra_Latn",
     "sv": "swe_Latn",
+    "th": "tha_Thai",
 }
 
 label_dict = {"bge-m3":np.array(["MT", "LY", "SP", "ID", "NA", "HI", "IN", "OP", "IP",
