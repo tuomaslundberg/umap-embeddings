@@ -43,8 +43,10 @@ COLORSEPARATION = 0.4
 
 
 # This for easy parsing of label parameters; if given as a list, that is used, else checking for keywords
+# NB: Type-checking doesn't work here! `l` is always passed as a string from the
+# command line. Using a workaround here to get on with my day
 def parse_labels(l):
-    if type(l)==list:
+    if type(eval(l))==list:
         return l
     elif l == "upper" or l == "all":
         return all_labels
@@ -465,7 +467,7 @@ def plot_results(results, options, column, unique_labels):
     fig.update_yaxes(title_text="Score", row=1, col=1)
     fig.update_yaxes(title_text="Score", row=1, col=2)
     langs = "-".join(options.languages)
-    save_name = os.path.join(options.save_dir, column, options.save_prefix+"_"+langs+"_sample"+str(options.sample)+".html")
+    save_name = os.path.join(options.save_dir, column, options.labels[0].lower(), options.save_prefix+"_"+langs+"_sample"+str(options.sample)+".html")
     pio.write_html(fig, file=save_name, auto_open=False)
 
 
@@ -486,7 +488,8 @@ def parse_params_further(options):
             
     try:
         for column in options.use_column_embeddings:
-            os.makedirs(options.save_dir + column, exist_ok=True)
+            path = os.path.join(options.save_dir, column, options.labels[0].lower())
+            os.makedirs(path, exist_ok=True)
     except Exception as e:
         print("Cannot create save directory.")
         print(e)
@@ -540,6 +543,7 @@ def find_max_values(data):
 
 if __name__=="__main__":
     options = ap.parse_args(sys.argv[1:])
+    options.labels = eval(options.labels)
     # parse this mfs
     options = parse_params_further(options)
     
@@ -579,7 +583,7 @@ if __name__=="__main__":
         if options.hover_text:
             ext_df[options.hover_text] = np.array(df[options.hover_text].values.tolist())
 
-        ext_df.to_csv(options.save_dir+column+"/data.tsv", sep='\t')
+        ext_df.to_csv(options.save_dir+column+"/"+options.labels[0].lower()+"/data.tsv", sep='\t')
         plot_embeddings = plot_embeddings_with_hover if options.hover_text is not None else plot_embeddings_normal
         for c in options.clustering_method:
             for m in ["pca", "umap"]:#options.reduction_method:

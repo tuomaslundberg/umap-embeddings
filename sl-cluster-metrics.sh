@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=clustering
 #SBATCH --account=project_462000353
-#SBATCH --partition=debug
+#SBATCH --partition=small
 #SBATCH --time=00:10:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -9,6 +9,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH -o logs/%x_%j.out
 #SBATCH -e logs/%x_%j.err
+#SBATCH --array=0-8
 
 # If run without sbatch, invoke here
 if [ -z "$SLURM_JOB_ID" ]; then
@@ -34,6 +35,9 @@ data="SACX keywords"
 #data="hplt"
 #data="CORE"
 
+registers=("MT" "LY" "SP" "ID" "NA" "HI" "IN" "OP" "IP")
+reg=${registers[$SLURM_ARRAY_TASK_ID]}
+
 echo $model $data "cluster metrics"
 
 #: '
@@ -41,12 +45,12 @@ srun python clusters.py --data="/scratch/project_462000353/tlundber/sacx-kw-clus
                            --langs="['en', 'fr', 'ur', 'zh']" \
                            --data_name="$data" \
                            --model_name="$model" \
-                           --labels="all" \
+                           --labels="['$reg']" \
                            --hover_text="text" \
                            --cmethod="all" \
                            --rmethod="umap" \
                            --n_umap="[2,4,1]" \
-                           --save_dir="/scratch/project_462000353/tlundber/umap-embeddings/sacx-keyword-clusters/" \
+                           --save_dir="/scratch/project_462000353/tlundber/umap-embeddings/sacx-keyword-clusters/per-register/" \
 						   --column_e="['embed_last']" \
 						   --column_l="preds" \
 # '
