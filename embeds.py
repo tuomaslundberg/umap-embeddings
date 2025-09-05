@@ -19,7 +19,7 @@ def argparser():
     ap.add_argument('--fold','--fold_number', type=int, metavar="INT", default=None,
                     help='Fold for models with different splits')
     ap.add_argument('--data_name', type=str, metavar='STR', required=True,
-                    choices=["CORE", "hplt", "cleaned"],
+                    choices=["CORE", "hplt", "cleaned", "concat"],
                     help='Which data to use.')
     ap.add_argument('--language','--lang', type=str, default=None, required=True, metavar='str',
                     help='which language to use.')
@@ -47,6 +47,7 @@ lang_map = {
     "fi": "fin_Latn",
     "fr": "fra_Latn",
     "sv": "swe_Latn",
+    "th": "tha_Thai",
 }
 
 label_dict = {
@@ -58,7 +59,9 @@ label_dict = {
 
 data_dict = lambda lang: {"CORE": f'/scratch/project_462000353/amanda/register-clustering/data/datasets/CORE/{lang}.hf',
                           "hplt": f'/scratch/project_462000353/amanda/register-clustering/data/datasets/hplt/{lang}.hf',
-                          "cleaned": f'/scratch/project_462000353/tlundber/hplt-samples/clean/{lang_map[lang]}.shuf',}
+                          "cleaned": f'/scratch/project_462000353/tlundber/hplt-samples/clean/{lang_map[lang]}.shuf',
+                          "concat": f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/cleaned/bge-m3-fold-6/th-optimised/{lang}_embeds.tsv',} # PROD
+                          #"concat": f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/cleaned/bge-m3-fold-6/th-optimised/{lang}test.tsv',} # TEST
 
 
 options = argparser().parse_args(sys.argv[1:])
@@ -73,19 +76,21 @@ if options.save_path is None:
         options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}-fold-{options.fold}/th-optimised/'
     else:
        #options.save_path = f'/scratch/project_462000353/amanda/register-clustering/data/model_embeds/{options.data_name}/{options.model_name}/' 
-       #options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}/th-optimised/' # TODO: joko omaan polkuunsa tai sit katenoidaan olemassaolevan datan perään
-       options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}_test/'
+       options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}/th-optimised/'
+       #options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}_test/'
 os.makedirs(options.save_path, exist_ok=True)
 
 num_labels=len(options.labels)
 label2id = {v:k for k,v in enumerate(options.labels)}
-extract_labels = False if options.data_name in ["cleaned", "dirty"] else True
+extract_labels = False if options.data_name in ["cleaned", "dirty", "concat"] else True
 base_model_name ="xlm-roberta-base"
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 #dataset = datasets.load_from_disk(options.data_path)
-dataset = datasets.load_dataset('json', data_files=options.data_path)
-dataset['train'] = dataset['train'].select(range(min(10, len(dataset['train']))))
+dataset = datasets.load_dataset('csv', data_files=options.data_path, sep="\t")
+#print(dataset)
+#sys.exit()
+#dataset['train'] = dataset['train'].select(range(min(10, len(dataset['train']))))
 #print(dataset)
 model = AutoModelForSequenceClassification.from_pretrained(base_model_name)
 tokenizer = AutoTokenizer.from_pretrained(base_model_name)
@@ -112,6 +117,8 @@ def predict(d, extract_labels=True):
     indices = np.array([0, len(hidden_states)//2, 3*len(hidden_states)//4, -1], dtype=int)
     embed = [torch.mean(hidden_states[i],axis=1).cpu().tolist() for i in indices]
     torch.cuda.empty_cache()
+    del d['encoded'], d['Unnamed: 0']
+    d['embed_ref'] = embed[2]
     #print(d)
     if extract_labels:
         true_labels = np.zeros(num_labels, dtype=int)
@@ -133,7 +140,7 @@ def predict(d, extract_labels=True):
                     "embed_last":embed[2]}
         else:
             return {"id":d["id"], "lang":d["lang"], "prediction":sigm, "labels": d["labels"], "vec_labels": true_labels, "embed_first":embed[0], "embed_half":embed[1], "embed_last":embed[2]}
-    return {"id":d["id"], "lang":d["lang"], "text":d["text"], "prediction":sigm, "embed_first":embed[0], "embed_half":embed[1], "embed_last":embed[2]}
+    return d #{"embed_ref":embed[2]}
 
 
 
@@ -143,7 +150,7 @@ def tokenize(d):
     return tokenizer(d["text"], return_tensors='pt', truncation=True)
 
 
-dataset = dataset.map(lambda line: {"encoded": tokenize(line), "lang": options.language})
+dataset = dataset.map(lambda line: {"encoded": tokenize(line)})#, "lang": options.language})
 #print(dataset['train'][0])
 #sys.exit()
 #dataset = dataset.map(lambda line: {"lang": options.language})
@@ -214,4 +221,4 @@ if extract_labels: #options.data_name != "cleaned":
 #print(df)
 # save results
 Path(options.save_path).mkdir(parents=True, exist_ok=True)
-df.to_csv(str(options.save_path)+str(options.language)+"_embeds.tsv", sep="\t", header=True)
+df.to_csv(str(options.save_path)+str(options.language)+"_embeds.tsv", sep="\t", header=True)#, index=False)

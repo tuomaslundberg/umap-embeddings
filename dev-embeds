@@ -5,7 +5,7 @@
 #SBATCH --partition=dev-g
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --mem=192G
+#SBATCH --mem=256G
 #SBATCH --gpus-per-node=1
 #SBATCH -o logs/%j.out
 #SBATCH -e logs/%j.err
@@ -20,7 +20,7 @@ fi
 # See http://redsymbol.net/articles/unofficial-bash-strict-mode/
 set -euo pipefail
 
-data_name="cleaned" #$1
+data_name="concat" #$1
 model_name="xlm-r-reference" #$2
 fold=6 #$3
 
@@ -40,6 +40,9 @@ case $data_name in
     cleaned)
         langs=("en" "fi" "fr" "sv") #("en" "fa" "fi" "fr" "sv" "ur" "tr" "zh")
         ;;
+	concat)
+		langs=("en" "fi" "fr" "sv" "th")
+		;;
     dirty)
         langs=("en" "fa" "fi" "fr" "sv" "ur" "tr" "zh")
         ;;
