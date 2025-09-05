@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH -o logs/%x_%j.out
 #SBATCH -e logs/%x_%j.err
-#SBATCH --array=0-3
+#SBATCH --array=0-8
 
 # If run without sbatch, invoke here
 if [ -z "$SLURM_JOB_ID" ]; then
@@ -35,22 +35,22 @@ data_name="SACX keywords"
 #data="hplt"
 #data="CORE"
 
-languages=("en" "fr" "ur" "zh")
-lang=${languages[$SLURM_ARRAY_TASK_ID]}
+registers=("MT" "LY" "SP" "ID" "NA" "HI" "IN" "OP" "IP")
+reg=${registers[$SLURM_ARRAY_TASK_ID]}
 
-echo "$model" "$data_name" "$lang" "cluster metrics"
+echo "$model" "$data_name" "$reg" "cluster metrics"
 
 #: '
 python clusters.py --data="$DATA/kw-embeddings/xlm-r" \
-                           --langs="['$lang']" \
+                           --langs="['en', 'fr', 'ur', 'zh']" \
                            --data_name="$data_name" \
                            --model_name="$model" \
-                           --labels="all" \
+                           --labels="['$reg']" \
                            --hover_text="text" \
                            --cmethod="all" \
                            --rmethod="umap" \
                            --n_umap="[2,4,1]" \
-                           --save_dir="$DATA/sacx-keyword-cluster-plots/xlm-r-reference/per-language" \
+                           --save_dir="$DATA/sacx-keyword-cluster-plots/xlm-r-reference/per-register" \
 						   --column_e="['embed_last']" \
 						   --column_l="preds" \
 # '
