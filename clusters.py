@@ -465,7 +465,7 @@ def plot_results(results, options, column, unique_labels):
     fig.update_yaxes(title_text="Score", row=1, col=1)
     fig.update_yaxes(title_text="Score", row=1, col=2)
     langs = "-".join(options.languages)
-    save_name = os.path.join(options.save_dir, column, options.save_prefix+"_"+langs+"_sample"+str(options.sample)+".html")
+    save_name = os.path.join(options.save_dir, column, options.languages[0], options.save_prefix+"_"+langs+"_sample"+str(options.sample)+".html")
     pio.write_html(fig, file=save_name, auto_open=False)
 
 
@@ -486,7 +486,8 @@ def parse_params_further(options):
             
     try:
         for column in options.use_column_embeddings:
-            os.makedirs(os.path.join(options.save_dir, column), exist_ok=True)
+            path = os.path.join(options.save_dir, column, options.languages[0], options.labels[0].lower())
+            os.makedirs(path, exist_ok=True)
     except Exception as e:
         print("Cannot create save directory.")
         print(e)
@@ -557,7 +558,9 @@ if __name__=="__main__":
 
         # A dirty hack to make clustering loop work in cases where not all labels are present in the data
         unique_labels, _ = np.unique(df["label_for_umap"], return_counts=True)
-        options.n_clusters = [2, len(unique_labels)*len(options.languages)+1]
+        #options.n_clusters = [2, len(unique_labels)*len(options.languages)+1]
+		# This is a heuristic for clustering substructure in single-label/single-language data!
+        options.n_clusters = [2, 5]
 
         print("\nNormalizing and encoding labels")
         # handle a couple things more (labels need to be numerical for ARI)
@@ -579,7 +582,7 @@ if __name__=="__main__":
         if options.hover_text:
             ext_df[options.hover_text] = np.array(df[options.hover_text].values.tolist())
 
-        ext_df.to_csv(os.path.join(options.save_dir, column, "data.tsv"), sep='\t')
+        ext_df.to_csv(options.save_dir+column+"/"+options.languages[0]+"/"+options.labels[0].lower()+"/data.tsv", sep='\t')
         plot_embeddings = plot_embeddings_with_hover if options.hover_text is not None else plot_embeddings_normal
         for c in options.clustering_method:
             for m in ["pca", "umap"]:#options.reduction_method:

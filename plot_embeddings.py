@@ -213,8 +213,8 @@ def plot_embeddings_with_hover(df_plot, data_column, color_column, options, colu
         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
         })
     # Save the figure as an HTML file
-    html_file = os.path.join(options.save_dir, column_name, f'{options.save_prefix}_wrt_{fig_label.get(color_column, color_column)}_{data_column}.html')
-    subpath = os.path.join(options.save_dir, column_name)
+    html_file = os.path.join(options.save_dir, column_name, options.languages[0], options.labels[0].lower(), f'{options.save_prefix}_wrt_{fig_label.get(color_column, color_column)}_{data_column}.html')
+    subpath = os.path.join(options.save_dir, column_name, options.languages[0], options.labels[0].lower())
     if not os.path.exists(subpath):
         os.makedirs(subpath)
     fig.write_html(html_file)

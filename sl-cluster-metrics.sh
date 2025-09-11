@@ -9,6 +9,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH -o logs/%x_%j.out
 #SBATCH -e logs/%x_%j.err
+#SBATCH --array=0-35
 
 # If run without sbatch, invoke here
 if [ -z "$SLURM_JOB_ID" ]; then
@@ -34,11 +35,17 @@ data_name="SACX keywords"
 #data="hplt"
 #data="CORE"
 
-echo "$model" "$data_name" "cluster metrics"
+registers=("MT" "LY" "SP" "ID" "NA" "HI" "IN" "OP" "IP")
+reg=${registers[$((SLURM_ARRAY_TASK_ID % 9))]}
+
+languages=("en" "fr" "ur" "zh")
+lang=${languages[$((SLURM_ARRAY_TASK_ID / 9))]}
+
+echo $model $data "cluster metrics"
 
 #: '
-srun python clusters.py --data="$DATA/kw-embeddings/xlm-r" \
-                           --langs="['en', 'fr', 'ur', 'zh']" \
+python clusters.py --data="$DATA/kw-embeddings/xlm-r" \
+                           --langs="['$lang']" \
                            --data_name="$data_name" \
                            --model_name="$model" \
                            --labels="all" \
