@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH -o logs/%x_%j.out
 #SBATCH -e logs/%x_%j.err
-#SBATCH --array=0-8
+#SBATCH --array=0-35
 
 # If run without sbatch, invoke here
 if [ -z "$SLURM_JOB_ID" ]; then
@@ -36,13 +36,16 @@ data="SACX keywords"
 #data="CORE"
 
 registers=("MT" "LY" "SP" "ID" "NA" "HI" "IN" "OP" "IP")
-reg=${registers[$SLURM_ARRAY_TASK_ID]}
+reg=${registers[$((SLURM_ARRAY_TASK_ID % 9))]}
+
+languages=("en" "fr" "ur" "zh")
+lang=${languages[$((SLURM_ARRAY_TASK_ID / 9))]}
 
 echo $model $data "cluster metrics"
 
 #: '
-srun python clusters.py --data="/scratch/project_462000353/tlundber/sacx-kw-clustering/output/avg-embeddings/" \
-                           --langs="['en', 'fr', 'ur', 'zh']" \
+python clusters.py --data="/scratch/project_462000353/tlundber/sacx-kw-clustering/output/avg-embeddings/" \
+                           --langs="['$lang']" \
                            --data_name="$data" \
                            --model_name="$model" \
                            --labels="['$reg']" \
@@ -50,7 +53,7 @@ srun python clusters.py --data="/scratch/project_462000353/tlundber/sacx-kw-clus
                            --cmethod="all" \
                            --rmethod="umap" \
                            --n_umap="[2,4,1]" \
-                           --save_dir="/scratch/project_462000353/tlundber/umap-embeddings/sacx-keyword-clusters/per-register/" \
+                           --save_dir="/scratch/project_462000353/tlundber/umap-embeddings/sacx-keyword-clusters/per-register-language/" \
 						   --column_e="['embed_last']" \
 						   --column_l="preds" \
 # '
