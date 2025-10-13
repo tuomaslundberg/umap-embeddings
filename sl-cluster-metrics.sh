@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=clustering
-#SBATCH --account=project_462000353
+#SBATCH --account=project_462000999
 #SBATCH --partition=debug
 #SBATCH --time=00:10:00
 #SBATCH --nodes=1
@@ -24,34 +24,32 @@ module use /appl/local/csc/modulefiles
 module load pytorch
 #source .venv/bin/activate
 
-[[ "$PYTHONPATH" != *"/scratch/project_462000353/tlundber/pythonuserbase/lib/python3.11/site-packages"* ]] && \
-export PYTHONPATH="/scratch/project_462000353/tlundber/pythonuserbase/lib/python3.11/site-packages:$PYTHONPATH"
+#[[ "$PYTHONPATH" != *"/scratch/project_462000353/tlundber/pythonuserbase/lib/python3.11/site-packages"* ]] && \
+#export PYTHONPATH="/scratch/project_462000353/tlundber/pythonuserbase/lib/python3.11/site-packages:$PYTHONPATH"
 
 pip install -r requirements.txt
 
-model="BGE register classifier (all folds)"
-data="SACX keywords"
+model="XLM-RoBERTa-large"
+data_name="SACX keywords"
 #data="hplt"
 #data="CORE"
 
-echo $model $data "cluster metrics"
+echo "$model" "$data_name" "cluster metrics"
 
 #: '
-srun python clusters.py --data="/scratch/project_462000353/tlundber/sacx-kw-clustering/output/avg-embeddings/" \
+srun python clusters.py --data="$DATA/kw-embeddings/xlm-r" \
                            --langs="['en', 'fr', 'ur', 'zh']" \
-                           --data_name="$data" \
+                           --data_name="$data_name" \
                            --model_name="$model" \
                            --labels="all" \
                            --hover_text="text" \
                            --cmethod="all" \
                            --rmethod="umap" \
                            --n_umap="[2,4,1]" \
-                           --save_dir="/scratch/project_462000353/tlundber/umap-embeddings/sacx-keyword-clusters/" \
+                           --save_dir="$DATA/sacx-keyword-cluster-plots/xlm-r-reference" \
 						   --column_e="['embed_last']" \
 						   --column_l="preds" \
 # '
-
-#						   --keep_sublabels="True" \ if there are any. check label dist before running this
 
 sacct -j "$SLURM_JOB_ID"
 exit 0

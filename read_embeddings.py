@@ -111,7 +111,7 @@ def read_and_process_data(options, sublabels):
         file = os.path.join(options.embeddings, filename)   # this is used for download
         _, file_extension = os.path.splitext(file)  # extension is used for download and selection
         # select files that have the given language(s) separated by _
-        matched_language = (next((lang for lang in options.languages if lang in filename.replace(file_extension,"").split("_")),None))
+        matched_language = (next((lang for lang in options.languages if lang in filename.replace(file_extension,"").split("-")),None))
         if matched_language:
             print(f'Reading {file}...', flush=True)
             df = read_file(file, file_extension, names=options.header)

@@ -486,7 +486,7 @@ def parse_params_further(options):
             
     try:
         for column in options.use_column_embeddings:
-            os.makedirs(options.save_dir + column, exist_ok=True)
+            os.makedirs(os.path.join(options.save_dir, column), exist_ok=True)
     except Exception as e:
         print("Cannot create save directory.")
         print(e)
@@ -579,7 +579,7 @@ if __name__=="__main__":
         if options.hover_text:
             ext_df[options.hover_text] = np.array(df[options.hover_text].values.tolist())
 
-        ext_df.to_csv(options.save_dir+column+"/data.tsv", sep='\t')
+        ext_df.to_csv(os.path.join(options.save_dir, column, "data.tsv"), sep='\t')
         plot_embeddings = plot_embeddings_with_hover if options.hover_text is not None else plot_embeddings_normal
         for c in options.clustering_method:
             for m in ["pca", "umap"]:#options.reduction_method:
