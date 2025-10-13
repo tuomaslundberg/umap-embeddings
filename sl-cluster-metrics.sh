@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=clustering
 #SBATCH --account=project_462000999
-#SBATCH --partition=debug
+#SBATCH --partition=small
 #SBATCH --time=00:10:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH -o logs/%x_%j.out
 #SBATCH -e logs/%x_%j.err
-#SBATCH --array=0-35
+#SBATCH --array=0-3
 
 # If run without sbatch, invoke here
 if [ -z "$SLURM_JOB_ID" ]; then
@@ -35,13 +35,10 @@ data_name="SACX keywords"
 #data="hplt"
 #data="CORE"
 
-registers=("MT" "LY" "SP" "ID" "NA" "HI" "IN" "OP" "IP")
-reg=${registers[$((SLURM_ARRAY_TASK_ID % 9))]}
-
 languages=("en" "fr" "ur" "zh")
-lang=${languages[$((SLURM_ARRAY_TASK_ID / 9))]}
+lang=${languages[$SLURM_ARRAY_TASK_ID]}
 
-echo $model $data "cluster metrics"
+echo "$model" "$data_name" "$lang" "cluster metrics"
 
 #: '
 python clusters.py --data="$DATA/kw-embeddings/xlm-r" \
@@ -53,7 +50,7 @@ python clusters.py --data="$DATA/kw-embeddings/xlm-r" \
                            --cmethod="all" \
                            --rmethod="umap" \
                            --n_umap="[2,4,1]" \
-                           --save_dir="$DATA/sacx-keyword-cluster-plots/xlm-r-reference" \
+                           --save_dir="$DATA/sacx-keyword-cluster-plots/xlm-r-reference/per-language" \
 						   --column_e="['embed_last']" \
 						   --column_l="preds" \
 # '
