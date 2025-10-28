@@ -242,9 +242,9 @@ def apply_umap(x: np.array, n_dim: int, options):
         print(f"Warning: n_dim ({n_dim}) >= number of samples ({x.shape[0]}). Setting n_dim = {x.shape[0] - 2}.")
         n_dim = max(1, x.shape[0] - 2) # See https://github.com/lmcinnes/umap/issues/201
     if options.seed is not None:
-        reducer = umap.UMAP(n_neighbors=options.n_neighbors, min_dist=options.min_dist, n_components=n_dim, random_state=options.seed)
+        reducer = umap.UMAP(n_neighbors=options.n_neighbors, min_dist=options.min_dist, n_components=n_dim, random_state=options.seed, metric='cosine')
     else:
-        reducer = umap.UMAP(n_neighbors=options.n_neighbors, min_dist=options.min_dist, n_components=n_dim)
+        reducer = umap.UMAP(n_neighbors=options.n_neighbors, min_dist=options.min_dist, n_components=n_dim, metric='cosine')
 
     # if given in params, apply pca before umap:
     if options.pca_before_umap is not None:
