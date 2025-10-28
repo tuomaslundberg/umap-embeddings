@@ -1,14 +1,15 @@
 #!/bin/bash
 #SBATCH --job-name=clustering
 #SBATCH --account=project_462000999
-#SBATCH --partition=debug
-#SBATCH --time=00:10:00
+#SBATCH --partition=small
+#SBATCH --time=00:20:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --mem=64G
 #SBATCH --cpus-per-task=16
 #SBATCH -o logs/%x_%j.out
 #SBATCH -e logs/%x_%j.err
+#SBATCH --array=0-15
 
 # If run without sbatch, invoke here
 if [ -z "$SLURM_JOB_ID" ]; then
@@ -29,7 +30,9 @@ module load pytorch
 
 pip install -r requirements.txt
 
-model="XLM-RoBERTa-large"
+read -r pca neighbors dist < <(sed -n "$((SLURM_ARRAY_TASK_ID + 1))p" param-grid-fasttext-embeddings.txt)
+
+model="fastText"
 data_name="SACX keywords"
 #data="hplt"
 #data="CORE"
@@ -37,16 +40,19 @@ data_name="SACX keywords"
 echo "$model" "$data_name" "cluster metrics"
 
 #: '
-srun python clusters.py --data="$DATA/kw-embeddings/xlm-r" \
+srun python clusters.py --data="$DATA/kw-embeddings/fasttext/centroid-norm" \
                            --langs="['en', 'fr', 'ur', 'zh']" \
                            --data_name="$data_name" \
                            --model_name="$model" \
                            --labels="all" \
                            --hover_text="text" \
                            --cmethod="all" \
+						   --pca_before_umap="$pca" \
                            --rmethod="umap" \
-                           --n_umap="[2,4,1]" \
-                           --save_dir="$DATA/sacx-keyword-cluster-plots/xlm-r-reference" \
+                           --n_umap="[2,9,1]" \
+                           --n_neighbors="$neighbors" \
+                           --min_dist="$dist" \
+                           --save_dir="$DATA/sacx-keyword-cluster-plots/fasttext/umap-grid/$pca-$neighbors-${dist//./}" \
 						   --column_e="['embed_last']" \
 						   --column_l="preds" \
 # '
