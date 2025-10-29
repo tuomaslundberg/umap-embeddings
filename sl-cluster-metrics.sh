@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=clustering
 #SBATCH --account=project_462000999
-#SBATCH --partition=debug
+#SBATCH --partition=small
 #SBATCH --time=00:10:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -30,7 +30,7 @@ module load pytorch
 
 pip install -r requirements.txt
 
-model="XLM-RoBERTa-large"
+model="fastText"
 data_name="SACX keywords"
 #data="hplt"
 #data="CORE"
@@ -41,19 +41,21 @@ reg=${registers[$((SLURM_ARRAY_TASK_ID % 9))]}
 languages=("en" "fr" "ur" "zh")
 lang=${languages[$((SLURM_ARRAY_TASK_ID / 9))]}
 
-echo $model $data "cluster metrics"
+echo "$model" "$data_name" "cluster metrics"
 
 #: '
-python clusters.py --data="$DATA/kw-embeddings/xlm-r" \
+python clusters.py --data="$DATA/kw-embeddings/fasttext" \
                            --langs="['$lang']" \
                            --data_name="$data_name" \
                            --model_name="$model" \
-                           --labels="all" \
+                           --labels="['$reg']" \
                            --hover_text="text" \
                            --cmethod="all" \
+						   --pca_before_umap="20" \
+						   --n_neighbors="5" \
                            --rmethod="umap" \
-                           --n_umap="[2,4,1]" \
-                           --save_dir="$DATA/sacx-keyword-cluster-plots/xlm-r-reference" \
+                           --n_umap="[2,9,1]" \
+                           --save_dir="$DATA/sacx-keyword-cluster-plots/fasttext/per-register-lang-5-cosine" \
 						   --column_e="['embed_last']" \
 						   --column_l="preds" \
 # '

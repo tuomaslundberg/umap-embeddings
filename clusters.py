@@ -44,7 +44,7 @@ COLORSEPARATION = 0.4
 
 # This for easy parsing of label parameters; if given as a list, that is used, else checking for keywords
 def parse_labels(l):
-    if type(l)==list:
+    if type(eval(l))==list:
         return l
     elif l == "upper" or l == "all":
         return all_labels
@@ -240,9 +240,9 @@ def apply_umap(x: np.array, n_dim: int, options):
         print(f"Warning: n_dim ({n_dim}) >= number of samples ({x.shape[0]}). Setting n_dim = {x.shape[0] - 2}.")
         n_dim = max(1, x.shape[0] - 2) # See https://github.com/lmcinnes/umap/issues/201
     if options.seed is not None:
-        reducer = umap.UMAP(n_neighbors=options.n_neighbors, min_dist=options.min_dist, n_components=n_dim, random_state=options.seed)
+        reducer = umap.UMAP(n_neighbors=options.n_neighbors, min_dist=options.min_dist, n_components=n_dim, random_state=options.seed, metric='cosine')
     else:
-        reducer = umap.UMAP(n_neighbors=options.n_neighbors, min_dist=options.min_dist, n_components=n_dim)
+        reducer = umap.UMAP(n_neighbors=options.n_neighbors, min_dist=options.min_dist, n_components=n_dim, metric='cosine')
 
     # if given in params, apply pca before umap:
     if options.pca_before_umap is not None:
@@ -465,7 +465,7 @@ def plot_results(results, options, column, unique_labels):
     fig.update_yaxes(title_text="Score", row=1, col=1)
     fig.update_yaxes(title_text="Score", row=1, col=2)
     langs = "-".join(options.languages)
-    save_name = os.path.join(options.save_dir, column, options.languages[0], options.save_prefix+"_"+langs+"_sample"+str(options.sample)+".html")
+    save_name = os.path.join(options.save_dir, column, options.languages[0], options.labels[0].lower(), options.save_prefix+"_"+langs+"_sample"+str(options.sample)+".html")
     pio.write_html(fig, file=save_name, auto_open=False)
 
 
@@ -541,6 +541,7 @@ def find_max_values(data):
 
 if __name__=="__main__":
     options = ap.parse_args(sys.argv[1:])
+    options.labels = eval(options.labels)
     # parse this mfs
     options = parse_params_further(options)
     
@@ -560,7 +561,7 @@ if __name__=="__main__":
         unique_labels, _ = np.unique(df["label_for_umap"], return_counts=True)
         #options.n_clusters = [2, len(unique_labels)*len(options.languages)+1]
 		# This is a heuristic for clustering substructure in single-label/single-language data!
-        options.n_clusters = [2, 5]
+        options.n_clusters = [2, 10]
 
         print("\nNormalizing and encoding labels")
         # handle a couple things more (labels need to be numerical for ARI)
@@ -582,7 +583,7 @@ if __name__=="__main__":
         if options.hover_text:
             ext_df[options.hover_text] = np.array(df[options.hover_text].values.tolist())
 
-        ext_df.to_csv(options.save_dir+column+"/"+options.languages[0]+"/"+options.labels[0].lower()+"/data.tsv", sep='\t')
+        ext_df.to_csv(os.path.join(options.save_dir, column, options.languages[0], options.labels[0].lower(), "data.tsv"), sep='\t')
         plot_embeddings = plot_embeddings_with_hover if options.hover_text is not None else plot_embeddings_normal
         for c in options.clustering_method:
             for m in ["pca", "umap"]:#options.reduction_method:
