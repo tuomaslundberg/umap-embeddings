@@ -187,8 +187,8 @@ def read_and_process_data(options, sublabels):
             
             # finally, drop everything unneeded and append
             if options.hover_text is not None:
-                if all(i in df.columns for i in [options.hover_text]):
-                    df = df[['lang','label_for_umap', *options.use_column_embeddings, options.hover_text]]
+                if all(i in df.columns for i in options.hover_text):
+                    df = df[['lang','label_for_umap', *options.use_column_embeddings, *options.hover_text]]
                 else:
                     df = df[['lang','label_for_umap', *options.use_column_embeddings]]
                     print("--hover_text= {options.hover_text} given but columns could not be found. Setting as null.")

@@ -9,7 +9,7 @@
 #SBATCH --cpus-per-task=16
 #SBATCH -o logs/%x_%j.out
 #SBATCH -e logs/%x_%j.err
-#SBATCH --array=0-8
+#SBATCH --array=1-8
 
 # If run without sbatch, invoke here
 if [ -z "$SLURM_JOB_ID" ]; then
@@ -28,9 +28,9 @@ module load pytorch
 #[[ "$PYTHONPATH" != *"/scratch/project_462000353/tlundber/pythonuserbase/lib/python3.11/site-packages"* ]] && \
 #export PYTHONPATH="/scratch/project_462000353/tlundber/pythonuserbase/lib/python3.11/site-packages:$PYTHONPATH"
 
-pip install -r requirements.txt
+#pip install -r requirements.txt
 
-model="fastText"
+model="sentence-transformers/LaBSE"
 data_name="SACX keywords"
 #data="hplt"
 #data="CORE"
@@ -41,18 +41,20 @@ reg=${registers[$SLURM_ARRAY_TASK_ID]}
 echo "$model" "$data_name" "$reg" "cluster metrics"
 
 #: '
-python clusters.py --data="$DATA/kw-embeddings/fasttext/centroid-unit-norm" \
+python clusters.py --data="$DATA/kw-embeddings/final" \
                            --langs="['en', 'fr', 'ur', 'zh']" \
                            --data_name="$data_name" \
                            --model_name="$model" \
                            --labels="['$reg']" \
-                           --hover_text="text" \
+                           --hover_text="['text', 'script_type', 'translation', 'comments']" \
+                           --truncate_hover=False \
 						   --pca_before_umap="50" \
-						   --n_neighbors="15" \
-                           --cmethod="all" \
+						   --n_neighbors="8" \
+                           --cmethod="spherical-kmeans" \
                            --rmethod="umap" \
-                           --n_umap="[2,9,1]" \
-                           --save_dir="$DATA/sacx-keyword-cluster-plots/fasttext/per-register/50-15-cosine" \
+                           --n_umap="[2,10,1]" \
+                           --seed=42 \
+                           --save_dir="$DATA/sacx-keyword-cluster-plots/final/interactive" \
 						   --column_e="['embed_last']" \
 						   --column_l="preds" \
 # '

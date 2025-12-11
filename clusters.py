@@ -3,7 +3,7 @@ import pandas as pd
 import sys
 import os
 from sklearn.preprocessing import normalize
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, HDBSCAN
 from sklearn.metrics import silhouette_score
 from sklearn.metrics import adjusted_rand_score
 #from nltk.cluster.kmeans import KMeansClusterer
@@ -176,7 +176,7 @@ def euclidian_distance(X, Y=None, Y_norm_squared=None, squared=False):
 def spherical_kmeans_sklearn_modified(x: np.array, n_clusters: int, n_iterations=300):
     sphe_kmeans._euclidean_distances = cosine_distance
     sphe_kmeans.euclidean_distances = cosine_distance # utilized by the method `KMeans._transform`
-    km = sphe_kmeans.KMeans(n_clusters=n_clusters, max_iter=n_iterations)
+    km = sphe_kmeans.KMeans(n_clusters=n_clusters, max_iter=n_iterations, random_state=42)
     labels = km.fit_predict(x)
     return labels
 
@@ -209,6 +209,10 @@ def regular_kmeans(x: np.array, n_clusters: int, n_iterations=300):
     #return kmeans.cluster_centers_, kmeans.labels_
     return labels
 
+def hdbscan_clustering(x: np.array, n_clusters: int, n_iterations=300):
+	clusterer = HDBSCAN(metric='euclidean')
+	labels = clusterer.fit_predict(x)
+	return labels
 
 def calculate_silhouette_score(x, labels):
     """
@@ -289,7 +293,9 @@ def cluster_loop(x, y, options):
     """
 
     # redirect funtion based on --clustering_method
+    #cluster_ = lambda x: {"kmeans":hdbscan_clustering, "spherical-kmeans":hdbscan_clustering}[x]
     cluster_ = lambda x: {"kmeans":kmeans_sklearn_modified, "spherical-kmeans":spherical_kmeans_sklearn_modified}[x]
+
 
     # result collection
     results = {k: {} for k in options.clustering_method}
@@ -544,6 +550,7 @@ def find_max_values(data):
 if __name__=="__main__":
     options = ap.parse_args(sys.argv[1:])
     options.labels = eval(options.labels)
+    options.hover_text = eval(options.hover_text)
     # parse this mfs
     options = parse_params_further(options)
     
@@ -563,7 +570,7 @@ if __name__=="__main__":
         unique_labels, _ = np.unique(df["label_for_umap"], return_counts=True)
         options.n_clusters = [2, len(unique_labels)*len(options.languages)+1]
 		# This is a heuristic for clustering substructure in single-label/single-language data!
-        # options.n_clusters = [2, 5]
+        options.n_clusters = [4, 9]
 
         print("\nNormalizing and encoding labels")
         # handle a couple things more (labels need to be numerical for ARI)
@@ -583,22 +590,27 @@ if __name__=="__main__":
         ext_df["label_for_umap"] = given_labels #y#df["label_for_umap"].tolist()
         ext_df["lang"] = np.array(df["lang"].values.tolist())
         if options.hover_text:
-            ext_df[options.hover_text] = np.array(df[options.hover_text].values.tolist())
-
+            for hover_col in options.hover_text:
+                ext_df[hover_col] = np.array(df[hover_col].values.tolist())
+        # Optional: select only the top-N keywords for plotting
+        # NB: the clustering is still performed on the full data
+        #ext_df = ext_df.groupby('lang').head(26).reset_index(drop=True)
+        # Fill missing NaN and NA values
+        ext_df = ext_df.fillna("None/not applicable").replace(np.nan, "None/not applicable").replace(r'^\s*nan\s*$', "None/not applicable", regex=True)
         ext_df.to_csv(os.path.join(options.save_dir, column, options.labels[0].lower(), "data.tsv"), sep='\t')
         plot_embeddings = plot_embeddings_with_hover if options.hover_text is not None else plot_embeddings_normal
         for c in options.clustering_method:
             for m in ["pca", "umap"]:#options.reduction_method:
                 if f"{m}_2" in results.keys():  # results for two dims
                     best_silh_dim, best_ari_dim = find_max_values(results[f"{m}_2"][c])
-                    options.save_prefix = f"true_labels_{m}"
-                    plot_embeddings(ext_df, "umap_data_2", "label_for_umap", options, column, title= f"Real labels ({len(unique_labels)}) from {options.model_name} on {options.data_name}")
+                    #options.save_prefix = f"true_labels_{m}"
+                    #plot_embeddings(ext_df, f"{m}_data_2", f"label_for_umap", options, column, title= f"Real labels ({len(unique_labels)}) from {options.model_name} on {options.data_name}")
                     options.save_prefix = f"langs_{m}"
-                    plot_embeddings(ext_df, "umap_data_2", "lang", options, column, title= f"Languages ({len(options.languages)}) from {options.model_name} on {options.data_name}")
-                    options.save_prefix = f"{m}_{c}_max_ari"
-                    plot_embeddings(ext_df, "umap_data_2", f"umap_labels_2_{c}_{best_ari_dim}", options, column, title= f"{c} dim={best_ari_dim} from {options.model_name} on {options.data_name}")
+                    plot_embeddings(ext_df, f"{m}_data_2", "lang", options, column, title= f"Languages ({len(options.languages)}) from {options.model_name} on {options.data_name}")
+                    #options.save_prefix = f"{m}_{c}_max_ari"
+                    #plot_embeddings(ext_df, f"{m}_data_2", f"{m}_labels_2_{c}_{best_ari_dim}", options, column, title= f"{c} dim={best_ari_dim} from {options.model_name} on {options.data_name}")
                     options.save_prefix = f"{m}_{c}_max_silh"
-                    plot_embeddings(ext_df, "umap_data_2", f"umap_labels_2_{c}_{best_silh_dim}", options, column, title= f"{c} dim={best_silh_dim} from {options.model_name} on {options.data_name}")
+                    plot_embeddings(ext_df, f"{m}_data_2", f"{m}_labels_2_{c}_{best_silh_dim}", options, column, title= f"{c} dim={best_silh_dim} from {options.model_name} on {options.data_name}")
                 else:
                     print(f"No results for {c} x {m} dim 2")
             

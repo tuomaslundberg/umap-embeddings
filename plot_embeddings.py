@@ -41,6 +41,23 @@ for main_label, sub_labels in labels_all_hierarchy_with_other.items():
     for sub_label in sub_labels:
         reverse_hierarchy[sub_label] = main_label
 
+cluster_map = {
+    "LY": ["Meta words, proper nouns, song parts", "Lyrics, song", "Sentiment and memory-related nouns and verbs", "Author, poetry"],
+    "SP": ["Words denoting authorship or medium, 'actor'", "Mostly verbs denoting presentation or perceiving", "Question/asking related words", "Words denoting conversation", "Words denoting interview", "'what'/'that', general adjectives and adverbs"],
+    "ID": ["Topic nouns, 'RE:', AM/PM", "Discussion metawords", "Question verbs/nouns", "Greetings/thanks, membership", "Answer verbs/nouns", "Message/post/edit metawords"],
+    "NA": ["Communication-related verbs", "Chinese time adverbs", "Mostly Urdu placenames", "Sport words, comments/blog", "News, news reporter", "Reporting/correspondence, mediums of communication", "English and French weekday words", "Photo/picture"],
+    "HI": ["Measurements, ingredients", "Imperative verbs", "Metatext, general (abstract?) nouns", "Procedure nouns and 'how'", "'preparation' and 'recipe'", "Instruction nouns"],
+    "IN": ["Association words, proper nouns", "Introduction, description, summary", "Name/title", "Nouns denoting meaning and purpose", "Nouns denoting mediums of communication", "Explanatory adverbs and discourse connectives", "Biographical and editing-related nouns/verbs"],
+    "OP": ["Urdu reverence words/words for scholar", "Words denoting valuation and presentation", "Words denoting documents and text mediums", "English and French month words", "'comment', 'review', 'rating'", "Positive & negative sentiments", "Weekdays & 'today'", "God/Christ, 'holy', 'church'"],
+    "IP": ["Adverbs and adjectives", "Nouns denoting price and description", "Book-related nouns", "'Customer', proper nouns and currencies", "Nouns denoting features and advantages", "Imperative verbs and persuasion words", "Product/manufacturer/brand words", "Dimensions and offer-related nouns"],
+}
+
+lang_map = {
+	"en": "English",
+	"fr": "French",
+	"ur": "Urdu",
+	"zh": "Chinese",
+}
 
 # this needed for CORE scheme, as NA is read as NaN
 remove_nan = lambda x: "NA" if x == "nan" else str(x)
@@ -186,24 +203,53 @@ def wrap_text(text, width, truncate=True):
     """Wrap text with a given width."""
     if truncate:
         text = text[0:500]
-    return '<br>'.join([text[i:i+width] for i in range(0, len(text), width)])
+    # Wrap without splitting words; build lines of max 'width' chars.
+    words = text.split()
+    width_rec = width
+    width -= 20  # leave some margin for first line
+    if not words:
+        text = ""
+    else:
+        lines = []
+        current = words[0]
+        for w in words[1:]:
+            # if adding the next word (plus a space) stays within width, append it,
+            # otherwise start a new line. If a single word is longer than width,
+            # it will occupy its own line (not split).
+            if len(current) + 1 + len(w) <= width:
+                current += " " + w
+            else:
+                lines.append(current)
+                current = w
+                width = width_rec  # reset width for next lines
+        lines.append(current)
+        text = '<br>'.join(lines)
+    return text
 
 
 def plot_embeddings_with_hover(df_plot, data_column, color_column, options, column_name, title=None):
 
     if title is None:
         title = f'Embeddings with {options.model_name} from {options.data_name}'
-    df_plot["hover_text"] =  df_plot.apply(lambda row: f"{wrap_text(row[options.hover_text], 80, truncate=options.truncate_hover)}", axis=1)
+    # Wrapping doesn't seem to work for now
+    df_plot["comments_hover"] =  df_plot.apply(lambda row: f"{wrap_text(row['comments'], 80, truncate=options.truncate_hover)}", axis=1)
+    reg = df_plot['label_for_umap'].iloc[0]
+    cluster_map_fn = lambda x: cluster_map[reg][int(x)]
+    #print("Color column:", color_column)
+    if 'lang' in color_column:
+        df_plot[color_column] = df_plot[color_column].apply(lambda x: lang_map[x])
+    elif not any(s in color_column for s in ['label_for_umap', 'lang']):
+        df_plot[color_column] = df_plot[color_column].apply(cluster_map_fn)
 
     print(f"Now plotting interactive plots for {'x_'+data_column},{'y_'+data_column} with coloring based on {color_column}.")
 
     fig = px.scatter(df_plot, x='x_'+data_column, y='y_'+data_column, color=color_column,
                      title=title,
-                     labels={"label_for_umap": "Register", "lang":"Language"},
-                     hover_data={"hover_text":True,"lang":True, "label_for_umap":True, "text":False, "x_"+data_column:False, "y_"+data_column:False},
+                     labels={"label_for_umap": "Register", "lang":"Language", "text":"Word", f"{color_column}":"Cluster", "script_type":"Script type", "translation":"Translation", "comments_hover":"Comments"},
+                     hover_data={"text":True,"lang":True, "label_for_umap":True, "script_type":True, "translation":True, "comments_hover":True, "comments":False, "x_"+data_column:False, "y_"+data_column:False},
                      width=1200, height=900)  # Increased size for better visibility
     fig.update_layout(legend= {'itemsizing': 'constant'})
-    fig.update_traces(marker={"opacity":0.5, "size":3})
+    fig.update_traces(marker={"opacity":0.8, "size":7})
     #fig.update_layout(
     #    legend_title_text='Cluster',
     #    hoverlabel=dict(bgcolor="white", font_size=16, font_family="Rockwell", bordercolor="black"),
