@@ -24,7 +24,7 @@ import plotly.express as px
 # data reading
 from read_embeddings import read_and_process_data
 # data plotting
-from plot_embeddings import plot_embeddings_normal, plot_embeddings_with_hover
+from plot_embeddings import plot_embeddings_normal, plot_embeddings_matplotlib
 
 # The columns expected in the data by default
 embedding_columns=["embed_last"]#, "embed_first" ,"embed_half", "embed_last"]
@@ -598,15 +598,15 @@ if __name__=="__main__":
         # Fill missing NaN and NA values
         ext_df = ext_df.fillna("None/not applicable").replace(np.nan, "None/not applicable").replace(r'^\s*nan\s*$', "None/not applicable", regex=True)
         ext_df.to_csv(os.path.join(options.save_dir, column, options.labels[0].lower(), "data.tsv"), sep='\t')
-        plot_embeddings = plot_embeddings_with_hover if options.hover_text is not None else plot_embeddings_normal
+        plot_embeddings = plot_embeddings_matplotlib if options.hover_text is not None else plot_embeddings_normal
         for c in options.clustering_method:
             for m in ["pca", "umap"]:#options.reduction_method:
                 if f"{m}_2" in results.keys():  # results for two dims
                     best_silh_dim, best_ari_dim = find_max_values(results[f"{m}_2"][c])
                     #options.save_prefix = f"true_labels_{m}"
                     #plot_embeddings(ext_df, f"{m}_data_2", f"label_for_umap", options, column, title= f"Real labels ({len(unique_labels)}) from {options.model_name} on {options.data_name}")
-                    options.save_prefix = f"langs_{m}"
-                    plot_embeddings(ext_df, f"{m}_data_2", "lang", options, column, title= f"Languages ({len(options.languages)}) from {options.model_name} on {options.data_name}")
+                    #options.save_prefix = f"langs_{m}"
+                    #plot_embeddings(ext_df, f"{m}_data_2", "lang", options, column, title= f"Languages ({len(options.languages)}) from {options.model_name} on {options.data_name}")
                     #options.save_prefix = f"{m}_{c}_max_ari"
                     #plot_embeddings(ext_df, f"{m}_data_2", f"{m}_labels_2_{c}_{best_ari_dim}", options, column, title= f"{c} dim={best_ari_dim} from {options.model_name} on {options.data_name}")
                     options.save_prefix = f"{m}_{c}_max_silh"
