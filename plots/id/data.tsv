@@ -1,0 +1,105 @@
+	x_umap_data_2	y_umap_data_2	umap_labels_2_spherical-kmeans_4	umap_labels_2_spherical-kmeans_5	umap_labels_2_spherical-kmeans_6	umap_labels_2_spherical-kmeans_7	umap_labels_2_spherical-kmeans_8	label_for_umap	lang	text	script_type	translation	comments
+0	4.056073	11.742857	1	1	5	6	1	ID	zh	帖	Simplified Chinese	Post (in a forum)	None/not applicable
+1	12.240889	7.2082405	0	0	0	0	0	ID	zh	主題	Traditional Chinese	Topic	None/not applicable
+2	3.9883404	11.798784	1	1	5	6	1	ID	zh	帖子	Simplified Chinese	Post (in a forum)	"Overlaps with keyword ""贴"" also in top ID keywords"
+3	5.4572654	7.8774347	1	1	1	1	6	ID	zh	論區	Traditional Chinese	Discussion area	None/not applicable
+4	4.770012	7.95313	1	1	1	5	6	ID	zh	討	Traditional Chinese	Discuss	"Rarely used alone; likely truncated from ""討論"" (discussion) or ""討論區"" (discussion area)"
+5	1.8358705	-10.660946	2	2	2	2	2	ID	zh	提问	Simplified Chinese	Ask a question	None/not applicable
+6	5.6556745	7.8439484	1	1	1	1	6	ID	zh	论坛	Simplified Chinese	Forum	None/not applicable
+7	1.8554759	-10.533586	2	2	2	2	2	ID	zh	請問	Traditional Chinese	May I ask	None/not applicable
+8	-3.368293	-3.218195	2	4	4	4	4	ID	zh	答案	Simplified Chinese	Answer	None/not applicable
+9	14.075283	13.272085	3	3	3	3	3	ID	zh	謝謝	Traditional Chinese	Thank you	"See comment for ""謝"" in top HI keywords"
+10	14.155308	13.060737	3	3	3	3	3	ID	zh	謝	Traditional Chinese	Thanks	"Informal abbreviation, duplicate of the traditional ""謝謝"" also in top ID keywords"
+11	14.003811	13.18725	3	3	3	3	3	ID	zh	谢	Simplified Chinese	Thanks	"Informal abbreviation, duplicate of the simplified ""谢谢"" also in top ID keywords"
+12	4.8839297	7.856119	1	1	1	5	6	ID	zh	討論	Traditional Chinese	Discussion	None/not applicable
+13	-3.3245993	-3.0513327	2	4	4	4	4	ID	zh	回答	Simplified Chinese	Reply/Answer	None/not applicable
+14	-3.4146037	-3.0302231	2	4	4	4	4	ID	zh	回覆	Traditional Chinese	Reply	None/not applicable
+15	14.042116	13.188264	3	3	3	3	3	ID	zh	谢谢	Simplified Chinese	Thank you	"See comment for ""谢"" in top ID keywords"
+16	9.92834	9.351477	0	0	0	0	0	ID	zh	pm	Latin	None/not applicable	Not Chinese; likely from English Private message (PM)
+17	-3.4094696	-3.280102	2	4	4	4	4	ID	zh	解答	Simplified Chinese	Solution/Answer	None/not applicable
+18	12.532024	13.181645	3	3	3	3	7	ID	zh	哈哈	Simplified Chinese	Haha (laughing)	This word is idenfied as a key Interactive Discussion register marker might be because it exclusively appears in conversational contexts (never in formal materials) and often serves as a way for someone to acknowledge or maintain interaction without necessarily expressing agreement with what's being said.
+19	12.0367985	7.1455183	0	0	0	0	0	ID	zh	頂部	Traditional Chinese	Top	None/not applicable
+20	4.174351	11.671558	1	1	5	6	1	ID	zh	發表	Traditional Chinese	Publish/Post	None/not applicable
+21	2.1880329	-10.887406	2	2	2	2	2	ID	zh	问题	Simplified Chinese	Question	None/not applicable
+22	1.8573847	-10.533384	2	2	2	2	2	ID	zh	请问	Simplified Chinese	May I ask	None/not applicable
+23	1.769086	-10.602196	2	2	2	2	2	ID	zh	问	Simplified Chinese	Ask	Rarely used alone
+24	1.7947502	-10.685817	2	2	2	2	2	ID	zh	問	Traditional Chinese	Ask	"Traditional equivalent of ""问"" also in top ID keywords"
+25	12.278783	7.2803617	0	0	0	0	0	ID	zh	題	Traditional Chinese	Topic/Issue	"Rarely used alone; likely truncated from ""問題"" (question), the simplified version of which also appears in the keywords (see ""问题"")"
+26	1.940614	-10.829363	2	2	2	2	2	ID	ur	سوال	Urdu	question	None/not applicable
+27	12.437982	7.3376513	0	0	0	0	0	ID	ur	موضوع	Urdu	topic	None/not applicable
+28	-3.3432124	-3.1121082	2	4	4	4	4	ID	ur	الجواب	Urdu	answer (noun)	This (ul-jawab) is likely part of the expression jawab-ul-jawab which means reply to an answer (jawab means answer).
+29	6.0229554	8.014394	1	1	1	1	6	ID	ur	فورم	Urdu	forum	English word in Urdu script
+30	12.097837	13.239408	3	3	3	3	7	ID	ur	سائل	Urdu	inquirer	Also: petitioner, beggar
+31	-3.5425322	-2.9042559	2	4	4	4	4	ID	ur	جواب	Urdu	answer (noun)	None/not applicable
+32	12.41335	13.477726	3	3	3	3	7	ID	ur	لاہور	Urdu	Lahore	None/not applicable
+33	12.280614	6.818313	0	0	0	0	0	ID	ur	topic	Latin	None/not applicable	None/not applicable
+34	-3.9958458	-2.7586803	2	4	4	4	4	ID	ur	جوابات	Urdu	answers (noun)	None/not applicable
+35	12.386088	6.999659	0	0	0	0	0	ID	ur	تھریڈ	Urdu	thread	English word in Urdu script
+36	9.893905	9.317075	0	0	0	0	0	ID	ur	pm	Latin	private message (PM)	"Could also be ""pm"" as in afternoon/evening (""am"" is also included in the top ID keywords)"
+37	11.862663	12.977685	3	3	3	3	7	ID	ur	جزاک	Urdu	thanks (Islamic greeting)	"Word likely incomplete; this (Jazak) is part of the expression Jazakallah which  means ""may Allah reward you"" and it is used to thank someone (originally Arabic)"
+38	12.077909	7.159301	0	0	0	0	0	ID	ur	عنوان	Urdu	title	None/not applicable
+39	12.880538	12.512277	3	3	3	3	7	ID	ur	محترم	Urdu	respected	None/not applicable
+40	13.469302	13.213436	3	3	3	3	3	ID	ur	الحمدللہ	Urdu	praise be to Allah	None/not applicable
+41	9.58677	8.972179	0	0	0	0	0	ID	ur	نمبر	Urdu	number	None/not applicable
+42	14.285897	13.416173	3	3	3	3	3	ID	ur	شکریہ	Urdu	thank you	None/not applicable
+43	13.582752	13.002723	3	3	3	3	3	ID	ur	الحمد	Urdu	praise	"Word incomplete; this has most likely occurred as part of the expression Alhamdulillah ""praise be to Allah"" (originally Arabic)"
+44	5.346748	9.861729	1	1	5	6	5	ID	ur	view	Latin	None/not applicable	None/not applicable
+45	13.340838	12.961122	3	3	3	3	3	ID	ur	بسم	Urdu	in the name (of Allah)	"Word incomplete; this is part of the expression ""bismillah"" which means ""in the name of Allah"" (originally Arabic)"
+46	12.808239	13.182637	3	3	3	3	7	ID	ur	ویسے	Urdu	in that manner/thus/by the way/likewise	This word can have several meanings
+47	11.798894	12.263363	3	3	3	3	7	ID	ur	ممبرز	Urdu	members	English word written in Urdu script
+48	2.3285189	-10.531549	2	2	2	2	2	ID	ur	سوالات	Urdu	questions	None/not applicable
+49	4.3100214	11.601784	1	1	5	6	1	ID	ur	posted	Latin	None/not applicable	None/not applicable
+50	9.6243725	9.15481	0	0	0	0	0	ID	ur	am	Latin	None/not applicable	Likely AM as in before noon
+51	6.0668087	8.110128	1	1	1	1	6	ID	ur	فتوی	Urdu	fatwa (Islamic ruling)	None/not applicable
+52	5.4151697	9.76351	1	1	5	6	5	ID	en	quote	Latin	None/not applicable	None/not applicable
+53	12.692695	7.1283946	0	0	0	0	0	ID	en	threads	Latin	None/not applicable	None/not applicable
+54	12.75301	7.181662	0	0	0	0	0	ID	en	thread	Latin	None/not applicable	None/not applicable
+55	5.8039336	7.8627715	1	1	1	1	6	ID	en	forum	Latin	None/not applicable	None/not applicable
+56	4.9014063	7.828654	1	1	1	5	6	ID	en	discussion	Latin	None/not applicable	None/not applicable
+57	5.2266965	10.702505	1	1	5	6	5	ID	en	moderator	Latin	None/not applicable	None/not applicable
+58	4.5757117	11.327744	1	1	5	6	1	ID	en	wrote	Latin	None/not applicable	None/not applicable
+59	2.3082817	-10.554816	2	2	2	2	2	ID	en	questions	Latin	None/not applicable	None/not applicable
+60	2.0734272	-10.927994	2	2	2	2	2	ID	en	question	Latin	None/not applicable	None/not applicable
+61	9.4069395	9.151176	0	0	0	0	0	ID	en	re	Latin	None/not applicable	None/not applicable
+62	5.841694	7.8314967	1	1	1	1	6	ID	en	forums	Latin	None/not applicable	None/not applicable
+63	14.257159	13.397091	3	3	3	3	3	ID	en	thanks	Latin	None/not applicable	None/not applicable
+64	-3.8931122	-2.8200657	2	4	4	4	4	ID	en	answers	Latin	None/not applicable	None/not applicable
+65	12.26322	6.742903	0	0	0	0	0	ID	en	topics	Latin	None/not applicable	None/not applicable
+66	4.9842362	10.86099	1	1	5	6	5	ID	en	edited	Latin	None/not applicable	None/not applicable
+67	3.8804133	11.903217	1	1	5	6	1	ID	en	posts	Latin	None/not applicable	None/not applicable
+68	12.35779	13.341977	3	3	3	3	7	ID	en	lol	Latin	None/not applicable	None/not applicable
+69	12.368596	6.7900333	0	0	0	0	0	ID	en	topic	Latin	None/not applicable	None/not applicable
+70	-3.675784	-2.7631283	2	4	4	4	4	ID	en	replied	Latin	None/not applicable	None/not applicable
+71	12.507152	6.8476615	0	0	0	0	0	ID	en	subject	Latin	None/not applicable	None/not applicable
+72	2.309785	-10.955459	2	2	2	2	2	ID	en	wondering	Latin	None/not applicable	None/not applicable
+73	12.609227	12.775454	3	3	3	3	7	ID	en	hi	Latin	None/not applicable	None/not applicable
+74	11.690373	12.386314	3	3	3	3	7	ID	en	member	Latin	None/not applicable	None/not applicable
+75	-4.010715	-2.7110572	2	4	4	4	4	ID	en	replies	Latin	None/not applicable	None/not applicable
+76	5.1753144	10.627341	1	1	5	6	5	ID	en	edit	Latin	None/not applicable	None/not applicable
+77	12.64073	12.732354	3	3	3	3	7	ID	en	hello	Latin	None/not applicable	None/not applicable
+78	5.816811	7.9078107	1	1	1	1	6	ID	fr	forums	Latin	forums	None/not applicable
+79	5.7727056	7.773295	1	1	1	1	6	ID	fr	forum	Latin	forum	None/not applicable
+80	5.1109514	10.725234	1	1	5	6	5	ID	fr	edit	Latin	edit	None/not applicable
+81	4.8257117	7.905668	1	1	1	5	6	ID	fr	discussion	Latin	discussion	None/not applicable
+82	12.448415	6.839473	0	0	0	0	0	ID	fr	topic	Latin	topic	None/not applicable
+83	3.7949197	11.973747	1	1	5	6	1	ID	fr	messages	Latin	messages	None/not applicable
+84	9.402988	9.0340395	0	0	0	0	0	ID	fr	re	Latin	re	None/not applicable
+85	4.936666	7.7540026	1	1	1	5	6	ID	fr	discussions	Latin	discussions	None/not applicable
+86	2.216999	-11.05608	2	2	2	2	2	ID	fr	question	Latin	question	None/not applicable
+87	12.540297	12.584817	3	3	3	3	7	ID	fr	bonjour	Latin	hello	None/not applicable
+88	2.3510783	-10.571675	2	2	2	2	2	ID	fr	questions	Latin	questions	None/not applicable
+89	9.893059	9.310562	0	0	0	0	0	ID	fr	ps	Latin	ps	None/not applicable
+90	14.312183	13.462224	3	3	3	3	3	ID	fr	remercie	Latin	thank you 	None/not applicable
+91	12.320018	13.378235	3	3	3	3	7	ID	fr	lol	Latin	lol	None/not applicable
+92	4.1570983	11.680132	1	1	5	6	1	ID	fr	post	Latin	post	None/not applicable
+93	9.851166	9.276673	0	0	0	0	0	ID	fr	pm	Latin	pm	None/not applicable
+94	-3.6667566	-2.7542138	2	4	4	4	4	ID	fr	réponse	Latin	answer	None/not applicable
+95	-3.959824	-2.7345042	2	4	4	4	4	ID	fr	réponses	Latin	answers	None/not applicable
+96	12.717514	12.679015	3	3	3	3	7	ID	fr	salut	Latin	hi	None/not applicable
+97	3.832421	11.932549	1	1	5	6	1	ID	fr	message	Latin	message	None/not applicable
+98	4.630088	11.275261	1	1	5	6	1	ID	fr	écrit	Latin	wrote	None/not applicable
+99	12.310069	12.383813	3	3	3	3	7	ID	fr	invités	Latin	guests	None/not applicable
+100	12.520908	6.7379484	0	0	0	0	0	ID	fr	sujet	Latin	subject	None/not applicable
+101	5.063092	10.587568	1	1	5	6	5	ID	fr	édition	Latin	edition	None/not applicable
+102	4.4095163	11.52305	1	1	5	6	1	ID	fr	posté	Latin	posted	None/not applicable
+103	14.27679	13.436998	3	3	3	3	3	ID	fr	merci	Latin	thank you	None/not applicable

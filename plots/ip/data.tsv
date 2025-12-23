@@ -1,0 +1,105 @@
+	x_umap_data_2	y_umap_data_2	umap_labels_2_spherical-kmeans_4	umap_labels_2_spherical-kmeans_5	umap_labels_2_spherical-kmeans_6	umap_labels_2_spherical-kmeans_7	umap_labels_2_spherical-kmeans_8	label_for_umap	lang	text	script_type	translation	comments
+0	4.218344	8.052048	1	1	1	1	1	IP	zh	报价	Simplified Chinese	Quotation/Price	None/not applicable
+1	1.900007	5.1887164	0	4	5	4	6	IP	zh	介	Traditional Chinese/simplified Chinese	Introduce/Intervene	"Rarely used alone; could be truncated from ""介紹"" (introduce) or ""简介"" (Brief introduction), both in top IP keywords"
+2	2.2143652	6.0417786	2	2	4	4	6	IP	zh	厂家	Simplified Chinese	Manufacturer	None/not applicable
+3	2.2178164	6.3131385	2	2	4	4	6	IP	zh	產	Traditional Chinese	Production/Product	"Rarely used alone; could be truncated from ""產品"" (product)"
+4	3.2017953	6.112294	3	3	4	6	7	IP	zh	替代品	Simplified Chinese	Substitute/Alternative product	None/not applicable
+5	2.0315347	5.4082856	0	4	4	4	6	IP	zh	聯	Traditional Chinese	Connect/Contact	"Rarely used alone; could be truncated from ""聯繫"" (contact)"
+6	2.301772	6.291081	2	2	4	4	6	IP	zh	產品	Traditional Chinese	Product	None/not applicable
+7	1.5210475	4.4762063	0	4	5	5	3	IP	zh	戶	Traditional Chinese	User/Customer	"Rarely used alone; could be truncated from ""用戶"" (user)"
+8	3.4865122	7.6037583	1	1	1	6	1	IP	zh	简介	Simplified Chinese	Brief introduction	None/not applicable
+9	2.894631	6.993603	2	2	4	6	1	IP	zh	小編	Traditional Chinese	Editor (informal)	None/not applicable
+10	3.5505521	7.5296717	1	1	1	6	1	IP	zh	详情	Simplified Chinese	Details	None/not applicable
+11	3.5776565	7.695828	1	1	1	6	1	IP	zh	介绍	Simplified Chinese	Introduction	None/not applicable
+12	3.2870436	6.7036366	1	1	4	6	7	IP	zh	有限	Simplified Chinese	Limited	"Context-dependent/multiple meanings: could be part of ""有限公司"" (limited company) or describe something as being limited/finite"
+13	1.3160574	4.735465	0	4	5	5	3	IP	zh	客戶	Traditional Chinese	Customer	None/not applicable
+14	3.1325643	7.779852	1	1	1	6	1	IP	zh	科技	Simplified Chinese	Technology	None/not applicable
+15	6.166371	8.083347	1	1	1	1	4	IP	zh	优势	Simplified Chinese	Advantage	None/not applicable
+16	4.980708	7.8986754	1	1	1	1	4	IP	zh	优惠	Simplified Chinese	Discount/Offer	None/not applicable
+17	2.5360484	6.8328805	2	2	4	6	6	IP	zh	編來	Traditional Chinese	Editor brings (context-specific)	The translation is awkward; this is likely a truncated word or incorrectly segmented phrase 
+18	-0.038747862	8.153599	2	2	2	2	2	IP	zh	书	Simplified Chinese	Book	None/not applicable
+19	1.8666973	5.0542035	0	4	5	4	6	IP	zh	首	Traditional Chinese/simplified Chinese	First/Primary	Can be a measure word
+20	4.3302517	8.358572	1	1	1	1	1	IP	zh	價格	Traditional Chinese	Price	None/not applicable
+21	2.3074894	5.7052093	2	4	4	4	6	IP	zh	公司	Simplified Chinese	Company	None/not applicable
+22	1.342258	4.5910997	0	4	5	5	3	IP	zh	用戶	Simplified Chinese	User	None/not applicable
+23	2.571094	6.074148	2	2	4	4	6	IP	zh	品牌	Simplified Chinese	Brand	None/not applicable
+24	3.5619307	7.890509	1	1	1	6	1	IP	zh	咨询	Simplified Chinese	Consultation/Inquire	None/not applicable
+25	2.9469824	3.2150872	0	0	0	0	0	IP	zh	多少	Simplified Chinese	How much	None/not applicable
+26	4.4850664	8.536594	1	1	1	1	1	IP	ur	قیمت	Urdu	price	None/not applicable
+27	1.44141	3.600193	0	4	5	5	3	IP	ur	روپے	Urdu	rupees	None/not applicable
+28	3.7650988	7.336749	1	1	1	6	1	IP	ur	description	Latin	None/not applicable	None/not applicable
+29	1.8233186	4.001724	0	4	5	5	3	IP	ur	rs	Latin	None/not applicable	Most likely referring to rupees (the currency)
+30	1.3814324	7.149023	2	2	2	2	2	IP	ur	مصنف	Urdu	author	None/not applicable
+31	2.6839976	3.639087	0	0	0	0	0	IP	ur	کیلئے	Urdu	for	None/not applicable
+32	3.925829	6.922256	1	1	1	6	1	IP	ur	کہانی	Urdu	story	None/not applicable
+33	3.8133652	3.444568	3	0	0	0	0	IP	ur	دلچسپ	Urdu	interesting	None/not applicable
+34	4.1155057	6.345558	3	3	3	6	7	IP	ur	پروگرام	Urdu	program	English word written in Urdu script
+35	2.9161012	3.2436783	0	0	0	0	0	IP	ur	کیسے	Urdu	how	None/not applicable
+36	2.9896693	3.943021	0	0	0	0	0	IP	ur	ہمارا	Urdu	our	None/not applicable
+37	3.500462	3.3248172	0	0	0	0	0	IP	ur	بھرپور	Urdu	full/abundant	None/not applicable
+38	3.2872672	3.2195468	0	0	0	0	0	IP	ur	بالکل	Urdu	absolutely	None/not applicable
+39	1.702527	3.7213895	0	4	5	5	3	IP	ur	پاکستان	Urdu	Pakistan	None/not applicable
+40	1.7086074	3.767498	0	4	5	5	3	IP	ur	پاکستانی	Urdu	Pakistani	None/not applicable
+41	2.9757476	3.5001547	0	0	0	0	0	IP	ur	کرکے	Urdu	by doing/having done	Conjunctive participle
+42	1.5967367	3.473879	0	4	5	5	3	IP	ur	urdu	Latin	None/not applicable	None/not applicable
+43	3.5483825	4.5580635	3	3	3	3	5	IP	ur	دستیاب	Urdu	available	None/not applicable
+44	2.3851593	3.231683	0	0	0	0	0	IP	ur	آج	Urdu	today	None/not applicable
+45	2.5722082	3.7819853	0	0	0	0	0	IP	ur	والا	Urdu	one that has, one that does 	Suffix used for forming nouns and adjectives, somewhat hard to translate
+46	5.9456906	7.848291	1	1	1	1	4	IP	ur	خصوصیات	Urdu	features	None/not applicable
+47	6.1294584	8.027508	1	1	1	1	4	IP	ur	سہولت	Urdu	ease/facility/convenience	None/not applicable
+48	3.253527	3.6354744	0	0	0	0	0	IP	ur	کرسکتے	Urdu	can do/can't do	"Can be 1st, 2nd, or 3rd  person plural. This is a little tricky to translate in isolation because this verb phrase (or part of a verb phrase) can be either ""can do"" or ""can't do"" depending on what surrounds it; if this is followed by the auxiliary verb 'hona' (kar sakte hain/ho), this translates as ""can do"", and if this is preceded by the negator 'nahi' (nahi kar sakte) this means ""can't do""."
+49	0.04240771	8.092264	2	2	2	2	2	IP	ur	کتاب	Urdu	book	None/not applicable
+50	1.2611884	3.7666762	0	4	5	5	3	IP	ur	سکے	Urdu	can	Can be past participle or 2nd and 3rd person singular subjunctive
+51	6.1882386	8.102275	1	1	1	1	4	IP	ur	فوائد	Urdu	benefits	None/not applicable
+52	2.1082835	4.5727983	0	4	5	5	3	IP	en	isbn	Latin	None/not applicable	None/not applicable
+53	1.2712902	7.2027473	2	2	2	2	2	IP	en	publisher	Latin	None/not applicable	None/not applicable
+54	0.18231292	7.97067	2	2	2	2	2	IP	en	book	Latin	None/not applicable	None/not applicable
+55	4.4207106	8.463117	1	1	1	1	1	IP	en	prices	Latin	None/not applicable	None/not applicable
+56	2.1690717	6.3949976	2	2	4	4	6	IP	en	product	Latin	None/not applicable	None/not applicable
+57	2.3026125	3.2743347	0	0	0	0	0	IP	en	today	Latin	None/not applicable	None/not applicable
+58	4.3606086	4.3072414	3	3	3	3	5	IP	en	call	Latin	None/not applicable	None/not applicable
+59	3.5636418	6.294272	3	3	4	6	7	IP	en	solutions	Latin	None/not applicable	None/not applicable
+60	4.3915553	6.290821	3	3	3	6	7	IP	en	dimensions	Latin	None/not applicable	None/not applicable
+61	3.4348836	3.2654831	0	0	0	0	0	IP	en	ideal	Latin	None/not applicable	None/not applicable
+62	4.0254693	7.381478	1	1	1	6	1	IP	en	quote	Latin	None/not applicable	None/not applicable
+63	3.7095084	7.1139784	1	1	1	6	1	IP	en	reviews	Latin	None/not applicable	None/not applicable
+64	4.3140855	6.0085692	3	3	3	6	7	IP	en	designed	Latin	None/not applicable	None/not applicable
+65	5.940016	7.8283854	1	1	1	1	4	IP	en	features	Latin	None/not applicable	None/not applicable
+66	1.4128726	6.5615854	2	2	4	2	6	IP	en	stock	Latin	None/not applicable	None/not applicable
+67	3.913677	5.519263	3	3	3	3	7	IP	en	deal	Latin	None/not applicable	None/not applicable
+68	2.3749917	4.908463	0	4	5	4	6	IP	en	amazon	Latin	None/not applicable	None/not applicable
+69	6.274416	8.176551	1	1	1	1	4	IP	en	benefits	Latin	None/not applicable	None/not applicable
+70	4.4522204	8.518605	1	1	1	1	1	IP	en	price	Latin	None/not applicable	None/not applicable
+71	3.511379	5.029609	3	3	3	3	7	IP	en	sold	Latin	None/not applicable	None/not applicable
+72	1.3537533	6.8903227	2	2	2	2	2	IP	en	owner	Latin	None/not applicable	None/not applicable
+73	4.7114277	3.9771776	3	3	3	3	5	IP	en	tour	Latin	None/not applicable	None/not applicable
+74	3.4856699	5.1277685	3	3	3	3	7	IP	en	sale	Latin	None/not applicable	None/not applicable
+75	1.7712039	6.4769883	2	2	4	4	6	IP	en	item	Latin	None/not applicable	None/not applicable
+76	0.07695563	8.203524	2	2	2	2	2	IP	en	books	Latin	None/not applicable	None/not applicable
+77	4.1677575	5.596623	3	3	3	3	7	IP	en	offer	Latin	None/not applicable	None/not applicable
+78	4.4799795	4.1038065	3	3	3	3	5	IP	fr	retrouvez	Latin	find	None/not applicable
+79	3.9781222	4.7175136	3	3	3	3	5	IP	fr	proposons	Latin	offer (1.plural)	None/not applicable
+80	2.4106424	5.340706	0	4	4	4	6	IP	fr	agence	Latin	agency	None/not applicable
+81	3.2195404	5.2257	3	3	3	4	7	IP	fr	boutique	Latin	shop	None/not applicable
+82	4.4918513	8.551311	1	1	1	1	1	IP	fr	tarif	Latin	rate	None/not applicable
+83	-0.11950956	8.23305	2	2	2	2	2	IP	fr	livre	Latin	book	None/not applicable
+84	1.4425862	3.5448966	0	4	5	5	3	IP	fr	euros	Latin	euros	None/not applicable
+85	4.1378384	4.0709963	3	3	3	3	5	IP	fr	contactez-nous	Latin	contact us (imp.)	None/not applicable
+86	1.3597895	6.535317	2	2	4	2	6	IP	fr	stock	Latin	stock	None/not applicable
+87	4.4264827	5.4546204	3	3	3	3	7	IP	fr	devis	Latin	quote	None/not applicable
+88	1.2593406	4.6757035	0	4	5	5	3	IP	fr	clients	Latin	clients	None/not applicable
+89	4.5404453	3.856232	3	3	3	3	5	IP	fr	découvrez	Latin	discover (imp.)	None/not applicable
+90	4.7078342	4.810743	3	3	3	3	5	IP	fr	ambiance	Latin	atmosphere	None/not applicable
+91	4.387502	6.4076533	3	3	3	6	7	IP	fr	dimensions	Latin	dimensions	None/not applicable
+92	4.657936	4.5350537	3	3	3	3	5	IP	fr	accueille	Latin	welcome	None/not applicable
+93	1.1760731	4.736923	0	4	5	5	3	IP	fr	clientèle	Latin	customers	None/not applicable
+94	4.6845803	4.2623224	3	3	3	3	5	IP	fr	écoute	Latin	listening	None/not applicable
+95	0.8293155	6.948053	2	2	2	2	2	IP	fr	réservation	Latin	reservation	None/not applicable
+96	6.2642198	8.170155	1	1	1	1	4	IP	fr	avantages	Latin	advantages	None/not applicable
+97	4.533232	3.95601	3	3	3	3	5	IP	fr	découvrir	Latin	discover	None/not applicable
+98	1.0757383	7.2501774	2	2	2	2	2	IP	fr	édition	Latin	edition	None/not applicable
+99	-0.07094389	8.181776	2	2	2	2	2	IP	fr	livres	Latin	books	None/not applicable
+100	4.1468806	6.3788443	3	3	3	6	7	IP	fr	gamme	Latin	range	None/not applicable
+101	4.6909227	5.142532	3	3	3	3	5	IP	fr	envies	Latin	desires	None/not applicable
+102	3.7768493	4.9225736	3	3	3	3	5	IP	fr	acheter	Latin	buy	None/not applicable
+103	4.0872383	3.828782	3	0	0	3	5	IP	fr	n'hésitez	Latin	do not hesitate	None/not applicable

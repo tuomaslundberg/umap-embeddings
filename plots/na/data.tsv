@@ -1,0 +1,105 @@
+	x_umap_data_2	y_umap_data_2	umap_labels_2_spherical-kmeans_4	umap_labels_2_spherical-kmeans_5	umap_labels_2_spherical-kmeans_6	umap_labels_2_spherical-kmeans_7	umap_labels_2_spherical-kmeans_8	label_for_umap	lang	text	script_type	translation	comments
+0	8.23315	9.809285	0	0	5	5	5	NA	zh	徐偉告	Traditional Chinese	Xu Wei reports (name-specific)	Seems like a fragment; appears to be a person's name + partial verb
+1	8.291483	9.563406	0	0	5	5	5	NA	zh	訊	Traditional Chinese	Information/News	"Vague alone; usually part of compound words (e.g. ""通訊"")"
+2	8.256299	9.735764	0	0	5	5	5	NA	zh	小说	Simplified Chinese	Novel	Appears also in MT keywords
+3	8.4758625	10.191087	0	0	5	5	5	NA	zh	訴	Traditional Chinese	Tell/Complain	"Rarely used alone; likely truncated from ""控訴"" (accusation)"
+4	8.395839	10.160062	0	0	5	5	5	NA	zh	紹說	Traditional Chinese	Introduction (context needed)	"Likely a fragment from ""介紹說"""
+5	7.7101345	11.41612	0	0	5	5	5	NA	zh	記者	Traditional Chinese	Reporter	None/not applicable
+6	8.343587	9.661012	0	0	5	5	5	NA	zh	章	Traditional Chinese/simplified Chinese	Chapter/Article	"Rarely used alone; could be truncated from ""文章"" (article)"
+7	10.8195915	15.934278	3	2	3	3	7	NA	zh	圖	Traditional Chinese	Picture/Diagram	None/not applicable
+8	3.0987024	7.3144307	2	4	4	6	1	NA	zh	昨日	Traditional Chinese	Yesterday	None/not applicable
+9	3.031225	7.246648	2	4	4	6	1	NA	zh	近日	Simplified Chinese	Recently	None/not applicable
+10	7.780958	11.223656	0	0	5	5	5	NA	zh	记者	Simplified Chinese	Reporter	None/not applicable
+11	8.250171	10.4561405	0	0	5	5	5	NA	zh	聞	Traditional Chinese	News/Hear	"Rarely used alone; likely truncated from ""新聞"" (news)"
+12	3.2548795	7.4702067	2	4	4	6	1	NA	zh	上午	Simplified Chinese	Morning	None/not applicable
+13	9.597311	10.794075	0	0	0	0	0	NA	zh	指出	Simplified Chinese	Point out	None/not applicable
+14	3.1528413	7.369218	2	4	4	6	1	NA	zh	昨天	Simplified Chinese	Yesterday	None/not applicable
+15	8.174343	10.595511	0	0	5	5	5	NA	zh	采訪	Traditional Chinese	Interview	None/not applicable
+16	10.873169	15.989485	3	2	3	3	7	NA	zh	图	Simplified Chinese	Picture/Diagram	"Simplified equivalent of ""圖"" also in top NA keywords"
+17	9.470332	10.709237	0	0	5	5	0	NA	zh	表示	Simplified Chinese	Indicate/State	None/not applicable
+18	2.929525	7.1436143	2	4	4	6	1	NA	zh	今日	Traditional Chinese	Today	None/not applicable
+19	8.806243	10.053835	0	0	5	5	5	NA	zh	来源	Simplified Chinese	Source	None/not applicable
+20	2.9884605	7.203974	2	4	4	6	1	NA	zh	日前	Traditional Chinese/simplified Chinese	A few days ago	None/not applicable
+21	7.879103	10.575946	0	0	5	5	5	NA	zh	報導	Traditional Chinese	Report	None/not applicable
+22	8.754025	10.00653	0	0	5	5	5	NA	zh	稱	Traditional Chinese	Call/State	None/not applicable
+23	3.2254257	7.440184	2	4	4	6	1	NA	zh	下午	Simplified Chinese	Afternoon	None/not applicable
+24	9.453562	10.631372	0	0	5	5	0	NA	zh	透露	Simplified Chinese	Reveal	None/not applicable
+25	7.274942	13.610388	3	2	2	2	2	NA	zh	警方	Simplified Chinese	Police	None/not applicable
+26	9.521638	11.610971	0	0	5	5	3	NA	ur	پوائنٹ	Urdu	point	English word in Urdu script
+27	10.067894	10.91583	0	0	0	0	0	NA	ur	تفصیلات	Urdu	details	None/not applicable
+28	7.7362127	11.433581	0	0	5	5	5	NA	ur	رپورٹر	Urdu	reporter	English word in Urdu script
+29	7.2016673	14.588449	3	2	2	2	2	NA	ur	لاہور	Urdu	Lahore	None/not applicable
+30	7.172755	14.434385	3	2	2	2	2	NA	ur	دہلی	Urdu	Delhi	None/not applicable
+31	8.015346	11.695938	0	0	5	5	5	NA	ur	ترجمان	Urdu	spokesperson	None/not applicable
+32	7.1717477	14.499168	3	2	2	2	2	NA	ur	حیدرآباد	Urdu	Hyderabad	None/not applicable
+33	11.343481	13.071291	3	3	3	3	3	NA	ur	خیالات	Urdu	thoughts/opinions	None/not applicable
+34	5.5428715	10.728092	2	4	4	4	4	NA	ur	خبریں	Urdu	news	None/not applicable
+35	5.517232	10.799117	2	4	4	4	4	NA	ur	news	Latin	None/not applicable	None/not applicable
+36	7.105765	14.43178	3	2	2	2	2	NA	ur	دبئی	Urdu	Dubai	None/not applicable
+37	6.8898826	14.448891	3	2	2	2	2	NA	ur	نیویارک	Urdu	New York	None/not applicable
+38	11.489308	10.589989	0	3	0	0	0	NA	ur	کہاہے	Urdu	has said	None/not applicable
+39	8.099671	11.642464	0	0	5	5	5	NA	ur	نمائندہ	Urdu	representative/correspondent	None/not applicable
+40	7.321434	13.558943	3	2	2	2	2	NA	ur	مانیٹرنگ	Urdu	monitoring	English word in Urdu script
+41	7.024958	14.285158	3	2	2	2	2	NA	ur	ممبئی	Urdu	Mumbai	None/not applicable
+42	7.2287354	14.224259	3	2	2	2	2	NA	ur	راولپنڈی	Urdu	Rawalpindi	None/not applicable
+43	8.375965	9.615343	0	0	5	5	5	NA	ur	نامہ	Urdu	written by/letter/written document	Hard to translate in isolation.This word may have occurred as part of the expression naama-o-paigham which means correspondence or as part of the word naama nigar which means correspondent.
+44	5.5577292	10.763882	2	4	4	4	4	NA	ur	نیوز	Urdu	news	English word in Urdu script
+45	9.745692	10.51764	0	0	0	0	0	NA	ur	انکشاف	Urdu	revelation/disclosure	None/not applicable
+46	5.8304477	10.707956	2	4	4	4	4	NA	ur	خبررساں	Urdu	news reporter	None/not applicable
+47	11.527657	10.55095	0	3	0	0	0	NA	ur	کہاکہ	Urdu	said that	None/not applicable
+48	9.400855	11.708183	0	0	5	5	3	NA	ur	منٹ	Urdu	minute	None/not applicable
+49	11.193345	11.033643	0	3	0	0	0	NA	ur	آگئی	Urdu	came	"Context-dependent; without context, ""came"" is the best translation"
+50	7.083749	14.606902	3	2	2	2	2	NA	ur	کراچی	Urdu	Karachi	None/not applicable
+51	5.7430964	10.584789	2	4	4	4	4	NA	ur	خبر	Urdu	news	None/not applicable
+52	11.617686	13.314517	3	3	3	3	3	NA	en	blog	Latin	None/not applicable	None/not applicable
+53	10.814582	15.932966	3	2	3	3	7	NA	en	photos	Latin	None/not applicable	None/not applicable
+54	10.507383	10.091275	0	0	0	0	0	NA	en	announced	Latin	None/not applicable	None/not applicable
+55	10.7002	15.827842	3	2	3	3	7	NA	en	photo	Latin	None/not applicable	None/not applicable
+56	9.158888	12.3893	0	0	5	5	3	NA	en	winning	Latin	None/not applicable	None/not applicable
+57	0.09638393	0.05956313	1	1	1	1	6	NA	en	monday	Latin	None/not applicable	None/not applicable
+58	-0.118177004	0.1916867	1	1	1	1	6	NA	en	wednesday	Latin	None/not applicable	None/not applicable
+59	11.525362	13.227006	3	3	3	3	3	NA	en	comments	Latin	None/not applicable	None/not applicable
+60	0.085618556	0.53879786	1	1	1	1	6	NA	en	friday	Latin	None/not applicable	None/not applicable
+61	3.2066946	7.463833	2	4	4	6	1	NA	en	yesterday	Latin	None/not applicable	None/not applicable
+62	0.031203117	0.09638292	1	1	1	1	6	NA	en	tuesday	Latin	None/not applicable	None/not applicable
+63	5.72902	10.600021	2	4	4	4	4	NA	en	news	Latin	None/not applicable	None/not applicable
+64	11.391061	10.518627	0	3	0	0	0	NA	en	told	Latin	None/not applicable	None/not applicable
+65	0.2389474	-0.035135917	1	1	1	1	6	NA	en	thursday	Latin	None/not applicable	None/not applicable
+66	9.527335	12.087687	0	0	5	5	3	NA	en	press	Latin	None/not applicable	None/not applicable
+67	11.101072	10.935276	0	3	0	0	0	NA	en	added	Latin	None/not applicable	None/not applicable
+68	10.439624	10.00769	0	0	0	0	0	NA	en	reported	Latin	None/not applicable	None/not applicable
+69	8.261801	10.748305	0	0	5	5	5	NA	en	interview	Latin	None/not applicable	None/not applicable
+70	-0.011459878	-0.036125068	1	1	1	1	6	NA	en	saturday	Latin	None/not applicable	None/not applicable
+71	11.456756	10.523375	0	3	0	0	0	NA	en	said	Latin	None/not applicable	None/not applicable
+72	10.063314	12.189502	0	3	0	0	3	NA	en	ceo	Latin	None/not applicable	None/not applicable
+73	7.3167014	13.571797	3	2	2	2	2	NA	en	police	Latin	None/not applicable	None/not applicable
+74	8.80416	12.207338	0	0	5	5	3	NA	en	coach	Latin	None/not applicable	None/not applicable
+75	8.2606	11.892143	0	0	5	5	5	NA	en	minister	Latin	None/not applicable	None/not applicable
+76	10.172464	9.880484	0	0	0	0	0	NA	en	reports	Latin	None/not applicable	None/not applicable
+77	9.83669	12.280717	0	3	0	0	3	NA	en	prime	Latin	None/not applicable	None/not applicable
+78	11.659346	13.35156	3	3	3	3	3	NA	fr	blog	Latin	blog	None/not applicable
+79	9.875609	10.855369	0	0	0	0	0	NA	fr	explique	Latin	explains	None/not applicable
+80	9.461749	12.102466	0	0	5	5	3	NA	fr	lance	Latin	launches	None/not applicable
+81	10.718244	15.842207	3	2	3	3	7	NA	fr	photos	Latin	photos	None/not applicable
+82	11.426841	13.136233	3	3	3	3	3	NA	fr	commentaires	Latin	comments	None/not applicable
+83	10.608791	15.742312	3	2	3	3	7	NA	fr	photo	Latin	photo	None/not applicable
+84	9.978097	9.690922	0	0	0	0	0	NA	fr	communiqué	Latin	press release	None/not applicable
+85	10.033469	11.10274	0	0	0	0	0	NA	fr	précise	Latin	clarifies	None/not applicable
+86	0.24456312	0.16858889	1	1	1	1	6	NA	fr	lundi	Latin	Monday	None/not applicable
+87	0.16758716	0.5437712	1	1	1	1	6	NA	fr	jeudi	Latin	Thursday	None/not applicable
+88	0.322105	0.36610198	1	1	1	1	6	NA	fr	mercredi	Latin	Wednesday	None/not applicable
+89	8.961394	12.289418	0	0	5	5	3	NA	fr	joueur	Latin	player	None/not applicable
+90	11.008325	12.707635	3	3	3	3	3	NA	fr	estime	Latin	estimates	None/not applicable
+91	11.382886	13.085037	3	3	3	3	3	NA	fr	commentaire	Latin	comment	None/not applicable
+92	10.239194	10.646543	0	0	0	0	0	NA	fr	expliqué	Latin	explained	None/not applicable
+93	0.03917305	0.6168604	1	1	1	1	6	NA	fr	vendredi	Latin	Friday	None/not applicable
+94	0.4266142	0.3167679	1	1	1	1	6	NA	fr	mardi	Latin	Tuesday	None/not applicable
+95	9.760013	10.924104	0	0	0	0	0	NA	fr	indique	Latin	indicates	None/not applicable
+96	5.6003084	10.714796	2	4	4	4	4	NA	fr	news	Latin	news	None/not applicable
+97	8.753712	12.133636	0	0	5	5	3	NA	fr	compétition	Latin	competition	None/not applicable
+98	10.538004	10.102783	0	0	0	0	0	NA	fr	annoncé	Latin	announced	None/not applicable
+99	10.238735	12.31731	0	3	0	0	3	NA	fr	euros	Latin	euros	None/not applicable
+100	10.244502	12.274289	0	3	0	0	3	NA	fr	d'euros	Latin	euros	None/not applicable
+101	-0.07282757	0.0039597563	1	1	1	1	6	NA	fr	dimanche	Latin	Sunday	None/not applicable
+102	10.926362	11.28436	0	3	0	0	0	NA	fr	arrivée	Latin	arrival	None/not applicable
+103	11.42344	10.924218	0	3	0	0	0	NA	fr	fallait	Latin	had to	None/not applicable

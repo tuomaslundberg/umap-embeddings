@@ -1,0 +1,105 @@
+	x_umap_data_2	y_umap_data_2	umap_labels_2_spherical-kmeans_4	umap_labels_2_spherical-kmeans_5	umap_labels_2_spherical-kmeans_6	umap_labels_2_spherical-kmeans_7	umap_labels_2_spherical-kmeans_8	label_for_umap	lang	text	script_type	translation	comments
+0	-1.6593997	8.550915	3	3	3	3	7	IN	zh	態	Traditional Chinese	State/Condition	"Rarely used alone; could be truncated from ""狀態"" (status)"
+1	-2.60895	6.262882	0	0	0	0	6	IN	zh	常見	Traditional Chinese	Commonly seen	None/not applicable
+2	-0.8745452	6.12606	2	4	4	6	2	IN	zh	新建	Simplified Chinese	Create new	None/not applicable
+3	-4.195763	6.1098905	0	0	5	5	4	IN	zh	哪些	Simplified Chinese	Which ones	None/not applicable
+4	-0.6964054	6.022009	2	4	4	6	2	IN	zh	编辑	Simplified Chinese	Edit	None/not applicable
+5	-3.5995243	6.2712164	0	0	5	5	4	IN	zh	簡	Traditional Chinese	Simple/Brief	"Rarely used alone; could be truncated from ""簡單"" (simple)"
+6	2.4669306	9.1723385	1	1	1	1	1	IN	zh	介紹	Traditional Chinese	Introduction	None/not applicable
+7	-3.986425	5.593587	0	0	5	5	4	IN	zh	如下	Simplified Chinese	As follows	None/not applicable
+8	2.4154952	9.240291	1	1	1	1	1	IN	zh	介绍	Simplified Chinese	Introduction	"Simplified equivalent of ""介紹"" also in top IN keywords"
+9	-0.27738228	9.091972	3	3	3	3	3	IN	zh	原理	Simplified Chinese	Principle	None/not applicable
+10	-0.6072204	8.396451	3	3	3	3	7	IN	zh	职责	Simplified Chinese	Responsibility	None/not applicable
+11	-0.4275418	9.308424	3	3	3	3	3	IN	zh	概念	Simplified Chinese	Concept	None/not applicable
+12	0.5273733	7.308774	3	4	4	4	5	IN	zh	圖	Traditional Chinese	Diagram/Picture	None/not applicable
+13	2.4890246	9.306113	1	1	1	1	1	IN	zh	简介	Simplified Chinese	Brief introduction	None/not applicable
+14	-3.6432788	5.4035306	0	0	5	5	4	IN	zh	分為	Traditional Chinese	Divided into	None/not applicable
+15	-2.3536541	5.6937933	2	2	2	6	6	IN	zh	見	Traditional Chinese	See	"Context-dependent; could be as part of ""可見"" (can be seen)"
+16	-2.9512024	4.4104333	2	2	2	2	4	IN	zh	稱	Traditional Chinese	Called/Named	None/not applicable
+17	-3.540253	5.284237	0	0	5	5	4	IN	zh	分为	Simplified Chinese	Divided into	None/not applicable
+18	-3.7937086	5.837209	0	0	5	5	4	IN	zh	因而	Simplified Chinese	Therefore/Thus	None/not applicable
+19	-0.3140666	9.094355	3	3	3	3	3	IN	zh	原則	Traditional Chinese	Principle	None/not applicable
+20	-4.164755	5.9039807	0	0	5	5	4	IN	zh	一下	Simplified Chinese	Briefly	In info contexts
+21	-3.599477	6.091026	0	0	5	5	4	IN	zh	故	Traditional Chinese/simplified Chinese	Therefore/Thus	Literary/formal
+22	0.6155858	8.992267	1	1	1	1	3	IN	zh	表明	Simplified Chinese	Indicate/Show	None/not applicable
+23	-4.1809497	5.610287	0	0	5	5	4	IN	zh	比如	Simplified Chinese	For example	None/not applicable
+24	-3.1497471	4.687995	2	2	2	2	4	IN	zh	称为	Simplified Chinese	Called/Named	"Partial duplicate of the traditional ""稱"" also in top IN keywords"
+25	-4.273955	6.010136	0	0	5	5	4	IN	zh	什么	Simplified Chinese	What	None/not applicable
+26	2.383148	9.369418	1	1	1	1	1	IN	ur	تعارف	Urdu	introduction	None/not applicable
+27	-1.662786	6.505899	2	2	0	6	6	IN	ur	مستعمل	Urdu	used/in use	None/not applicable
+28	-1.5181702	6.3852677	2	2	0	6	6	IN	ur	پرانے	Urdu	old	None/not applicable
+29	-1.4600614	5.098445	2	2	2	6	2	IN	ur	تاریخترمیم	Urdu	HistoryEdit	"A machine translation. Translator's comment: ""I don’t know what this means, this is a little weird formulation. I showed this to a native speaker and they were also confused."" One explanation could be that this is from Wikipedia's ""History | Edit"" article menu distorted by the keyword cleaning process"
+30	-0.8344842	5.504872	2	2	4	6	2	IN	ur	بانی	Urdu	founder	None/not applicable
+31	-2.0093544	5.203446	2	2	2	6	2	IN	ur	علامہ	Urdu	scholar	(Honorific title for a) learned person/scholar
+32	-0.70268697	9.530654	3	3	3	3	3	IN	ur	اصطلاح	Urdu	term/terminology	None/not applicable
+33	-3.611369	7.661315	0	0	0	0	0	IN	ur	انگریزی	Urdu	English	None/not applicable
+34	-4.034434	6.2609177	0	0	5	5	4	IN	ur	ہے1	Mixed	is (with numeral 1)	Might be a formatting issue
+35	-1.172333	5.077309	2	2	2	6	2	IN	ur	پیدائش	Urdu	birth	None/not applicable
+36	-1.3820677	8.719511	3	3	3	3	7	IN	ur	صفت	Urdu	attribute/trait/feature	None/not applicable
+37	-1.9378923	5.234857	2	2	2	6	2	IN	ur	جاتترمیم	Urdu	edited entries	"Translator's comment: ""I don’t know what this means. The native speaker also had no idea."" See ""تاریخترمیم"", a top keyword in the same register"
+38	-3.6781318	7.157723	0	0	0	0	0	IN	ur	لال	Urdu	red	None/not applicable
+39	-1.9773037	5.4147706	2	2	2	6	2	IN	ur	دیکھیےترمیم	Urdu	see edit	Optionally: see modification/amendment
+40	-2.8167589	4.465452	2	2	2	2	4	IN	ur	اسم	Urdu	name	None/not applicable
+41	-3.872072	5.747612	0	0	5	5	4	IN	ur	یوں	Urdu	thus/in this way	None/not applicable
+42	0.68989426	6.3850846	3	4	4	4	5	IN	ur	حوالہ	Urdu	reference/custody/care	None/not applicable
+43	-0.71994936	6.1478252	2	4	4	6	2	IN	ur	ترمیم	Urdu	edit/modification/amendment	None/not applicable
+44	-0.8955765	9.337842	3	3	3	3	3	IN	ur	لفظ	Urdu	word	None/not applicable
+45	-3.590093	7.256075	0	0	0	0	0	IN	ur	لاہور	Urdu	Lahore	None/not applicable
+46	-0.83662254	9.286163	3	3	3	3	3	IN	ur	معنی	Urdu	meaning	None/not applicable
+47	-2.91788	4.3635345	2	2	2	2	4	IN	ur	لقب	Urdu	title	None/not applicable
+48	-1.2297473	5.0912466	2	2	2	6	2	IN	ur	وفات	Urdu	death	None/not applicable
+49	-1.2107521	5.0461316	2	2	2	6	2	IN	ur	ولادت	Urdu	birth	None/not applicable
+50	-4.2275305	5.510487	0	0	5	5	4	IN	ur	مثلا	Urdu	for example	None/not applicable
+51	-3.568664	6.3487506	0	0	5	5	4	IN	ur	نوں	Urdu	None/not applicable	This does not mean anything - at least in Urdu.
+52	1.0110074	9.003799	1	1	1	1	1	IN	en	abstract	Latin	None/not applicable	None/not applicable
+53	2.3923948	9.478158	1	1	1	1	1	IN	en	introduction	Latin	None/not applicable	None/not applicable
+54	-2.8622398	4.3387055	2	2	2	2	4	IN	en	title	Latin	None/not applicable	None/not applicable
+55	0.72316486	6.777542	3	4	4	4	5	IN	en	note	Latin	None/not applicable	None/not applicable
+56	0.63761246	9.203637	1	1	1	1	3	IN	en	description	Latin	None/not applicable	None/not applicable
+57	1.0111841	8.997854	1	1	1	1	1	IN	en	summary	Latin	None/not applicable	None/not applicable
+58	-1.0615853	5.251925	2	2	2	6	2	IN	en	born	Latin	None/not applicable	None/not applicable
+59	0.6499573	6.3346877	3	4	4	4	5	IN	en	reference	Latin	None/not applicable	None/not applicable
+60	0.6021823	6.96441	3	4	4	4	5	IN	en	paper	Latin	None/not applicable	None/not applicable
+61	-2.7713065	6.1616974	0	0	0	0	6	IN	en	typically	Latin	None/not applicable	None/not applicable
+62	-3.5723422	7.7291307	0	0	0	0	0	IN	en	english	Latin	None/not applicable	None/not applicable
+63	-0.61721295	5.769348	2	4	4	6	2	IN	en	author	Latin	None/not applicable	None/not applicable
+64	-2.8939905	4.338605	2	2	2	2	4	IN	en	name	Latin	None/not applicable	None/not applicable
+65	-0.8022642	9.448117	3	3	3	3	3	IN	en	word	Latin	None/not applicable	None/not applicable
+66	-1.671558	6.734047	2	2	0	6	6	IN	en	worked	Latin	None/not applicable	None/not applicable
+67	-2.3079405	7.1537786	0	0	0	0	6	IN	en	contains	Latin	None/not applicable	None/not applicable
+68	-2.515167	6.9851613	0	0	0	0	6	IN	en	associated	Latin	None/not applicable	None/not applicable
+69	-2.160347	5.5710154	2	2	2	6	2	IN	en	see	Latin	None/not applicable	None/not applicable
+70	-0.68664616	8.165222	3	3	3	3	7	IN	en	mission	Latin	None/not applicable	None/not applicable
+71	-2.170449	6.9948506	0	0	0	0	6	IN	en	listed	Latin	None/not applicable	None/not applicable
+72	0.43180272	9.176548	1	1	1	1	3	IN	en	described	Latin	None/not applicable	None/not applicable
+73	0.7553382	6.952488	3	4	4	4	5	IN	en	document	Latin	None/not applicable	None/not applicable
+74	-4.3279195	5.4461403	0	0	5	5	4	IN	en	example	Latin	None/not applicable	None/not applicable
+75	-0.2734721	7.3594384	3	4	4	4	7	IN	en	article	Latin	None/not applicable	None/not applicable
+76	-1.1857686	9.13227	3	3	3	3	3	IN	en	mean	Latin	None/not applicable	None/not applicable
+77	-0.74357444	9.563723	3	3	3	3	3	IN	en	term	Latin	None/not applicable	None/not applicable
+78	1.5794497	8.861187	1	1	1	1	1	IN	fr	biographie	Latin	biography	None/not applicable
+79	0.7292056	6.497931	3	4	4	4	5	IN	fr	notes	Latin	notes	None/not applicable
+80	-1.075972	8.588673	3	3	3	3	7	IN	fr	caractéristiques	Latin	characteristics	None/not applicable
+81	-0.44287804	7.8326893	3	3	3	3	7	IN	fr	étude	Latin	study	None/not applicable
+82	0.5349963	9.144954	1	1	1	1	3	IN	fr	description	Latin	description	None/not applicable
+83	-0.8681908	7.8630137	3	3	3	3	7	IN	fr	objet	Latin	object	None/not applicable
+84	-0.9250598	8.0856085	3	3	3	3	7	IN	fr	objectif	Latin	objective	None/not applicable
+85	-0.6985072	8.262312	3	3	3	3	7	IN	fr	missions	Latin	missions	None/not applicable
+86	2.3421497	9.459345	1	1	1	1	1	IN	fr	accueil	Latin	home	None/not applicable
+87	0.15825541	9.305489	3	3	3	3	3	IN	fr	définition	Latin	definition	None/not applicable
+88	1.369896	8.678456	1	1	1	1	1	IN	fr	histoire	Latin	history	None/not applicable
+89	-0.5412467	5.920973	2	4	4	6	2	IN	fr	modifier	Latin	edit	None/not applicable
+90	-2.9689474	5.9029527	0	0	5	5	4	IN	fr	particulièrement	Latin	particularly	None/not applicable
+91	1.0908965	9.097555	1	1	1	1	1	IN	fr	résumé	Latin	summary	None/not applicable
+92	-3.6876829	7.5662594	0	0	0	0	0	IN	fr	française	Latin	French	None/not applicable
+93	0.882072	7.051996	3	4	4	4	5	IN	fr	fiche	Latin	record	None/not applicable
+94	-2.1819365	6.9232345	0	0	0	0	6	IN	fr	située	Latin	located	None/not applicable
+95	-3.2232115	7.487247	0	0	0	0	0	IN	fr	école	Latin	school	None/not applicable
+96	2.1790566	9.239072	1	1	1	1	1	IN	fr	présentation	Latin	presentation	None/not applicable
+97	-3.708206	7.559898	0	0	0	0	0	IN	fr	français	Latin	French	None/not applicable
+98	-2.7780313	6.0555215	0	0	0	5	6	IN	fr	parfois	Latin	sometimes	None/not applicable
+99	0.6328071	6.3124876	3	4	4	4	5	IN	fr	références	Latin	references	None/not applicable
+100	-2.639928	7.2127337	0	0	0	0	0	IN	fr	composé	Latin	composed	None/not applicable
+101	-2.583197	7.057737	0	0	0	0	6	IN	fr	associé	Latin	associated	None/not applicable
+102	-2.8011072	7.1801944	0	0	0	0	0	IN	fr	commune	Latin	municipality	None/not applicable
+103	-2.7636104	7.134458	0	0	0	0	0	IN	fr	l'association	Latin	the association	None/not applicable

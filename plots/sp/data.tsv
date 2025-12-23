@@ -1,0 +1,105 @@
+	x_umap_data_2	y_umap_data_2	umap_labels_2_spherical-kmeans_4	umap_labels_2_spherical-kmeans_5	umap_labels_2_spherical-kmeans_6	umap_labels_2_spherical-kmeans_7	umap_labels_2_spherical-kmeans_8	label_for_umap	lang	text	script_type	translation	comments
+0	4.925757	10.126792	1	4	4	4	4	SP	zh	專訪	Traditional Chinese	Exclusive interview	None/not applicable
+1	5.0063066	10.047192	1	4	4	4	4	SP	zh	专访	Simplified Chinese	Interview	"Simplified equivalent of ""專訪"" (Exclusive interview)"
+2	4.9963374	10.227492	1	4	4	4	4	SP	zh	采访	Simplified Chinese	Interview/Reporting	None/not applicable
+3	4.893336	10.171913	1	4	4	4	4	SP	zh	访谈	Simplified Chinese	Talk/Interview	None/not applicable
+4	7.090739	2.2011135	0	0	0	0	0	SP	zh	主持人	Simplified Chinese	Host/Presenter	None/not applicable
+5	7.0702105	2.0596306	0	0	0	0	0	SP	zh	记者	Simplified Chinese	Journalist/Reporter	None/not applicable
+6	2.906657	5.348336	1	1	1	1	1	SP	zh	看待	Simplified Chinese	View/Perceive	None/not applicable
+7	4.883654	6.0331655	1	1	1	1	1	SP	zh	介绍	Simplified Chinese	Introduce/Introduction	None/not applicable
+8	0.286879	-2.3092391	2	2	2	2	2	SP	zh	問	Traditional Chinese	Ask	None/not applicable
+9	0.18553643	-2.2895563	2	2	2	2	2	SP	zh	问	Simplified Chinese	Ask	"Simplified equivalent of ""問"" (Ask)"
+10	2.4041097	3.2221522	0	1	5	5	5	SP	zh	哪些	Simplified Chinese	Which ones	None/not applicable
+11	0.13786098	-1.5774584	2	2	2	2	2	SP	zh	q	Latin	None/not applicable	"Not Chinese; likely abbreviation of English ""question"""
+12	3.1185412	5.2807317	1	1	1	1	1	SP	zh	觉得	Simplified Chinese	Feel/Think	None/not applicable
+13	2.4893508	2.8784359	0	1	5	5	5	SP	zh	如何	Simplified Chinese	How	None/not applicable
+14	2.9055798	5.4177585	1	1	1	1	1	SP	zh	认为	Simplified Chinese	Consider/Believe	None/not applicable
+15	3.1745596	5.2352257	1	1	1	1	1	SP	zh	覺	Traditional Chinese	Feel/Sense	"Rarely used alone; could be truncated from ""覺得"" (feel), the simplified equivalent of which is also in top SP keywords (see ""觉得"")"
+16	2.5511162	3.6094108	0	1	5	5	5	SP	zh	以下	Simplified Chinese	Below/The following	None/not applicable
+17	5.775467	4.20874	0	0	0	6	6	SP	zh	原因	Simplified Chinese	Reason/Cause	None/not applicable
+18	2.2729821	3.058552	0	1	5	5	5	SP	zh	什麼	Traditional Chinese	What	None/not applicable
+19	2.2937179	3.0742393	0	1	5	5	5	SP	zh	什么	Simplified Chinese	What	"Simplified equivalent of ""什麼"" (What)"
+20	2.5386043	3.3205554	0	1	5	5	5	SP	zh	一下	Simplified Chinese	A bit/For a moment	None/not applicable
+21	2.4928246	2.8666193	0	1	5	5	5	SP	zh	怎么	Simplified Chinese	How	None/not applicable
+22	2.5200555	2.794199	0	1	5	5	5	SP	zh	怎样	Simplified Chinese	How	None/not applicable
+23	2.9269059	3.403813	0	1	5	5	5	SP	zh	当时	Simplified Chinese	At that time	None/not applicable
+24	3.0890138	5.3379593	1	1	1	1	1	SP	zh	感觉	Simplified Chinese	Feeling/Sense	None/not applicable
+25	6.241935	3.7012916	0	0	0	6	6	SP	zh	角色	Simplified Chinese	Role/Character	None/not applicable
+26	4.8618526	10.5366745	1	4	4	4	4	SP	ur	انٹرویو	Urdu	interview	English word in Urdu script
+27	5.0572615	5.971619	1	1	1	1	1	SP	ur	تعارف	Urdu	introduction	None/not applicable
+28	9.522879	6.0625196	3	3	3	3	3	SP	ur	گفتگو	Urdu	conversation/discussion	None/not applicable
+29	7.592919	2.4575443	0	0	0	0	0	SP	ur	علامہ	Urdu	scholar	(Honorific title for a) learned person/scholar
+30	0.4212788	-2.5235362	2	2	2	2	2	SP	ur	سوالات	Urdu	questions	None/not applicable
+31	4.723511	3.328318	0	1	5	6	7	SP	ur	خصوصی	Urdu	special/exclusive	None/not applicable
+32	9.643566	6.2103996	3	3	3	3	3	SP	ur	چیت	Urdu	talk/chat	Word incomplete: this item is the latter part (chiit) of the word baatchiit which means conversation/talk
+33	0.27096593	-2.3843648	2	2	2	2	2	SP	ur	سوال	Urdu	question	None/not applicable
+34	3.9632823	5.111975	0	1	1	1	1	SP	ur	nadeem	Latin	None/not applicable	Proper noun
+35	3.0182683	3.280012	0	1	5	5	5	SP	ur	ٹائمز	Urdu	Times (as in newspaper name)	None/not applicable
+36	4.1262956	6.622677	1	1	1	1	1	SP	ur	بتائیں	Urdu	tell	None/not applicable
+37	4.1107492	6.6890483	1	1	1	1	1	SP	ur	بتائیے	Urdu	please tell	None/not applicable
+38	7.055399	1.9760509	0	0	0	0	0	SP	ur	صحافی	Urdu	journalist	None/not applicable
+39	6.0709834	6.8009186	1	1	1	1	1	SP	ur	ملاقات	Urdu	meeting	None/not applicable
+40	0.16679993	-1.7693287	2	2	2	2	2	SP	ur	س	Urdu	S	Context-dependent, could be an abbreviation
+41	3.490558	3.1393394	0	1	5	5	5	SP	ur	کیساتھ	Urdu	with	None/not applicable
+42	2.7862809	2.8450782	0	1	5	5	5	SP	ur	کیسا	Urdu	how/what kind	None/not applicable
+43	6.5285296	2.4797926	0	0	0	0	0	SP	ur	ادبی	Urdu	literary	None/not applicable
+44	7.3410597	2.7477357	0	0	0	0	0	SP	ur	مولانا	Urdu	Islamic religious leader	A title used for a respected Islamic  religious scholar
+45	3.0706718	3.2169359	0	1	5	5	5	SP	ur	کب	Urdu	when	None/not applicable
+46	3.1303377	5.5853868	1	1	1	1	1	SP	ur	خیال	Urdu	thought/opinion	None/not applicable
+47	5.8265986	4.1811724	0	0	0	6	6	SP	ur	صورتحال	Urdu	situation	None/not applicable
+48	4.442958	6.4368687	1	1	1	1	1	SP	ur	حوالے	Urdu	references	This Urdu word has probably occurred with the postposition ke (ke hawale): this means in the posession of or in the care of (someone).
+49	9.679615	6.2418113	3	3	3	3	3	SP	ur	باتیں	Urdu	talks/conversations	None/not applicable
+50	6.16412	3.7512505	0	0	0	6	6	SP	ur	شخصیت	Urdu	personality	None/not applicable
+51	2.6829245	3.771121	0	1	5	5	5	SP	ur	یعنی	Urdu	that is/meaning	None/not applicable
+52	4.9090576	10.640383	1	4	4	4	4	SP	en	interview	Latin	None/not applicable	None/not applicable
+53	4.9430084	10.878744	1	4	4	4	4	SP	en	interviews	Latin	None/not applicable	None/not applicable
+54	0.057278097	-1.4624392	2	2	2	2	2	SP	en	qa	Latin	None/not applicable	None/not applicable
+55	4.7473264	10.609126	1	4	4	4	4	SP	en	interviewed	Latin	None/not applicable	None/not applicable
+56	7.0183244	3.9564202	0	0	0	6	6	SP	en	laughs	Latin	None/not applicable	None/not applicable
+57	6.688069	2.3245406	0	0	0	0	0	SP	en	writer	Latin	None/not applicable	None/not applicable
+58	4.6423917	3.4317508	0	1	5	6	7	SP	en	exclusive	Latin	None/not applicable	None/not applicable
+59	9.49043	5.977784	3	3	3	3	3	SP	en	chat	Latin	None/not applicable	None/not applicable
+60	9.628522	6.1783147	3	3	3	3	3	SP	en	conversation	Latin	None/not applicable	None/not applicable
+61	9.355839	6.019257	3	3	3	3	3	SP	en	spoke	Latin	None/not applicable	None/not applicable
+62	7.6804676	2.2933793	0	0	0	0	0	SP	en	album	Latin	None/not applicable	None/not applicable
+63	4.5974703	3.6206105	0	1	5	6	7	SP	en	ceo	Latin	None/not applicable	None/not applicable
+64	9.668678	6.231577	3	3	3	3	3	SP	en	talks	Latin	None/not applicable	None/not applicable
+65	0.16272217	-1.508512	2	2	2	2	2	SP	en	q	Latin	None/not applicable	None/not applicable
+66	4.100487	6.6483593	1	1	1	1	1	SP	en	describe	Latin	None/not applicable	None/not applicable
+67	0.38314283	-2.4856632	2	2	2	2	2	SP	en	questions	Latin	None/not applicable	None/not applicable
+68	7.009502	2.4269996	0	0	0	0	0	SP	en	readers	Latin	None/not applicable	None/not applicable
+69	7.06025	3.0595453	0	0	0	0	0	SP	en	fans	Latin	None/not applicable	None/not applicable
+70	0.21101303	-1.3860378	2	2	2	2	2	SP	en	dr	Latin	None/not applicable	None/not applicable
+71	9.450217	6.204619	3	3	3	3	3	SP	en	talked	Latin	None/not applicable	None/not applicable
+72	6.0228133	4.0025973	0	0	0	6	6	SP	en	background	Latin	None/not applicable	None/not applicable
+73	4.8690066	5.7537527	1	1	1	1	1	SP	en	debut	Latin	None/not applicable	None/not applicable
+74	4.9618864	5.8219504	1	1	1	1	1	SP	en	welcome	Latin	None/not applicable	None/not applicable
+75	6.434346	2.6772246	0	0	0	0	0	SP	en	artist	Latin	None/not applicable	None/not applicable
+76	4.3081665	3.486004	0	1	5	5	7	SP	en	biggest	Latin	None/not applicable	None/not applicable
+77	7.238509	1.6961942	0	0	0	0	0	SP	en	magazine	Latin	None/not applicable	None/not applicable
+78	4.7267737	10.78827	1	4	4	4	4	SP	fr	interview	Latin	interview	None/not applicable
+79	5.0300603	10.918376	1	4	4	4	4	SP	fr	interviews	Latin	interviews	None/not applicable
+80	4.705657	10.703297	1	4	4	4	4	SP	fr	l’interview	Latin	the interview	None/not applicable
+81	4.860151	10.975495	1	4	4	4	4	SP	fr	entretien	Latin	discussion	None/not applicable
+82	6.9939523	3.9479206	0	0	0	6	6	SP	fr	rires	Latin	laughter	None/not applicable
+83	7.671033	2.263919	0	0	0	0	0	SP	fr	album	Latin	album	None/not applicable
+84	0.32079694	-2.423408	2	2	2	2	2	SP	fr	questions	Latin	questions	None/not applicable
+85	7.079637	1.9149761	0	0	0	0	0	SP	fr	journaliste	Latin	journalist	None/not applicable
+86	5.98928	6.7264967	1	1	1	1	1	SP	fr	rencontre	Latin	meeting	None/not applicable
+87	4.5925536	6.139717	1	1	1	1	1	SP	fr	présenter	Latin	present	None/not applicable
+88	4.843657	3.7769175	0	1	5	6	7	SP	fr	objectif	Latin	objective	None/not applicable
+89	4.059686	6.623072	1	1	1	1	1	SP	fr	expliquer	Latin	explain	None/not applicable
+90	3.4372418	3.8389425	0	1	5	5	5	SP	fr	pouvez-vous	Latin	can you	None/not applicable
+91	5.9577155	3.1779888	0	0	0	6	6	SP	fr	parcours	Latin	background	None/not applicable
+92	3.1338103	5.6997566	1	1	1	1	1	SP	fr	comment	Latin	how	None/not applicable
+93	5.972056	6.698514	1	1	1	1	1	SP	fr	rencontré	Latin	met	None/not applicable
+94	6.0827537	2.9025824	0	0	0	6	6	SP	fr	métier	Latin	profession	None/not applicable
+95	4.2964206	3.4512289	0	1	5	5	7	SP	fr	particulièrement	Latin	particularly	None/not applicable
+96	4.26507	5.013973	0	1	1	1	1	SP	fr	viennent	Latin	come (3. plural)	None/not applicable
+97	3.3846052	3.8376296	0	1	5	5	5	SP	fr	peux-tu	Latin	can you	None/not applicable
+98	4.123758	3.6551793	0	1	5	5	7	SP	fr	d'abord	Latin	first	None/not applicable
+99	6.630672	2.3332167	0	0	0	0	0	SP	fr	auteur	Latin	author	None/not applicable
+100	7.4115324	4.1661706	0	0	0	6	6	SP	fr	mots	Latin	words	None/not applicable
+101	7.261974	1.7510399	0	0	0	0	0	SP	fr	magazine	Latin	magazine	None/not applicable
+102	6.2556896	2.6678622	0	0	0	0	0	SP	fr	artistique	Latin	artistic	None/not applicable
+103	4.238507	6.7219443	1	1	1	1	1	SP	fr	raconte	Latin	tells	None/not applicable

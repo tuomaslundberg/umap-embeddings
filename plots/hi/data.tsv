@@ -1,0 +1,105 @@
+	x_umap_data_2	y_umap_data_2	umap_labels_2_spherical-kmeans_4	umap_labels_2_spherical-kmeans_5	umap_labels_2_spherical-kmeans_6	umap_labels_2_spherical-kmeans_7	umap_labels_2_spherical-kmeans_8	label_for_umap	lang	text	script_type	translation	comments
+0	2.5557146	2.6453273	1	1	2	2	4	HI	zh	識	Traditional Chinese	Knowledge/Recognize	"Rarely used alone; could be truncated from ""知識"" (knowledge)"
+1	4.4871545	2.517368	2	2	5	5	2	HI	zh	攻略	Simplified Chinese	Guide/Strategy	Often implies a step-by-step plan or strategies to maximize efficiency
+2	2.3725913	2.3799307	1	1	2	2	4	HI	zh	常	Traditional Chinese/simplified Chinese	Often/Common	"Rarely used alone; likely truncated from either ""常识""/""常識"" (common knowledge) or ""常見""/""常见"" (common)"
+3	4.309992	2.6457167	2	2	5	5	2	HI	zh	技巧	Simplified Chinese	Skills/Techniques	None/not applicable
+4	2.9416702	2.8197355	1	1	2	2	4	HI	zh	事项	Simplified Chinese	Matters/Items	None/not applicable
+5	-0.6951551	6.290328	3	3	3	3	6	HI	zh	驟	Traditional Chinese	Step/Procedure	"Rarely used alone; likely truncated from ""步驟"" (steps), the simplified equivalent of which also appears in top HI keywords"
+6	-0.6649495	6.3345065	3	3	3	3	6	HI	zh	步骤	Simplified Chinese	Steps/Procedure	None/not applicable
+7	-1.7081645	8.887181	3	3	3	3	6	HI	zh	怎样	Simplified Chinese	How	None/not applicable
+8	4.805875	2.1452339	2	2	5	5	2	HI	zh	教學	Traditional Chinese	Instruction	None/not applicable
+9	-0.64958024	7.54016	3	3	3	3	6	HI	zh	做法	Simplified Chinese	Method/Practice	None/not applicable
+10	3.6681008	2.8997397	2	2	2	2	4	HI	zh	小编	Simplified Chinese	Editor (informal)	None/not applicable
+11	2.1557286	2.545638	1	1	2	2	4	HI	zh	準	Traditional Chinese	Preparation (steps)	"Rarely used alone; likely truncated from ""準備"" (preparation)"
+12	4.0355372	5.4351497	0	0	0	6	0	HI	zh	材料	Simplified Chinese	Materials/Ingredients	Can refer to ingredients in cooking contexts or materials for projects
+13	-1.6910472	8.926044	3	3	3	3	6	HI	zh	如何	Simplified Chinese	How	None/not applicable
+14	-1.6056983	8.938729	3	3	3	3	6	HI	zh	怎么	Simplified Chinese	How	None/not applicable
+15	-0.71186566	7.666452	3	3	3	3	6	HI	zh	法	Traditional Chinese/simplified Chinese	Method/Way	"Rarely used alone; could be truncated from ""方法"" or  ""做法"" (method)"
+16	-0.69973344	7.595131	3	3	3	3	6	HI	zh	方法	Simplified Chinese	Method	None/not applicable
+17	4.2090793	2.6641674	2	2	5	5	2	HI	zh	介绍	Simplified Chinese	Introduction	None/not applicable
+18	4.8151884	2.2653692	2	2	5	5	2	HI	zh	教程	Simplified Chinese	Tutorial	None/not applicable
+19	1.2053736	3.2021453	1	1	1	1	1	HI	zh	即可	Simplified Chinese	That's all you need to do	None/not applicable
+20	2.9347205	2.7839472	1	1	2	2	4	HI	zh	事	Traditional Chinese/simplified Chinese	Thing/Matter	"Too general; could be truncated from ""事情"" (matter)"
+21	1.4316323	3.648305	1	1	1	1	7	HI	zh	囉	Traditional Chinese	(Emphasis particle, informal)	Taiwan/Hong Kong specific
+22	1.4633744	4.247343	1	1	1	1	7	HI	zh	按下	Simplified Chinese	Press/Click	None/not applicable
+23	3.2411163	2.9448967	1	1	2	2	4	HI	zh	篇	Simplified Chinese	Article/Chapter	Measure word
+24	2.5092824	2.85222	1	1	2	2	4	HI	zh	具體	Traditional Chinese	Specific/Concrete	None/not applicable
+25	4.6039124	1.9793668	2	2	5	5	2	HI	zh	教	Traditional Chinese/simplified Chinese	Teach	None/not applicable
+26	7.263427	5.042522	0	4	4	4	5	HI	ur	recipe	Latin	None/not applicable	None/not applicable
+27	4.072184	5.499989	0	0	0	6	0	HI	ur	ingredients	Latin	None/not applicable	None/not applicable
+28	2.2882278	4.0210085	1	1	2	2	7	HI	ur	urdu	Latin	None/not applicable	None/not applicable
+29	3.1990447	4.960502	1	0	0	0	0	HI	ur	250گرام	Mixed	250 grams	None/not applicable
+30	-1.5365274	8.791954	3	3	3	3	6	HI	ur	کیسے	Urdu	how	None/not applicable
+31	-0.88780284	7.847274	3	3	3	3	6	HI	ur	طریقہ	Urdu	method/way	None/not applicable
+32	3.5442355	5.130805	1	0	0	6	0	HI	ur	وٹامن	Urdu	vitamin	None/not applicable
+33	5.5389585	2.3257008	2	2	5	5	2	HI	ur	instructions	Latin	None/not applicable	None/not applicable
+34	6.721108	6.6597905	0	4	4	4	5	HI	ur	تیاری	Urdu	preparation	None/not applicable
+35	3.537062	5.1744432	1	0	0	6	0	HI	ur	فائل	Urdu	file	None/not applicable
+36	1.6558206	4.425752	1	1	1	1	7	HI	ur	دبائیں	Urdu	press	Verb, imperative
+37	2.8168142	3.2286952	1	1	2	2	4	HI	ur	نوٹ	Urdu	note (remark)	English word in Urdu script
+38	2.8417292	5.6401453	1	0	0	0	3	HI	ur	زعفران	Urdu	saffron	None/not applicable
+39	1.8135018	3.7206888	1	1	1	1	7	HI	ur	منٹ	Urdu	minute	None/not applicable
+40	-0.7384368	6.268352	3	3	3	3	6	HI	ur	مراحل	Urdu	stages/steps	None/not applicable
+41	1.9090592	4.7308483	1	1	1	0	7	HI	ur	ٹھنڈے	Urdu	cold	None/not applicable
+42	3.1450956	3.4827378	1	1	2	2	4	HI	ur	تحریر	Urdu	writing/text	None/not applicable
+43	2.179998	3.862953	1	1	2	2	7	HI	ur	آدھ	Urdu	half	None/not applicable
+44	-0.8849388	7.7498307	3	3	3	3	6	HI	ur	طریقے	Urdu	method/methods	Oblique case
+45	0.3813334	3.3271704	1	1	1	1	1	HI	ur	کرکے	Urdu	by doing/having done	Conjunctive participle
+46	3.1777527	4.918229	1	0	0	0	0	HI	ur	گرام	Urdu	gram	None/not applicable
+47	0.35740814	3.1398823	1	1	1	1	1	HI	ur	کیجئے	Urdu	please do (imperative)	"Translating this verb as ""do"" works fine here. However, this verb may have different meanings depending on the context and depending on the nouns it occurs with. "
+48	0.4841542	3.2184386	1	1	1	1	1	HI	ur	کرلیں	Urdu	do (imperative)	"Translating this verb as ""do"" works fine here. However, this verb may have different meanings depending on the context and depending on the nouns it occurs with. "
+49	0.7768055	3.0052521	1	1	1	1	1	HI	ur	فرمائیں	Urdu	please do (imperative)	"The word is a little hard to translate in isolation. Farmana basically means ""to say"" but this verb is used in polite requests and can receive different translations depending on context. Translating this as ""do"" works fine here. "
+50	2.82467	5.5980344	1	0	0	0	3	HI	ur	نمک	Urdu	salt	None/not applicable
+51	2.1283085	3.7725742	1	1	2	2	7	HI	ur	گھنٹے	Urdu	hour/hours	Oblique case
+52	4.938261	2.1748478	2	2	5	5	2	HI	en	tutorial	Latin	None/not applicable	None/not applicable
+53	7.238915	5.027752	0	4	4	4	5	HI	en	recipe	Latin	None/not applicable	None/not applicable
+54	3.991522	5.504232	0	0	0	6	0	HI	en	ingredients	Latin	None/not applicable	None/not applicable
+55	7.392752	4.840387	0	4	4	4	5	HI	en	recipes	Latin	None/not applicable	None/not applicable
+56	5.6155233	2.2603104	2	2	5	5	2	HI	en	instructions	Latin	None/not applicable	None/not applicable
+57	5.5894985	2.739676	2	2	5	5	2	HI	en	tips	Latin	None/not applicable	None/not applicable
+58	1.2298646	3.7819278	1	1	1	1	7	HI	en	here’s	Latin	None/not applicable	None/not applicable
+59	-0.81249756	6.1565213	3	3	3	3	6	HI	en	steps	Latin	None/not applicable	None/not applicable
+60	5.6747217	2.1879647	2	2	5	5	2	HI	en	directions	Latin	None/not applicable	None/not applicable
+61	3.1284077	3.7771559	1	1	2	2	4	HI	en	blog	Latin	None/not applicable	None/not applicable
+62	6.7228394	6.6564617	0	4	4	4	5	HI	en	preparation	Latin	None/not applicable	None/not applicable
+63	2.9521015	3.3521514	1	1	2	2	4	HI	en	note	Latin	None/not applicable	None/not applicable
+64	5.7244596	2.0927365	2	2	5	5	2	HI	en	guide	Latin	None/not applicable	None/not applicable
+65	-0.7796327	7.9407487	3	3	3	3	6	HI	en	pattern	Latin	None/not applicable	None/not applicable
+66	-1.5139081	8.865308	3	3	3	3	6	HI	en	how	Latin	None/not applicable	None/not applicable
+67	3.0841553	3.741838	1	1	2	2	4	HI	en	post	Latin	None/not applicable	None/not applicable
+68	2.1652193	5.3490205	1	0	0	0	3	HI	en	rack	Latin	None/not applicable	None/not applicable
+69	-0.8331841	6.1320896	3	3	3	3	6	HI	en	step	Latin	None/not applicable	None/not applicable
+70	-0.85162884	7.742742	3	3	3	3	6	HI	en	method	Latin	None/not applicable	None/not applicable
+71	1.9903941	4.161195	1	1	1	1	7	HI	en	add	Latin	None/not applicable	None/not applicable
+72	2.2526422	5.5198693	1	0	0	0	3	HI	en	chop	Latin	None/not applicable	None/not applicable
+73	6.547451	6.7748556	0	4	4	4	5	HI	en	preheat	Latin	None/not applicable	None/not applicable
+74	6.6652136	6.708277	0	4	4	4	5	HI	en	prepare	Latin	None/not applicable	None/not applicable
+75	1.6660633	3.7113652	1	1	1	1	7	HI	en	mom	Latin	None/not applicable	None/not applicable
+76	1.1638141	4.147949	1	1	1	1	7	HI	en	below	Latin	None/not applicable	None/not applicable
+77	2.9425492	5.7492557	1	0	0	0	3	HI	en	spice	Latin	None/not applicable	None/not applicable
+78	7.3982134	4.8386383	0	4	4	4	5	HI	fr	recettes	Latin	recipes	None/not applicable
+79	7.203516	5.0039124	0	4	4	4	5	HI	fr	recette	Latin	recipe	None/not applicable
+80	5.5648108	2.225872	2	2	5	5	2	HI	fr	instructions	Latin	instructions	None/not applicable
+81	3.787255	5.6702194	0	0	0	6	0	HI	fr	légumes	Latin	vegetables	None/not applicable
+82	5.664338	2.6314402	2	2	5	5	2	HI	fr	conseils	Latin	tips	None/not applicable
+83	3.0930548	4.9526224	1	0	0	0	0	HI	fr	kg	Latin	kg	None/not applicable
+84	2.4418185	5.7286906	1	0	0	0	3	HI	fr	cuillère	Latin	spoon	None/not applicable
+85	2.555637	5.7889934	1	0	0	0	3	HI	fr	cuillères	Latin	spoons	None/not applicable
+86	0.028540576	3.6645305	1	1	1	1	1	HI	fr	procéder	Latin	proceed	None/not applicable
+87	2.2391274	3.2744136	1	1	2	2	4	HI	fr	personnes	Latin	people	None/not applicable
+88	-0.7648657	6.2299113	3	3	3	3	6	HI	fr	étapes	Latin	steps	None/not applicable
+89	-0.72535837	6.926695	3	3	3	3	6	HI	fr	procédure	Latin	procedure	None/not applicable
+90	6.7801676	6.603728	0	4	4	4	5	HI	fr	préparation	Latin	preparation	None/not applicable
+91	5.1499224	2.0799189	2	2	5	5	2	HI	fr	tutoriel	Latin	tutorial	None/not applicable
+92	4.023781	5.537304	0	0	0	6	0	HI	fr	ingrédients	Latin	ingredients	None/not applicable
+93	0.7713572	2.9566905	1	1	1	1	1	HI	fr	découvrez	Latin	discover (imp.)	None/not applicable
+94	0.34563813	3.0312955	1	1	1	1	1	HI	fr	faites-les	Latin	make them (imp.)	None/not applicable
+95	1.0587014	4.037338	1	1	1	1	7	HI	fr	installé	Latin	installed	None/not applicable
+96	5.733626	2.0894501	2	2	5	5	2	HI	fr	guide	Latin	guide	None/not applicable
+97	0.33739695	3.275931	1	1	1	1	1	HI	fr	faites	Latin	do (imp.)	None/not applicable
+98	0.16813935	3.697599	1	1	1	1	1	HI	fr	servir	Latin	serve	None/not applicable
+99	3.109465	4.9875746	1	0	0	0	0	HI	fr	250g	Latin	250g	None/not applicable
+100	0.96076834	3.2987475	1	1	1	1	1	HI	fr	suffit	Latin	is enough	None/not applicable
+101	7.189554	4.968739	0	4	4	4	5	HI	fr	cuisine	Latin	cooking / kitchen	Context required
+102	0.19357257	3.4642956	1	1	1	1	1	HI	fr	réaliser	Latin	achieve	None/not applicable
+103	3.2633448	3.1997523	1	1	2	2	4	HI	fr	article	Latin	article	None/not applicable

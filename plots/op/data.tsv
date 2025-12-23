@@ -1,0 +1,105 @@
+	x_umap_data_2	y_umap_data_2	umap_labels_2_spherical-kmeans_4	umap_labels_2_spherical-kmeans_5	umap_labels_2_spherical-kmeans_6	umap_labels_2_spherical-kmeans_7	umap_labels_2_spherical-kmeans_8	label_for_umap	lang	text	script_type	translation	comments
+0	7.17693	8.046784	1	1	5	5	4	OP	zh	评	Simplified Chinese	Review/Evaluation	"Rarely used alone; likely truncated from ""评论"" (comment/review) or ""评价"" (evaluation/assessment), both of which are also top OP keywords"
+1	6.3973684	8.203748	1	1	5	5	4	OP	zh	评论	Simplified Chinese	Comment/Review	None/not applicable
+2	7.40888	8.029211	1	1	5	5	4	OP	zh	评价	Simplified Chinese	Evaluation/Assessment	None/not applicable
+3	12.101953	3.298579	0	4	4	4	7	OP	zh	上帝	Simplified Chinese	God	None/not applicable
+4	12.031263	8.628676	2	2	2	2	2	OP	zh	文章	Simplified Chinese	Article	None/not applicable
+5	11.80765	8.448545	2	2	2	2	2	OP	zh	读	Simplified Chinese	Read	None/not applicable
+6	8.979514	6.3128223	3	0	1	1	1	OP	zh	相比	Simplified Chinese	Compare/Compared to	None/not applicable
+7	12.105827	8.427292	2	2	2	2	2	OP	zh	作者	Simplified Chinese	Author	None/not applicable
+8	10.8359165	4.0345273	0	4	0	0	5	OP	zh	感受	Simplified Chinese	Feeling/Experience	None/not applicable
+9	12.260449	8.80873	2	2	2	2	2	OP	zh	篇	Simplified Chinese	Piece/Article (measure word)	None/not applicable
+10	12.047082	7.9241395	2	2	2	2	2	OP	zh	書	Traditional Chinese	Book	None/not applicable
+11	9.126761	6.8439345	3	0	1	1	1	OP	zh	推荐	Simplified Chinese	Recommend/Recommendation	None/not applicable
+12	12.338166	8.653041	2	2	2	2	2	OP	zh	個人	Traditional Chinese	Personal/Individual	None/not applicable
+13	10.445411	4.139904	0	4	0	0	5	OP	zh	失望	Simplified Chinese	Disappointed/Disappointment	None/not applicable
+14	9.3453865	6.7918363	3	0	1	1	1	OP	zh	介紹	Traditional Chinese	Introduction	None/not applicable
+15	9.221769	6.098971	3	0	1	1	1	OP	zh	值得	Simplified Chinese	Worth/Deserving	None/not applicable
+16	9.012719	5.186804	3	0	1	1	1	OP	zh	這次	Traditional Chinese	This time	None/not applicable
+17	7.236294	8.609396	1	1	5	5	4	OP	zh	点	Simplified Chinese	Point/Dot	"Multiple meanings: likely truncated from 点评 (to comment/review), could mean ""to order"" (food), ""to click"" (in digital context), or a measure word for small items"
+18	9.02284	4.99446	3	0	1	1	1	OP	zh	下面	Simplified Chinese	Below/Next	None/not applicable
+19	9.484638	6.596008	3	0	1	1	1	OP	zh	告诉	Simplified Chinese	Tell/Inform	None/not applicable
+20	0.87671804	8.004732	1	1	5	6	6	OP	zh	今天	Simplified Chinese	Today	None/not applicable
+21	9.088088	6.002966	3	0	1	1	1	OP	zh	算是	Simplified Chinese	Can be considered as	None/not applicable
+22	9.220813	5.1592827	3	0	1	1	1	OP	zh	最近	Simplified Chinese	Recently	None/not applicable
+23	9.297006	6.0578346	3	0	1	1	1	OP	zh	不错	Simplified Chinese	Not bad/Pretty good	None/not applicable
+24	12.201747	8.712758	2	2	2	2	2	OP	zh	文	Traditional Chinese/simplified Chinese	Text/Writing	"Rarely used alone; could be truncated from ""文章"" (article)"
+25	9.016548	5.0607896	3	0	1	1	1	OP	zh	以下	Simplified Chinese	Below/The following	None/not applicable
+26	11.595345	8.848382	2	2	2	2	2	OP	ur	سورة	Urdu	Surah (chapter of the Quran)	None/not applicable
+27	12.10732	4.019865	0	4	0	0	0	OP	ur	الحمدللہ	Urdu	praise be to Allah	None/not applicable
+28	12.231427	4.1826234	0	4	0	0	0	OP	ur	علامہ	Urdu	scholar	(Honorific title for a) learned person/scholar
+29	9.92935	4.9088926	3	0	1	1	1	OP	ur	جہنم	Urdu	hell	None/not applicable
+30	12.131715	4.032266	0	4	0	0	0	OP	ur	الحمد	Urdu	praise	"This has most likely occurred as part of the expression Alhamdulillah ""praise be to Allah"" (originally Arabic)"
+31	9.678479	5.6631007	3	0	1	1	1	OP	ur	ثواب	Urdu	reward (spiritual merit)	None/not applicable
+32	11.907388	2.6651983	0	4	4	4	7	OP	ur	یسوع	Urdu	Jesus	None/not applicable
+33	11.722529	4.1853094	0	4	0	0	0	OP	ur	مجید	Urdu	glorious	None/not applicable
+34	12.119752	2.4486136	0	4	4	4	7	OP	ur	مسیح	Urdu	Messiah (Jesus Christ)	None/not applicable
+35	0.5405031	8.292392	1	1	5	6	6	OP	ur	جمعہ	Urdu	Friday	None/not applicable
+36	11.994301	9.166875	2	2	2	2	2	OP	ur	باب	Urdu	chapter/section	None/not applicable
+37	11.821435	8.174819	2	2	2	2	2	OP	ur	تحریر	Urdu	writing/text	None/not applicable
+38	12.214434	4.4495497	0	4	0	0	0	OP	ur	المبارک	Urdu	the blessed	"Translator's comment: ""I don't know about this, hard to say without context. Al mubarak seems to mean ""the blessed"" in Arabic but I don’t know how this is used in Urdu. The word mubarak is used in Urdu in greetings and congratulations to convey blessings, but I don’t know about this al mubarak."""
+39	11.796407	4.2807136	0	4	0	0	0	OP	ur	مولانا	Urdu	Islamic religious leader	(A title used for a respected) Islamic  religious scholar
+40	11.596397	9.006827	2	2	2	2	2	OP	ur	آیت	Urdu	verse (of the Quran)	None/not applicable
+41	11.777692	9.171207	2	2	2	2	2	OP	ur	بیت	Urdu	house	Also refers to Kaaba in Islamic context
+42	12.270254	4.741757	0	4	0	0	0	OP	ur	بخاری	Urdu	Bukhari (Hadith collection)	None/not applicable
+43	9.46537	5.038511	3	0	1	1	1	OP	ur	آخرت	Urdu	afterlife	None/not applicable
+44	7.0631313	7.9601846	1	1	5	5	4	OP	ur	تفسیر	Urdu	interpretation/exegesis (of the Quran)	None/not applicable
+45	11.803913	6.9877152	2	2	2	2	2	OP	ur	اسرائیل	Urdu	Israel	None/not applicable
+46	11.581511	8.990239	2	2	2	2	2	OP	ur	آیات	Urdu	verses (plural of Ayah)	None/not applicable
+47	11.700528	8.453201	2	2	2	2	2	OP	ur	پڑھیں	Urdu	read/recite	None/not applicable
+48	12.240948	4.0513754	0	4	0	0	0	OP	ur	آمین	Urdu	Amen	None/not applicable
+49	11.218016	8.823631	2	2	2	2	2	OP	ur	حدیث	Urdu	Hadith (sayings of the Prophet)	None/not applicable
+50	11.036191	8.434968	2	2	2	2	2	OP	ur	خطبہ	Urdu	Sermon	None/not applicable
+51	12.073091	3.6257803	0	4	0	0	0	OP	ur	للہ	Urdu	for Allah	"Likely part of the expression Alhamdulillah ""praise be to Allah"". "
+52	7.0122547	7.675959	1	1	5	5	4	OP	en	review	Latin	None/not applicable	None/not applicable
+53	0.57740045	8.25461	1	1	5	6	6	OP	en	monday	Latin	None/not applicable	None/not applicable
+54	6.961135	8.016976	1	1	5	5	4	OP	en	reviews	Latin	None/not applicable	None/not applicable
+55	0.72563165	8.109251	1	1	5	6	6	OP	en	sunday	Latin	None/not applicable	None/not applicable
+56	7.4810104	7.947635	1	1	5	5	4	OP	en	rating	Latin	None/not applicable	None/not applicable
+57	11.925903	7.313647	2	2	2	2	2	OP	en	bible	Latin	None/not applicable	None/not applicable
+58	11.193121	7.9726477	2	2	2	2	2	OP	en	blog	Latin	None/not applicable	None/not applicable
+59	7.1699715	7.585861	1	1	5	5	4	OP	en	reviewed	Latin	None/not applicable	None/not applicable
+60	11.093692	3.8685603	0	4	0	0	5	OP	en	spirit	Latin	None/not applicable	None/not applicable
+61	12.27032	2.4444578	0	4	4	4	7	OP	en	christ	Latin	None/not applicable	None/not applicable
+62	11.944248	2.7353117	0	4	4	4	7	OP	en	jesus	Latin	None/not applicable	None/not applicable
+63	12.474932	2.3567195	0	4	4	4	7	OP	en	christians	Latin	None/not applicable	None/not applicable
+64	9.077403	6.86775	3	0	1	1	1	OP	en	recommend	Latin	None/not applicable	None/not applicable
+65	9.712379	2.1288018	0	3	3	3	3	OP	en	july	Latin	None/not applicable	None/not applicable
+66	6.5625987	8.252107	1	1	5	5	4	OP	en	comments	Latin	None/not applicable	None/not applicable
+67	11.170075	8.022248	2	2	2	2	2	OP	en	post	Latin	None/not applicable	None/not applicable
+68	6.503354	8.145379	1	1	5	5	4	OP	en	thoughts	Latin	None/not applicable	None/not applicable
+69	9.665853	2.1313412	0	3	3	3	3	OP	en	september	Latin	None/not applicable	None/not applicable
+70	10.984567	8.539228	2	2	2	2	2	OP	en	testament	Latin	None/not applicable	None/not applicable
+71	12.5457945	2.5130782	0	4	4	4	7	OP	en	church	Latin	None/not applicable	None/not applicable
+72	9.892069	2.1570709	0	3	3	3	3	OP	en	march	Latin	None/not applicable	None/not applicable
+73	9.883497	2.188308	0	3	3	3	3	OP	en	june	Latin	None/not applicable	None/not applicable
+74	11.954703	9.063444	2	2	2	2	2	OP	en	chapter	Latin	None/not applicable	None/not applicable
+75	12.060248	7.8295455	2	2	2	2	2	OP	en	album	Latin	None/not applicable	None/not applicable
+76	12.154639	3.1674776	0	4	4	4	7	OP	en	lord	Latin	None/not applicable	None/not applicable
+77	12.460919	2.638987	0	4	4	4	7	OP	en	holy	Latin	None/not applicable	None/not applicable
+78	7.1705275	7.644879	1	1	5	5	4	OP	fr	test	Latin	test	None/not applicable
+79	11.179327	7.9678926	2	2	2	2	2	OP	fr	blog	Latin	blog	None/not applicable
+80	0.4264919	8.423262	1	1	5	6	6	OP	fr	jeudi	Latin	Thursday	None/not applicable
+81	6.658335	8.014069	1	1	5	5	4	OP	fr	avis	Latin	review	None/not applicable
+82	7.0111265	7.858717	1	1	5	5	4	OP	fr	critique	Latin	criticism	None/not applicable
+83	0.51222664	8.322914	1	1	5	6	6	OP	fr	vendredi	Latin	Friday	None/not applicable
+84	11.57186	2.7995195	0	4	4	4	7	OP	fr	jésus	Latin	Jesus	None/not applicable
+85	12.198993	2.5120509	0	4	4	4	7	OP	fr	christ	Latin	Christ	None/not applicable
+86	0.6139438	8.21769	1	1	5	6	6	OP	fr	lundi	Latin	Monday	None/not applicable
+87	7.1183076	7.9169517	1	1	5	5	4	OP	fr	critiques	Latin	reviews	None/not applicable
+88	0.71001446	8.126355	1	1	5	6	6	OP	fr	dimanche	Latin	Sunday	None/not applicable
+89	12.614938	2.432076	0	4	4	4	7	OP	fr	chrétiens	Latin	Christians	None/not applicable
+90	6.413846	8.107393	1	1	5	5	4	OP	fr	commentaire	Latin	comment	None/not applicable
+91	6.511775	8.041744	1	1	5	5	4	OP	fr	commentaires	Latin	comments	None/not applicable
+92	6.7111816	8.539022	1	1	5	5	4	OP	fr	notes	Latin	ratings	None/not applicable
+93	9.050496	6.8664412	3	0	1	1	1	OP	fr	recommande	Latin	recommends	None/not applicable
+94	9.356914	6.188772	3	0	1	1	1	OP	fr	excellent	Latin	excellent	None/not applicable
+95	10.112425	2.3571298	0	3	3	3	3	OP	fr	euros	Latin	euros	None/not applicable
+96	9.006397	4.969447	3	0	1	1	1	OP	fr	voici	Latin	here is	None/not applicable
+97	12.10682	3.4194002	0	4	4	4	7	OP	fr	dieu	Latin	God	None/not applicable
+98	9.571801	2.188902	0	3	3	3	3	OP	fr	septembre	Latin	September	None/not applicable
+99	11.182912	3.828	0	4	0	0	5	OP	fr	amour	Latin	love	None/not applicable
+100	12.033749	7.7946143	2	2	2	2	2	OP	fr	album	Latin	album	None/not applicable
+101	9.673657	2.1297762	0	3	3	3	3	OP	fr	novembre	Latin	November	None/not applicable
+102	9.7949095	2.0574777	0	3	3	3	3	OP	fr	février	Latin	February	None/not applicable
+103	10.386976	4.1722956	0	4	0	0	5	OP	fr	malheureusement	Latin	unfortunately	None/not applicable

@@ -1,0 +1,105 @@
+	x_umap_data_2	y_umap_data_2	umap_labels_2_spherical-kmeans_4	umap_labels_2_spherical-kmeans_5	umap_labels_2_spherical-kmeans_6	umap_labels_2_spherical-kmeans_7	umap_labels_2_spherical-kmeans_8	label_for_umap	lang	text	script_type	translation	comments
+0	8.260278	2.2557395	0	0	5	5	0	LY	zh	專	Traditional Chinese	Special/Exclusive	"Rarely used alone; could be truncated from ""專輯"" (album) (see ""专辑"" and ""輯"")"
+1	8.240695	3.3403184	0	2	5	6	2	LY	zh	专辑	Simplified Chinese	Album	None/not applicable
+2	14.151625	2.8510509	3	3	3	3	7	LY	zh	诗	Simplified Chinese	Poem	None/not applicable
+3	16.797897	1.2346141	1	1	1	1	1	LY	zh	歌曲	Simplified Chinese	Song	None/not applicable
+4	8.335356	2.703948	0	2	5	6	0	LY	zh	輯	Traditional Chinese	Collection/Album	"Rarely used alone; could be truncated from ""專輯"" (album) (see ""專"" and ""专辑"")"
+5	16.888382	1.3518088	1	1	1	1	1	LY	zh	演唱	Simplified Chinese	Singing/Performance	None/not applicable
+6	14.606764	0.77179897	1	1	1	1	6	LY	zh	詞	Traditional Chinese	Lyrics/Words	None/not applicable
+7	16.887135	1.4751337	1	1	1	1	1	LY	zh	唱	Simplified Chinese	Sing	None/not applicable
+8	8.289552	1.575476	0	0	0	5	0	LY	zh	首	Traditional Chinese/simplified Chinese	A song	In this context, a measure word
+9	16.750452	1.3176041	1	1	1	1	1	LY	zh	歌	Simplified Chinese	Song	None/not applicable
+10	6.887978	3.7166862	0	2	2	2	2	LY	zh	tags	Latin	None/not applicable	Not Chinese
+11	16.927505	1.4696472	1	1	1	1	1	LY	zh	曲	Simplified Chinese	Melody/Song	None/not applicable
+12	12.773188	3.3373253	3	3	3	3	3	LY	zh	作者	Simplified Chinese	Author/Composer	None/not applicable
+13	3.1869047	1.9160073	2	4	4	4	4	LY	zh	爱情	Simplified Chinese	Love	None/not applicable
+14	14.773576	0.5431907	1	1	1	1	6	LY	zh	lyrics	Latin	None/not applicable	Not Chinese
+15	3.3362389	1.7201194	2	4	4	4	4	LY	zh	愛情	Traditional Chinese	Love	None/not applicable
+16	5.383493	1.7640406	2	4	4	0	5	LY	zh	微笑	Simplified Chinese	Smile	None/not applicable
+17	6.8544188	3.6666706	0	2	2	2	2	LY	zh	jetlyrics	Latin	None/not applicable	Not Chinese; a brand name
+18	8.165763	1.8115222	0	0	5	5	0	LY	zh	原	Traditional Chinese/simplified Chinese	Original	"Might be as part of ""原創"" (original work)"
+19	4.652737	0.5567809	2	4	4	4	4	LY	zh	回憶	Traditional Chinese	Memory	None/not applicable
+20	3.6123028	1.3653178	2	4	4	4	4	LY	zh	梦	Simplified Chinese	Dream	None/not applicable
+21	4.478635	0.66984016	2	4	4	4	4	LY	zh	回忆	Simplified Chinese	Memory	None/not applicable
+22	4.2305803	0.7142605	2	4	4	4	4	LY	zh	伤感	Simplified Chinese	Sadness	None/not applicable
+23	14.958234	0.60330904	1	1	1	1	6	LY	zh	歌词	Simplified Chinese	Lyrics	None/not applicable
+24	4.824225	0.6887598	2	4	4	4	4	LY	zh	记得	Simplified Chinese	Remember	None/not applicable
+25	8.507766	2.1304169	0	0	5	5	0	LY	zh	作	Traditional Chinese/simplified Chinese	Work/Create	"Rarely used alone; could be truncated from ""創作"" (create)"
+26	15.742626	1.7074395	1	1	1	1	1	LY	ur	غزل	Urdu	ghazal	A form of poetry
+27	14.099378	3.0295846	3	3	3	3	7	LY	ur	poetry	Latin	None/not applicable	None/not applicable
+28	15.61139	1.7926805	1	1	1	1	1	LY	ur	غزلیں	Urdu	ghazals	None/not applicable
+29	13.2760105	3.1093447	3	3	3	3	3	LY	ur	شاعر	Urdu	poet	None/not applicable
+30	8.31939	2.5354497	0	0	5	6	0	LY	ur	نظم	Urdu	poem	None/not applicable
+31	14.166075	2.7234495	3	3	3	3	7	LY	ur	اشعار	Urdu	verses	None/not applicable
+32	14.025623	2.801213	3	3	3	3	7	LY	ur	شعر	Urdu	verse/poetry	None/not applicable
+33	13.912427	2.8924284	3	3	3	3	7	LY	ur	شاعری	Urdu	poetry	General term
+34	7.808998	2.970198	0	2	5	6	2	LY	ur	صدیقی	Urdu	Siddiqui	Name
+35	6.7344565	2.6347632	0	2	2	2	2	LY	ur	ماجد	Urdu	Majid	Name
+36	6.934197	2.0535057	0	0	0	0	5	LY	ur	فراز	Urdu	Faraz	Name of a poet
+37	6.859229	2.7728274	0	2	2	2	2	LY	ur	امجد	Urdu	Amjad	Name
+38	8.127275	1.5286765	0	0	0	5	0	LY	ur	نمبر	Urdu	number	None/not applicable
+39	16.591827	1.5256534	1	1	1	1	1	LY	ur	نغمہ	Urdu	song/melody	None/not applicable
+40	7.942009	2.5033133	0	0	5	5	0	LY	ur	یقیں	Urdu	faith/belief	None/not applicable
+41	8.1364155	2.1295965	0	0	5	5	0	LY	ur	واسطے	Urdu	for the sake of	"The word (vaaste) has probably occurred with the postposition ke (ke vaaste = ""for the sake of"").  "
+42	6.7163544	2.2723901	0	0	2	2	5	LY	ur	فیض	Urdu	Faiz	Name of a poet
+43	7.0410533	2.341023	0	0	2	2	2	LY	ur	اقبال	Urdu	Iqbal	Name of a poet
+44	7.5510616	1.2469113	0	0	0	5	0	LY	ur	کہانی	Urdu	story	None/not applicable
+45	6.9730773	2.6929011	0	2	2	2	2	LY	ur	عجب	Urdu	strange/astonishing	None/not applicable
+46	7.5016317	2.1320412	0	0	0	5	0	LY	ur	وفا	Urdu	loyalty	None/not applicable
+47	8.024874	1.8075563	0	0	0	5	0	LY	ur	پہ	Urdu	on	None/not applicable
+48	6.681185	3.095645	0	2	2	2	2	LY	ur	جہان	Urdu	world	None/not applicable
+49	6.826333	2.5056984	0	2	2	2	2	LY	ur	اعجاز	Urdu	Ejaz	Name
+50	6.5586963	2.6569521	0	2	2	2	2	LY	ur	محسن	Urdu	Mohin	Name
+51	7.31632	2.9920022	0	2	2	2	2	LY	ur	اردو	Urdu	Urdu	None/not applicable
+52	13.965634	3.0384905	3	3	3	3	7	LY	en	poetry	Latin	None/not applicable	None/not applicable
+53	14.066513	3.1502247	3	3	3	3	7	LY	en	poem	Latin	None/not applicable	None/not applicable
+54	16.666632	1.6133165	1	1	1	1	1	LY	en	song	Latin	None/not applicable	None/not applicable
+55	14.633736	0.5910688	1	1	1	1	6	LY	en	lyrics	Latin	None/not applicable	None/not applicable
+56	14.215972	2.7949777	3	3	3	3	7	LY	en	poems	Latin	None/not applicable	None/not applicable
+57	8.202321	3.3289278	0	2	5	6	2	LY	en	album	Latin	None/not applicable	None/not applicable
+58	16.416782	1.2514569	1	1	1	1	1	LY	en	songs	Latin	None/not applicable	None/not applicable
+59	13.040134	3.31556	3	3	3	3	3	LY	en	artist	Latin	None/not applicable	None/not applicable
+60	14.670201	0.4211654	1	1	1	1	6	LY	en	lyricsmode	Latin	None/not applicable	None/not applicable
+61	8.245417	2.2786984	0	0	5	5	0	LY	en	official	Latin	None/not applicable	None/not applicable
+62	7.9260397	1.4238609	0	0	0	5	0	LY	en	intro	Latin	None/not applicable	None/not applicable
+63	6.380986	1.1136901	0	0	0	0	5	LY	en	depot	Latin	None/not applicable	None/not applicable
+64	16.092363	1.2437541	1	1	1	1	1	LY	en	songmeanings	Latin	None/not applicable	None/not applicable
+65	7.175781	1.2737566	0	0	0	0	5	LY	en	track	Latin	None/not applicable	None/not applicable
+66	6.234231	1.3297656	0	0	0	0	5	LY	en	release	Latin	None/not applicable	None/not applicable
+67	6.899933	1.4254237	0	0	0	0	5	LY	en	stone	Latin	None/not applicable	None/not applicable
+68	16.632128	1.0145552	1	1	1	1	1	LY	en	music	Latin	None/not applicable	None/not applicable
+69	4.0671964	0.597365	2	4	4	4	4	LY	en	feelings	Latin	None/not applicable	None/not applicable
+70	7.0160456	3.5393224	0	2	2	2	2	LY	en	html	Latin	None/not applicable	None/not applicable
+71	16.604017	1.6957422	1	1	1	1	1	LY	en	chorus	Latin	None/not applicable	None/not applicable
+72	6.8761563	1.3572053	0	0	0	0	5	LY	en	bridge	Latin	None/not applicable	None/not applicable
+73	12.930245	3.2606037	3	3	3	3	3	LY	en	artists	Latin	None/not applicable	None/not applicable
+74	7.683388	1.9859229	0	0	0	5	0	LY	en	tonight	Latin	None/not applicable	None/not applicable
+75	4.5457616	0.6396913	2	4	4	4	4	LY	en	memories	Latin	None/not applicable	None/not applicable
+76	7.9182024	1.8537558	0	0	0	5	0	LY	en	there’s	Latin	None/not applicable	None/not applicable
+77	14.651611	0.34432474	1	1	1	1	6	LY	en	lyricfind	Latin	None/not applicable	None/not applicable
+78	8.290129	3.4263089	0	2	5	6	2	LY	fr	album	Latin	album	None/not applicable
+79	14.698206	0.51853687	1	1	1	1	6	LY	fr	lyrics	Latin	lyrics	None/not applicable
+80	16.429707	1.6997548	1	1	1	1	1	LY	fr	chanson	Latin	song	None/not applicable
+81	4.247837	0.43999943	2	4	4	4	4	LY	fr	commentaire	Latin	comment	None/not applicable
+82	16.341547	1.3420354	1	1	1	1	1	LY	fr	chansons	Latin	songs	None/not applicable
+83	16.638746	1.0350503	1	1	1	1	1	LY	fr	musique	Latin	music	None/not applicable
+84	5.3254046	1.6503669	2	4	4	0	5	LY	fr	sourire	Latin	smile	None/not applicable
+85	14.293073	2.6501667	3	3	3	3	7	LY	fr	poèmes	Latin	poems	None/not applicable
+86	6.533271	1.292744	0	0	0	0	5	LY	fr	acheter	Latin	buy	None/not applicable
+87	8.105523	3.2390041	0	2	5	6	2	LY	fr	cd	Latin	cd	None/not applicable
+88	13.364462	3.1382368	3	3	3	3	3	LY	fr	poète	Latin	poet	None/not applicable
+89	3.2314289	1.6572417	2	4	4	4	4	LY	fr	amours	Latin	love	None/not applicable
+90	3.1118398	1.7918983	2	4	4	4	4	LY	fr	amoureux	Latin	lovers	None/not applicable
+91	13.9760065	3.0056992	3	3	3	3	7	LY	fr	poème	Latin	poem	None/not applicable
+92	3.2237582	1.8287526	2	4	4	4	4	LY	fr	amour	Latin	love	None/not applicable
+93	12.992951	3.2174468	3	3	3	3	3	LY	fr	artistes	Latin	artists	None/not applicable
+94	3.76304	1.0221938	2	4	4	4	4	LY	fr	rêves	Latin	dreams	None/not applicable
+95	12.861274	3.297074	3	3	3	3	3	LY	fr	l'auteur	Latin	the author	None/not applicable
+96	5.160408	0.8853956	2	4	4	4	4	LY	fr	oublie	Latin	forget	None/not applicable
+97	6.4311585	1.2763193	0	0	0	0	5	LY	fr	retrouver	Latin	find again	None/not applicable
+98	6.0285645	1.0948571	2	0	0	0	5	LY	fr	refrain	Latin	chorus	None/not applicable
+99	6.7580905	3.5717597	0	2	2	2	2	LY	fr	labels	Latin	labels	None/not applicable
+100	3.4647703	1.8655283	2	4	4	4	4	LY	fr	beauté	Latin	beauty	None/not applicable
+101	6.5704694	3.4259582	0	2	2	2	2	LY	fr	étoiles	Latin	stars	None/not applicable
+102	4.2071915	0.50079143	2	4	4	4	4	LY	fr	sentiments	Latin	feelings	None/not applicable
+103	3.2696245	1.8790904	2	4	4	4	4	LY	fr	l’amour	Latin	love	None/not applicable
