@@ -396,7 +396,7 @@ def plot_embeddings_matplotlib(df_plot, data_column, color_column, options, colu
                     font_path = fm.findfont('Droid Sans Fallback', fallback_to_default=False)
                     fp = FontProperties(fname=font_path)
                 elif rlang and str(rlang).lower() == 'urdu':
-                    font_path = PosixPath('/scratch/project_462000999/tlundber/misc/NotoNaskhArabic-VariableFont_wght.ttf')
+                    font_path = PosixPath(os.environ.get("MISC", "/scratch/project_462001491/tlundber/misc") + "/NotoNaskhArabic-VariableFont_wght.ttf")
                     fp = FontProperties(fname=font_path)
                 else:
                     font_path = fm.findfont('DejaVu Sans', fallback_to_default=False)

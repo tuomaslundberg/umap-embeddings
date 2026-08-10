@@ -1,6 +1,5 @@
 #!/bin/bash
 #SBATCH --job-name=clustering
-#SBATCH --account=project_462000999
 #SBATCH --partition=small
 #SBATCH --time=00:20:00
 #SBATCH --nodes=1
@@ -10,6 +9,7 @@
 #SBATCH --output=slurm-logs/array_%A_%a.out
 #SBATCH --error=slurm-logs/array_%A_%a.err
 #SBATCH --array=1-8
+source ~/lumi-env.sh
 
 # If run without sbatch, invoke here
 if [ -z "$SLURM_JOB_ID" ]; then
