@@ -24,3 +24,6 @@ outputtest.tsv
 data/
 *.test
 *.old
+
+# Model checkpoints — 1.1 GB per fold; never commit (keep in models/ or LUMI-O)
+fold_*/

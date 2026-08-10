@@ -35,7 +35,7 @@ def argparser():
 
 
 # paths for models and data, e.g. data_path = data_dict("en")["CORE"] gives en-core
-model_dict = lambda fold: {"bge-m3":"/scratch/project_462000353/amanda/register-clustering/data/models/folds_improved/fold_"+str(fold)}
+model_dict = lambda fold: {"bge-m3":"/scratch/project_2005092/tlundber/umap-embeddings/fold_"+str(fold)}
 
 #label_dict = {"bge-m3":np.array(["MT", "LY", "SP", "ID", "NA", "HI", "IN", "OP", "IP",
 #                                 "it", "os", "ne", "sr", "nb", "on", "re", "oh", "en",
@@ -55,7 +55,7 @@ label_dict = {"bge-m3":np.array(["MT", "LY", "SP", "ID", "NA", "HI", "IN", "OP",
 
 data_dict = lambda lang: {"CORE": f'/scratch/project_462000353/amanda/register-clustering/data/datasets/CORE/{lang}.hf',
                           "hplt": f'/scratch/project_462000353/amanda/register-clustering/data/datasets/hplt/{lang}.hf',
-                          "cleaned": f'/scratch/project_462000353/tlundber/hplt-samples/clean/{lang_map[lang]}.shuf',}
+                          "cleaned": f'/scratch/project_2005092/tlundber/hplt-samples/clean/{lang_map[lang]}.shuf',}
 
 
 options = argparser().parse_args(sys.argv[1:])
@@ -67,10 +67,10 @@ options.labels = label_dict[options.model_name]
 if options.save_path is None:
     if options.fold is not None:
         #options.save_path = f'/scratch/project_462000353/amanda/register-clustering/data/model_embeds/{options.data_name}/{options.model_name}-fold-{options.fold}/'
-        options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}-fold-{options.fold}/th-optimised/'
+        options.save_path = f'/scratch/project_2005092/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}-fold-{options.fold}/th-optimised/'
     else:
        #options.save_path = f'/scratch/project_462000353/amanda/register-clustering/data/model_embeds/{options.data_name}/{options.model_name}/' 
-       options.save_path = f'/scratch/project_462000353/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}/th-optimised/' 
+       options.save_path = f'/scratch/project_2005092/tlundber/umap-embeddings/data/model_embeds/{options.data_name}/{options.model_name}/th-optimised/' 
 os.makedirs(options.save_path, exist_ok=True)
 
 num_labels=len(options.labels)
